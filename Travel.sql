@@ -22,7 +22,8 @@ create table ThongTinDuLich
 	Name nvarchar(20),
 	Address nvarchar(50),
 	Phone varchar(15),
-	Content text
+	Content text,
+	Rating decimal(1)
 )
 
 create table ThongTinKhachSan
@@ -31,7 +32,8 @@ create table ThongTinKhachSan
 	Name nvarchar(20),
 	Address nvarchar(50),
 	Phone varchar(15),
-	Content text
+	Content text,
+	Rating decimal(1)
 )
 
 create table ThongTinNhaHang
@@ -40,21 +42,24 @@ create table ThongTinNhaHang
 	Name nvarchar(20),
 	Address nvarchar(50),
 	Phone varchar(15),
-	Content text
+	Content text,
+	Rating decimal(1)
 )
 
 create table ThongTinAmThuc
 (
 	AmThuc_ID int primary key,
 	Title nvarchar(100),
-	Content text
+	Content text,
+	Rating decimal(1)
 )
 
 create table Event
 (
 	Event_ID int primary key,
 	Title nvarchar(100),
-	Content text
+	Content text,
+	Rating decimal(1)
 )
 
 create table Travel_Comment_Rating
