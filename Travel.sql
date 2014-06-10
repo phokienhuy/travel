@@ -44,6 +44,7 @@ create table ThongTinNhaHang
 	Phone varchar(15),
 	Content text,
 	Rating int
+)
 
 create table ThongTinAmThuc
 (
