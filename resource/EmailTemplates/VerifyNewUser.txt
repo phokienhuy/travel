@@ -1,0 +1,13 @@
+﻿Hello <%UserName%>
+<br /><br />
+Chào mừng bạn đến với The Travel.
+<br /><br />
+Tài khoản của bạn đã được tạo tại The Travel, trước khi sử dụng, bạn hãy [ <a href="<%VerificationUrl%>">CLICK VÀO ĐÂY</a>] để hoàn thành quá trình tạo tài khoản.
+<br /><br />
+Sau khi hoàn thành quá trình xác nhận tài khoản, bạn sẽ được chuyển về trang đăng nhập để bắt đầu sử dụng dịch vụ của chúng tôi..
+<br /><br />
+Nếu bạn có câu hỏi gì liên quan đến việc kích hoạt tài khoản, vui long liên hệ với quản trị viên thông qua Email: phokienhuy@gmail.com
+<br /><br />
+Chân thành cảm ơn bạn.
+<br /><br />
+Web Service Team.
