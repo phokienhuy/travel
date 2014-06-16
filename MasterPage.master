@@ -6,12 +6,15 @@
 <head runat="server">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+        
+        
          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		 <link rel="icon" href="resource/images/favicon.ico">
 		 <link rel="shortcut icon" href="resource/images/favicon.ico" />
 		 <link rel="stylesheet" href="resource/css/style.css">
 		 <link rel="stylesheet" href="resource/css/slider.css">
 		 <link rel="stylesheet" href="resource/css/form.css">
+         
 		 <script src="js/jquery.js"></script>
 		 <script src="js/jquery-migrate-1.1.1.js"></script>
 		 <script src="js/superfish.js"></script>
@@ -23,7 +26,9 @@
 		 <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
 		 <script src="js/jquery.ui.totop.js"></script>
 		 <script src="js/forms.js"></script>
-
+         
+         
+         
 		 <script>
 		     $(window).load(function () {
 		         $('.slider')._TMS({
@@ -204,7 +209,7 @@
                 <asp:MultiView ID="MultiView1" runat="server">
 
                 <asp:View ID="View1" runat="server">
-                <div class="newsletter_title">Đăng Nhập </div>
+                <div class="newsletter_title">ĐĂNG NHẬP </div>
                 <div class="n_container">
 		        <br class="clear">
                 <table align="center">
@@ -214,7 +219,7 @@
                         <td><asp:TextBox ID="txtUN" runat="server"  Width="200px" ></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <td><asp:Label ID="PW" runat="server" Text="Password "></asp:Label>&nbsp&nbsp&nbsp</td>
+                        <td><asp:Label ID="PW" runat="server" Text="Mật khẩu"></asp:Label>&nbsp&nbsp&nbsp</td>
                     
                         <td><asp:TextBox ID="txtPW" runat="server" TextMode="Password" Width="200"></asp:TextBox></td>
                     </tr>
@@ -236,26 +241,18 @@
                             <asp:HyperLink ID="hlForgotPW" runat="server">Quên mật khẩu?</asp:HyperLink>
                         </td>
                     </tr>
+                    <tr>
+                        <td align="center" colspan="2">
+                            Chưa có tài khoản? Click
+                            <asp:HyperLink ID="LinkSignup" runat="server" NavigateUrl="~/signup.aspx" 
+                                ForeColor="Blue">ĐĂNG KÍ</asp:HyperLink>
+                        </td>
+                    </tr>
                     </table>
                     <br class="clear">
 			    </div>
                 </asp:View>
 
-                <asp:View ID="View2" runat="server">
-                    <div class="newsletter_title">Xin Chào <asp:Label ID="lblInfoName" runat="server" Text="Label"></asp:Label> </div>
-                    <div class="n_container">
-		                <br class="clear">
-                        <table align="center">
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                        </table>
-                        <br class="clear">
-			        </div>
-                </asp:View>
-                
                 </asp:MultiView>
                 
 		    <%--<form method="post" id="form">

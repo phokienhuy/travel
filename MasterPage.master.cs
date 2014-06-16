@@ -26,8 +26,13 @@ public partial class MasterPage : User_MasterPage
     }
     private void SetUserView()
     {
+        Account user = db.Accounts.Single(n => n.UserName == Session["User"].ToString());
         MultiView1.ActiveViewIndex = 1;
-        lblInfoName.Text = Session["User"].ToString();
+        lblInfoUN.Text = Session["User"].ToString();
+        lblInfoName.Text = user.Name.ToString();
+        lblInfoEmail.Text = user.Email.ToString();
+        lblInfoPhone.Text = user.Phone.ToString();
+        lblInfoAdd.Text = user.Address.ToString();
     }
 
     protected void BtnLogin_Click(object sender, EventArgs e)
@@ -38,17 +43,20 @@ public partial class MasterPage : User_MasterPage
 
         if (user == null || txtPW == null || txtUN == null)
         {
-            if (user == null)
-            {
-                LbMessages.Visible = true;
-                LbMessages.Text = "tài khoản không tồn tại";
-            }
-            else
-                if (txtUN == null || txtPW == null)
+            if (txtUN == null || txtPW == null)
                 {
                     LbMessages.Visible = true;
                     LbMessages.Text = "Tên đăng nhập hoặc mật khẩu không được trống";
                 }
+            else
+            if (user == null)
+            {
+                LbMessages.Visible = true;
+                LbMessages.Text = "tài khoản không tồn tại";
+                
+                txtUN.Focus();
+            }
+                
         }
         else
             try
@@ -85,5 +93,10 @@ public partial class MasterPage : User_MasterPage
                 LbMessages.Text = ex.Message;
 
             }
+    }
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        Session.Remove("User");
+        Response.Redirect("main.aspx");
     }
 }

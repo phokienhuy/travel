@@ -33,6 +33,7 @@ public partial class CheckUserName : User
         check = user.getuser(UserName);
         return check;
     }
+
     public bool getEmail(string mail)
     {
         string email = mail;
@@ -52,5 +53,10 @@ public partial class CheckUserName : User
         CheckUserName user = new CheckUserName();
         check = user.getEmail(Email);
         return check;
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        bool res = CheckUN(TextBox1.Text.ToString());
+        Label1.Text = res.ToString();
     }
 }

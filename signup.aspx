@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="signup.aspx.cs" Inherits="signup" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<script language="javascript" src="resource/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script language="javascript" type="text/javascript">
     var $j = jQuery.noConflict();
     function checkUN(src, args) {
@@ -62,7 +63,7 @@
         <h3>ĐĂNG KÍ TÀI KHOẢN</h3>
     </div>
 <div class="boxes">
-<table align="center" width="1500" >
+<table id="tablesignup" runat="server" align="center" width="1500" >
    
         <tr>
             <td width="200"></td>
@@ -80,7 +81,7 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="txtUN" ErrorMessage="Không được để trống" 
                     ForeColor="Red" Font-Bold="True" Font-Size="Small" Display="Dynamic"></asp:RequiredFieldValidator>
-                <asp:CustomValidator ID="CustomValidator3" runat="server" 
+                <asp:CustomValidator ID="CustomValidator1" runat="server" 
                     Font-Bold="True" 
                     Font-Size="Small" ForeColor="Red"
                     ErrorMessage="Tài khoản tồn tại" ClientValidationFunction="checkUN" 
@@ -126,13 +127,12 @@
                     Font-Size="Small" ForeColor="Red" 
                     ValidationExpression="^.+@[^\.].*\.[a-z]{2,}$" Display="Dynamic"></asp:RegularExpressionValidator>
                 
-                <asp:CustomValidator ID="CustomValidator1" runat="server" 
+                <asp:CustomValidator ID="CustomValidator2" runat="server" 
                     ControlToValidate="txtEmail" ErrorMessage="Email tồn tại" 
                     Font-Bold="True" 
                     Font-Size="Small" ForeColor="Red"
                     ClientValidationFunction="checkEmail" Display="Dynamic" 
                     ValidateEmptyText="True"></asp:CustomValidator>
-                
                 <span id="checkReturnEmail"></span>
                 
                   
