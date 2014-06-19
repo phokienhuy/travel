@@ -9,7 +9,7 @@
         
         
          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		 <link rel="icon" href="resource/images/favicon.ico">
+		 <link rel="icon" href="resource/images/favicon.ico" />
 		 <link rel="shortcut icon" href="resource/images/favicon.ico" />
 		 <link rel="stylesheet" href="resource/css/style.css">
 		 <link rel="stylesheet" href="resource/css/slider.css">
@@ -93,28 +93,9 @@
         </header>
 
     <div class="main">
-	    <div class="container_12">
-		    <div class="grid_12">
-	     <div class="slider-relative">
-			    <div class="slider-block">
-				    <div class="slider">
-					    <a href="#" class="prev"></a><a href="#" class="next"></a>
-					    <ul class="items">
-						    <li><img src="resource/images/slide.jpg" alt="">
-								    <div class="banner">
-									    <div>CÓ RẤT NHIỀU NƠI</div><br>
-									    <span> bạn chưa khám phá</span>
-								    </div>
-						    </li>
-						    <li><img src="resource/images/slide1.jpg" alt=""></li>
-						    <li><img src="resource/images/slide2.jpg" alt=""></li>
-						    <li><img src="resource/images/slide3.jpg" alt=""></li>
-					    </ul>
-				    </div>
-			    </div>
-		    </div>
-	    </div></div>
-	
+	    
+        <asp:ContentPlaceHolder ID="Slider" runat="server">
+        </asp:ContentPlaceHolder>
     <!--=======content================================-->
 
     <div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - August 05, 2013!</div>
@@ -252,7 +233,35 @@
                     <br class="clear">
 			    </div>
                 </asp:View>
-
+                <asp:View ID="View2" runat="server">
+                    <div class="newsletter_title">Xin Chào <asp:Label ID="lblInfoUN" runat="server" Text=""></asp:Label> </div>
+                    <div class="n_container">
+		            <br class="clear">
+                    <table align="center">
+                        <tr>
+                            <td>Tên: </td>
+                            <td><asp:Label ID="lblInfoName" runat="server" Text=""></asp:Label></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Email: </td>
+                            <td><asp:Label ID="lblInfoEmail" runat="server" Text=""></asp:Label></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại: </td>
+                            <td><asp:Label ID="lblInfoPhone" runat="server" Text=""></asp:Label></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Địa chỉ: </td>
+                            <td><asp:Label ID="lblInfoAdd" runat="server" Text=""></asp:Label></td>
+                            
+                        </tr>
+                    </table>
+                    <br class="clear">
+			    </div>
+                </asp:View>
                 </asp:MultiView>
                 
 		    <%--<form method="post" id="form">

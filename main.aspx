@@ -6,7 +6,7 @@
                     <nav	class="" >
 						        <ul class="sf-menu">
 									        <li class="current"><a href="index.html">Trang Chủ</a></li>
-									         <li><a href="place.html">Địa Điểm</a></li>
+									         <li><a href="places.aspx">Địa Điểm</a></li>
 									         <li class="with_ul"><a href="index-2.html">Nhà Hàng</a>
 										         <ul>
 												        <li><a href="#">Agency</a></li>
@@ -20,6 +20,30 @@
 						        </ul>
 				    </nav>
 </asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Slider" runat="server">
+
+<div class="container_12">
+		    <div class="grid_12">
+	     <div class="slider-relative">
+			    <div class="slider-block">
+				    <div class="slider">
+					    <a href="#" class="prev"></a><a href="#" class="next"></a>
+					    <ul class="items">
+						    <li><img src="resource/images/slide.jpg" alt="">
+								    <div class="banner">
+									    <div>CÓ RẤT NHIỀU NƠI</div><br>
+									    <span> bạn chưa khám phá</span>
+								    </div>
+						    </li>
+						    <li><img src="resource/images/slide1.jpg" alt=""></li>
+						    <li><img src="resource/images/slide2.jpg" alt=""></li>
+						    <li><img src="resource/images/slide3.jpg" alt=""></li>
+					    </ul>
+				    </div>
+			    </div>
+		    </div>
+	    </div></div>
+        </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" Runat="Server">
     <div class="grid_12">
 <h3>Điểm Đến Nổi Bật</h3>

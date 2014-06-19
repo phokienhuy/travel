@@ -75,7 +75,8 @@ public partial class MasterPage : User_MasterPage
                         {
                             
                             Session["User"] = user.UserName;
-                            Response.Redirect("~/main.aspx");
+                            Response.Redirect(Page.Request.RawUrl, false);
+                            
                         }
                         
                     }
