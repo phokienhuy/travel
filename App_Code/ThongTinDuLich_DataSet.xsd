@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ThongTinDuLich_DataSet" targetNamespace="http://tempuri.org/ThongTinDuLich_DataSet.xsd" xmlns:mstns="http://tempuri.org/ThongTinDuLich_DataSet.xsd" xmlns="http://tempuri.org/ThongTinDuLich_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="TravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TravelConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.TravelConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ThongTinDuLich_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ThongTinDuLich_DataSet" msprop:Generator_UserDSName="ThongTinDuLich_DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ThongTinDuLich" msprop:Generator_TableClassName="ThongTinDuLichDataTable" msprop:Generator_TableVarName="tableThongTinDuLich" msprop:Generator_TablePropName="ThongTinDuLich" msprop:Generator_RowDeletingName="ThongTinDuLichRowDeleting" msprop:Generator_RowChangingName="ThongTinDuLichRowChanging" msprop:Generator_RowEvHandlerName="ThongTinDuLichRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinDuLichRowDeleted" msprop:Generator_UserTableName="ThongTinDuLich" msprop:Generator_RowChangedName="ThongTinDuLichRowChanged" msprop:Generator_RowEvArgName="ThongTinDuLichRowChangeEvent" msprop:Generator_RowClassName="ThongTinDuLichRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Travel_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTravel_ID" msprop:Generator_ColumnPropNameInRow="Travel_ID" msprop:Generator_ColumnPropNameInTable="Travel_IDColumn" msprop:Generator_UserColumnName="Travel_ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortDescription" msprop:Generator_ColumnVarNameInTable="columnShortDescription" msprop:Generator_ColumnPropNameInRow="ShortDescription" msprop:Generator_ColumnPropNameInTable="ShortDescriptionColumn" msprop:Generator_UserColumnName="ShortDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" minOccurs="0" />
+              <xs:element name="InsertDay" msprop:Generator_ColumnVarNameInTable="columnInsertDay" msprop:Generator_ColumnPropNameInRow="InsertDay" msprop:Generator_ColumnPropNameInTable="InsertDayColumn" msprop:Generator_UserColumnName="InsertDay" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InsertMonth" msprop:Generator_ColumnVarNameInTable="columnInsertMonth" msprop:Generator_ColumnPropNameInRow="InsertMonth" msprop:Generator_ColumnPropNameInTable="InsertMonthColumn" msprop:Generator_UserColumnName="InsertMonth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommentNum" msprop:Generator_ColumnVarNameInTable="columnCommentNum" msprop:Generator_ColumnPropNameInRow="CommentNum" msprop:Generator_ColumnPropNameInTable="CommentNumColumn" msprop:Generator_UserColumnName="CommentNum" type="xs:int" minOccurs="0" />
+              <xs:element name="CoverPic" msprop:Generator_ColumnVarNameInTable="columnCoverPic" msprop:Generator_ColumnPropNameInRow="CoverPic" msprop:Generator_ColumnPropNameInTable="CoverPicColumn" msprop:Generator_UserColumnName="CoverPic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic1" msprop:Generator_ColumnVarNameInTable="columnPic1" msprop:Generator_ColumnPropNameInRow="Pic1" msprop:Generator_ColumnPropNameInTable="Pic1Column" msprop:Generator_UserColumnName="Pic1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic2" msprop:Generator_ColumnVarNameInTable="columnPic2" msprop:Generator_ColumnPropNameInRow="Pic2" msprop:Generator_ColumnPropNameInTable="Pic2Column" msprop:Generator_UserColumnName="Pic2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic3" msprop:Generator_ColumnVarNameInTable="columnPic3" msprop:Generator_ColumnPropNameInRow="Pic3" msprop:Generator_ColumnPropNameInTable="Pic3Column" msprop:Generator_UserColumnName="Pic3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic4" msprop:Generator_ColumnVarNameInTable="columnPic4" msprop:Generator_ColumnPropNameInRow="Pic4" msprop:Generator_ColumnPropNameInTable="Pic4Column" msprop:Generator_UserColumnName="Pic4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic5" msprop:Generator_ColumnVarNameInTable="columnPic5" msprop:Generator_ColumnPropNameInRow="Pic5" msprop:Generator_ColumnPropNameInTable="Pic5Column" msprop:Generator_UserColumnName="Pic5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic6" msprop:Generator_ColumnVarNameInTable="columnPic6" msprop:Generator_ColumnPropNameInRow="Pic6" msprop:Generator_ColumnPropNameInTable="Pic6Column" msprop:Generator_UserColumnName="Pic6" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LikeNum" msprop:Generator_ColumnVarNameInTable="columnLikeNum" msprop:Generator_ColumnPropNameInRow="LikeNum" msprop:Generator_ColumnPropNameInTable="LikeNumColumn" msprop:Generator_UserColumnName="LikeNum" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Travel_Like" msprop:Generator_TableClassName="Travel_LikeDataTable" msprop:Generator_TableVarName="tableTravel_Like" msprop:Generator_TablePropName="Travel_Like" msprop:Generator_RowDeletingName="Travel_LikeRowDeleting" msprop:Generator_RowChangingName="Travel_LikeRowChanging" msprop:Generator_RowEvHandlerName="Travel_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Travel_LikeRowDeleted" msprop:Generator_UserTableName="Travel_Like" msprop:Generator_RowChangedName="Travel_LikeRowChanged" msprop:Generator_RowEvArgName="Travel_LikeRowChangeEvent" msprop:Generator_RowClassName="Travel_LikeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Travel_ID" msprop:Generator_ColumnVarNameInTable="columnTravel_ID" msprop:Generator_ColumnPropNameInRow="Travel_ID" msprop:Generator_ColumnPropNameInTable="Travel_IDColumn" msprop:Generator_UserColumnName="Travel_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Travel_Comment_Rating" msprop:Generator_TableClassName="Travel_Comment_RatingDataTable" msprop:Generator_TableVarName="tableTravel_Comment_Rating" msprop:Generator_TablePropName="Travel_Comment_Rating" msprop:Generator_RowDeletingName="Travel_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Travel_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Travel_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Travel_Comment_RatingRowDeleted" msprop:Generator_UserTableName="Travel_Comment_Rating" msprop:Generator_RowChangedName="Travel_Comment_RatingRowChanged" msprop:Generator_RowEvArgName="Travel_Comment_RatingRowChangeEvent" msprop:Generator_RowClassName="Travel_Comment_RatingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Travel_ID" msprop:Generator_ColumnVarNameInTable="columnTravel_ID" msprop:Generator_ColumnPropNameInRow="Travel_ID" msprop:Generator_ColumnPropNameInTable="Travel_IDColumn" msprop:Generator_UserColumnName="Travel_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ThongTinDuLich" />
+      <xs:field xpath="mstns:Travel_ID" />
+    </xs:unique>
+    <xs:unique name="Travel_Like_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Travel_Like" />
+      <xs:field xpath="mstns:Like_ID" />
+    </xs:unique>
+    <xs:unique name="Travel_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Travel_Comment_Rating" />
+      <xs:field xpath="mstns:Comment_ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__Travel_Li__Trave__35BCFE0A" msdata:parent="ThongTinDuLich" msdata:child="Travel_Like" msdata:parentkey="Travel_ID" msdata:childkey="Travel_ID" msprop:Generator_UserChildTable="Travel_Like" msprop:Generator_ChildPropName="GetTravel_LikeRows" msprop:Generator_UserRelationName="FK__Travel_Li__Trave__35BCFE0A" msprop:Generator_ParentPropName="ThongTinDuLichRow" msprop:Generator_RelationVarName="relationFK__Travel_Li__Trave__35BCFE0A" msprop:Generator_UserParentTable="ThongTinDuLich" />
+      <msdata:Relationship name="FK__Travel_Co__Trave__1920BF5C" msdata:parent="ThongTinDuLich" msdata:child="Travel_Comment_Rating" msdata:parentkey="Travel_ID" msdata:childkey="Travel_ID" msprop:Generator_UserChildTable="Travel_Comment_Rating" msprop:Generator_ChildPropName="GetTravel_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Travel_Co__Trave__1920BF5C" msprop:Generator_ParentPropName="ThongTinDuLichRow" msprop:Generator_RelationVarName="relationFK__Travel_Co__Trave__1920BF5C" msprop:Generator_UserParentTable="ThongTinDuLich" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

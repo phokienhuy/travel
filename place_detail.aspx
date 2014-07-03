@@ -92,11 +92,33 @@
             </asp:DataList>          
             <asp:SqlDataSource ID="SQLPlaceDetail" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" 
-                SelectCommand="SELECT * FROM [ThongTinDuLich] WHERE ([Travel_ID] = @Travel_ID)">
+                
+        SelectCommand="SELECT * FROM [ThongTinDuLich] WHERE ([Travel_ID] = @Travel_ID)">
                 <SelectParameters>
                     <asp:QueryStringParameter DefaultValue="0" Name="Travel_ID" 
                         QueryStringField="tid" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
+   <br />
+    <asp:Label ID="lbl_cmt" runat="server" Text="Bình luận"></asp:Label><br />
+    <asp:TextBox ID="tbx_cmt" TextMode="MultiLine" runat="server" Height="88px" Width="372px"></asp:TextBox><br />
+    <asp:Button ID="btn_cmt" runat="server" Text="Gửi" onclick="btn_cmt_Click" /><br /><br />
+    <asp:DataList ID="lst_cmt" RepeatColumns="3" runat="server" BorderColor="Black" CellSpacing="10">
+        <ItemTemplate>
+            <table width="280px">
+                <tr>
+                    <td>
+                        <%#DataBinder.Eval(Container.DataItem,"UserName") %><asp:Label ID="lbl_cm" runat="server"
+                            Text=" bình luận:" ForeColor="#CC99FF"></asp:Label> 
+                    </td><br />
+                </tr>
+                <tr>
+                    <td>
+                        <%#DataBinder.Eval(Container.DataItem,"Content") %>
+                    </td>
+                </tr>
+            </table>
+        </ItemTemplate>
+    </asp:DataList>
 </asp:Content>
 
