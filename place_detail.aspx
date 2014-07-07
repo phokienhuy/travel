@@ -99,11 +99,23 @@
                         QueryStringField="tid" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
+    <br />
+    
    <br />
-    <asp:Label ID="lbl_cmt" runat="server" Text="Bình luận"></asp:Label><br />
-    <asp:TextBox ID="tbx_cmt" TextMode="MultiLine" runat="server" Height="88px" Width="372px"></asp:TextBox><br />
-    <asp:Button ID="btn_cmt" runat="server" Text="Gửi" onclick="btn_cmt_Click" /><br /><br />
-    <asp:DataList ID="lst_cmt" RepeatColumns="3" runat="server" BorderColor="Black" CellSpacing="10">
+   <table id="" >
+    <tr>
+        <td><asp:Label ID="lbl_cmt" runat="server" Text="Bình luận"></asp:Label><br /></td>
+    </tr>
+    <tr>
+        <td><asp:TextBox ID="tbx_cmt" TextMode="MultiLine" Height="88px" Width="372px" runat="server"></asp:TextBox></td>
+    </tr>
+    <tr>
+        <br />
+        <td align=right><asp:Button ID="btn_cmt" runat="server" Text="Gửi" onclick="btn_cmt_Click" /><br /></td>
+    </tr>
+    
+    </table>
+    <asp:DataList ID="lst_cmt" RepeatColumns="4" runat="server" BorderColor="Black" CellSpacing="10">
         <ItemTemplate>
             <table width="280px">
                 <tr>
@@ -120,5 +132,6 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
+
 </asp:Content>
 

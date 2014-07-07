@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Runtime.Remoting;
+
 
 public partial class place_detail : System.Web.UI.Page
 {
@@ -18,13 +20,14 @@ public partial class place_detail : System.Web.UI.Page
     SqlCommand cmd_c = new SqlCommand();
     SqlDataAdapter adapter_c = new SqlDataAdapter();
     ThongTinDuLich_DataSet DuLichDS_c = new ThongTinDuLich_DataSet();
-
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         string tID = Request.QueryString["tid"];
         conn.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
         conn.Open();
-
+       
+        
         cmd.Connection = conn;
         cmd.CommandText = "select top 50 * from Travel_Comment_Rating where Travel_ID='" + tID + "'";
         cmd.CommandType = System.Data.CommandType.Text;
@@ -34,6 +37,7 @@ public partial class place_detail : System.Web.UI.Page
         adapter.Fill(DuLichDS.Travel_Comment_Rating);
         lst_cmt.DataSource = DuLichDS.Travel_Comment_Rating;
         lst_cmt.DataBind();
+
     }
 
     protected void btn_cmt_Click(object sender, EventArgs e)
@@ -42,6 +46,7 @@ public partial class place_detail : System.Web.UI.Page
         string uid = Convert.ToString(Session["User"]);
         if (uid.Length == 0)
         {
+
             Response.Redirect("main.aspx");
         }
         else
@@ -54,8 +59,8 @@ public partial class place_detail : System.Web.UI.Page
             {
 
 
-            conn_c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
-            conn_c.Open();
+                conn_c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
+                conn_c.Open();
 
                 cmd_c.Connection = conn_c;
                 cmd_c.CommandText = "select * from Travel_Comment_Rating where Travel_ID='" + tID + "' and UserName='" + uid + "'";
@@ -73,6 +78,7 @@ public partial class place_detail : System.Web.UI.Page
                     add_comment.Content = tbx_cmt.Text;
                     DuLichDS_c.Travel_Comment_Rating.AddTravel_Comment_RatingRow(add_comment);
                     adapter_c.Update(DuLichDS_c.Travel_Comment_Rating);
+                    Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
                 else
                 {
