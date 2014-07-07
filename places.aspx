@@ -57,7 +57,7 @@ height:18px;
                 
                 <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>--%>
-                        <ajaxtoolkit:Rating ID="RatingControl" ReadOnly="true" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
+                        <ajaxtoolkit:Rating ID="RatingControl" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
                         </ajaxtoolkit:Rating>
                     <%--</ContentTemplate>
                 </asp:UpdatePanel>--%>
