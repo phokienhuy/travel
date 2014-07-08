@@ -100,9 +100,21 @@
                 </SelectParameters>
             </asp:SqlDataSource>
     <br />
-    
-   <br />
    <table id="" >
+    <tr>
+        <td align="right">
+            <asp:MultiView ID="MultiView_Like" runat="server">
+                <asp:View ID="View_Like" runat="server">
+                    <asp:Button ID="btn_like" runat="server" Text="Like" onclick="btn_like_Click" BorderColor="#9966FF" BorderStyle="Solid" ForeColor="White" BackColor="#3366FF" />
+                </asp:View>
+                <asp:View ID="View_Unlike" runat="server">
+                    <asp:Button ID="btn_unlike" runat="server" Text="Unlike" 
+                        onclick="btn_unlike_Click" BorderColor="#9966FF" BorderStyle="Solid" ForeColor="White" BackColor="#3366FF" />
+                </asp:View>
+            </asp:MultiView>
+            <asp:Label ID="lblShare" runat="server" Text="" ></asp:Label><br /><br />
+        </td>
+    </tr>
     <tr>
         <td><asp:Label ID="lbl_cmt" runat="server" Text="Bình luận"></asp:Label><br /></td>
     </tr>
@@ -111,7 +123,7 @@
     </tr>
     <tr>
         <br />
-        <td align=right><asp:Button ID="btn_cmt" runat="server" Text="Gửi" onclick="btn_cmt_Click" /><br /></td>
+        <td align="right"><asp:Button ID="btn_cmt" runat="server" Text="Gửi" onclick="btn_cmt_Click" /><br /></td>
     </tr>
     
     </table>

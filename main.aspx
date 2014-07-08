@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" Runat="Server">
                     <nav	class="" >
 						        <ul class="sf-menu">
-									        <li class="current"><a href="index.html">Trang Chủ</a></li>
+									        <li class="current"><a href="main.aspx">Trang Chủ</a></li>
 									         <li><a href="places.aspx">Địa Điểm</a></li>
 									         <li class="with_ul"><a href="index-2.html">Nhà Hàng</a>
 										         <ul>
