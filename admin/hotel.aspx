@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="place.aspx.cs" Inherits="admin_place" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="hotel.aspx.cs" Inherits="admin_hotel" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,9 +25,9 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                    <li><a href="place.aspx" class="active"><span>Thông Tin Du Lịch</span></a></li>
-                    <li><a href="hotel.aspx"><span>Khách Sạn</span></a></li>
-                    <li><a href="#"><span>Nhà Hàng</span></a></li>
+                    <li><a href="place.aspx"><span>Thông Tin Du Lịch</span></a></li>
+                    <li><a href="hotel.aspx" class="active"><span>Khách Sạn</span></a></li>
+                    <li><a href="restaurant.aspx"><span>Nhà Hàng</span></a></li>
                     <li><a href="#"><span>Ẩm Thực</span></a></li>
                     <li><a href="#"><span>Sự Kiện</span></a></li>
                     <li><a href="#"><span>Tài Khoản</span></a></li>
@@ -72,24 +72,24 @@
                         <!-- Table -->
                         <div class="table">
                             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False"
-                                DataKeyNames="Travel_ID" DataSourceID="SqlDataSource1" BorderWidth="0px" CellPadding="0"
+                                DataKeyNames="Hotel_ID" DataSourceID="SqlDataSource1" BorderWidth="0px" CellPadding="0"
                                 GridLines="Horizontal" Width="100%">
                                 <Columns>
-                                    <asp:BoundField DataField="Travel_ID" HeaderText="ID" InsertVisible="False" ReadOnly="True"
-                                        SortExpression="Travel_ID" />
-                                    <asp:BoundField DataField="Name" HeaderText="Tên Địa Điểm" SortExpression="Name" />
-                                    <asp:BoundField DataField="Address" HeaderText="Địa chỉ" SortExpression="Address" />
+                                    <asp:BoundField DataField="Hotel_ID" HeaderText="ID" InsertVisible="False" ReadOnly="True"
+                                        SortExpression="Hotel_ID" />
+                                    <asp:BoundField DataField="Name" HeaderText="Tên Khách Sạn" SortExpression="Name" />
+                                    <asp:BoundField DataField="Address" HeaderText="Địa Chỉ" SortExpression="Address" />
                                     <asp:BoundField DataField="Phone" HeaderText="Số điện thoại" SortExpression="Phone" />
-                                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Thao tác" />
+                                    <asp:CommandField HeaderText="Thao tác" ShowDeleteButton="True" ShowEditButton="True" />
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>"
-                                SelectCommand="SELECT [Travel_ID], [Name], [Address], [Phone] FROM [ThongTinDuLich]"
-                                ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [ThongTinDuLich] WHERE [Travel_ID] = @original_Travel_ID AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Address] = @original_Address) OR ([Address] IS NULL AND @original_Address IS NULL)) AND (([Phone] = @original_Phone) OR ([Phone] IS NULL AND @original_Phone IS NULL))"
-                                InsertCommand="INSERT INTO [ThongTinDuLich] ([Name], [Address], [Phone]) VALUES (@Name, @Address, @Phone)"
-                                OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [ThongTinDuLich] SET [Name] = @Name, [Address] = @Address, [Phone] = @Phone WHERE [Travel_ID] = @original_Travel_ID AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Address] = @original_Address) OR ([Address] IS NULL AND @original_Address IS NULL)) AND (([Phone] = @original_Phone) OR ([Phone] IS NULL AND @original_Phone IS NULL))">
+                                SelectCommand="SELECT [Hotel_ID], [Name], [Address], [Phone] FROM [ThongTinKhachSan]"
+                                ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [ThongTinKhachSan] WHERE [Hotel_ID] = @original_Hotel_ID AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Address] = @original_Address) OR ([Address] IS NULL AND @original_Address IS NULL)) AND (([Phone] = @original_Phone) OR ([Phone] IS NULL AND @original_Phone IS NULL))"
+                                InsertCommand="INSERT INTO [ThongTinKhachSan] ([Name], [Address], [Phone]) VALUES (@Name, @Address, @Phone)"
+                                OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [ThongTinKhachSan] SET [Name] = @Name, [Address] = @Address, [Phone] = @Phone WHERE [Hotel_ID] = @original_Hotel_ID AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Address] = @original_Address) OR ([Address] IS NULL AND @original_Address IS NULL)) AND (([Phone] = @original_Phone) OR ([Phone] IS NULL AND @original_Phone IS NULL))">
                                 <DeleteParameters>
-                                    <asp:Parameter Name="original_Travel_ID" Type="Int32" />
+                                    <asp:Parameter Name="original_Hotel_ID" Type="Int32" />
                                     <asp:Parameter Name="original_Name" Type="String" />
                                     <asp:Parameter Name="original_Address" Type="String" />
                                     <asp:Parameter Name="original_Phone" Type="String" />
@@ -103,7 +103,7 @@
                                     <asp:Parameter Name="Name" Type="String" />
                                     <asp:Parameter Name="Address" Type="String" />
                                     <asp:Parameter Name="Phone" Type="String" />
-                                    <asp:Parameter Name="original_Travel_ID" Type="Int32" />
+                                    <asp:Parameter Name="original_Hotel_ID" Type="Int32" />
                                     <asp:Parameter Name="original_Name" Type="String" />
                                     <asp:Parameter Name="original_Address" Type="String" />
                                     <asp:Parameter Name="original_Phone" Type="String" />
@@ -124,7 +124,7 @@
                         <div class="box-content">
                             <div class="buttons">
                                 <asp:LinkButton ID="addButton" runat="server" Font-Underline="false" CssClass="button"
-                                    OnClick="addButton_Click">Thêm Địa Điểm</asp:LinkButton>
+                                    OnClick="addButton_Click">Thêm Khách Sạn</asp:LinkButton>
                             </div>
                         </div>
                     </div>
