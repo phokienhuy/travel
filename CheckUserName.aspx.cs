@@ -11,7 +11,7 @@ public partial class CheckUserName : User
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Response.Redirect("main.aspx");
     }
     public bool getuser(string un)
     {
@@ -54,9 +54,5 @@ public partial class CheckUserName : User
         check = user.getEmail(Email);
         return check;
     }
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        bool res = CheckUN(TextBox1.Text.ToString());
-        Label1.Text = res.ToString();
-    }
+    
 }

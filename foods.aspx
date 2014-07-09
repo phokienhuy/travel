@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="places.aspx.cs" Inherits="places" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="foods.aspx.cs" Inherits="foods" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxtoolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -23,14 +24,14 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" Runat="Server">
-    <nav	class="" >
+    <nav class="" >
 						        <ul class="sf-menu">
 									         <li><a href="main.aspx">Trang Chủ</a></li>
-									         <li class="current"><a href="places.aspx" >Địa Điểm</a></li>
+									         <li ><a href="places.aspx" >Địa Điểm</a></li>
 									         <li><a href="restaurant.aspx">Nhà Hàng</a></li>
-									         <li><a href="index-3.html">Khách sạn</a></li>
+									         <li ><a href="hotels.aspx">Khách sạn</a></li>
 									         <li><a href="events.aspx">Sự kiện</a></li>
-									         <li><a href="foods.aspx">Ẩm thực</a></li>
+									         <li class="current"><a href="foods.aspx">Ẩm thực</a></li>
 						        </ul>
 				    </nav>
                     
@@ -38,14 +39,15 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" Runat="Server">
     <div class="grid_12">
     <ajaxtoolkit:ToolkitScriptManager ID="ScripManager1" runat="server" />
-<h3>Các địa điểm mới</h3>
+<h3>Các khách sạn mới</h3>
 		    </div>
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="Travel_ID" DataSourceID="PlaceList">
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="Event_ID" 
+        DataSourceID="EventList">
         <ItemTemplate>
             <div class="blog">
                 <time datetime="2013-01-01"><%# Eval("InsertDay") %><br><%# Eval("InsertMonth") %></time>
                 <div class="extra_wrapper">
-                <div class="text1 upp"><asp:Label ID="lblTravelName" runat="server" Text='<%# Eval("Name") %>' /> </div>
+                <div class="text1 upp"><asp:Label ID="lblFoodlName" runat="server" Text='<%# Eval("Name") %>' /> </div>
                 <div class="links">
                 
                 
@@ -65,7 +67,7 @@
                     <p class="text1"></p>
                     <p><asp:Label ID="lblShortDes" runat="server" Text='<%# Eval("ShortDescription") %>' /></p>
                     <br>
-                    <a href="place_detail.aspx?tid=<%# Eval("Travel_ID") %>" class="btn">Xem</a>
+                    <a href="food_detail.aspx?fid=<%# Eval("AmThuc_ID") %>" class="btn">Xem</a>
                 </div>
             </div>
             <br>
@@ -73,9 +75,9 @@
         </ItemTemplate>
     </asp:DataList>
             
-            <asp:SqlDataSource ID="PlaceList" runat="server" 
+            <asp:SqlDataSource ID="EventList" runat="server" 
         ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" 
-        SelectCommand="SELECT TOP 10 * FROM [ThongTinDuLich]"></asp:SqlDataSource>
+        SelectCommand="SELECT TOP 10 * FROM [Event]"></asp:SqlDataSource>
             
             
 

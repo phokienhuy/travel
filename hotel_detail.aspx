@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DetailMasterpage.master" AutoEventWireup="true" CodeFile="place_detail.aspx.cs" Inherits="place_detail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DetailMasterpage.master" AutoEventWireup="true" CodeFile="hotel_detail.aspx.cs" Inherits="hotel_detail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
+<style type="text/css">
     .ratingEmpty
     {
         background-image: url(resource/images/ratingStarEmpty.png);
@@ -23,12 +23,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" Runat="Server">
-    <nav	class="" >
+                <nav class="" >
 						        <ul class="sf-menu">
 									         <li><a href="main.aspx">Trang Chủ</a></li>
-									         <li class="current"><a href="places.aspx" >Địa Điểm</a></li>
+									         <li ><a href="places.aspx" >Địa Điểm</a></li>
 									         <li><a href="restaurant.aspx">Nhà Hàng</a></li>
-									         <li><a href="hotels.aspx">Khách sạn</a></li>
+									         <li class="current"><a href="hotels.aspx">Khách sạn</a></li>
 									         <li><a href="events.aspx">Sự kiện</a></li>
 									         <li><a href="foods.aspx">Ẩm thực</a></li>
 						        </ul>
@@ -36,8 +36,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
     <ajaxtoolkit:ToolkitScriptManager ID="ScripManager1" runat="server" />
-<asp:DataList ID="PlaceDetail" runat="server" DataKeyField="Travel_ID" 
-                DataSourceID="SQLPlaceDetail">
+    <asp:DataList ID="HotelDetail" runat="server" DataKeyField="Hotel_ID" 
+                DataSourceID="SQLHotelDetail">
                 <ItemTemplate>
                     <div class="grid_9">
                         <div class="">
@@ -107,13 +107,13 @@
       <div class="clear"></div>
                 </ItemTemplate>
             </asp:DataList>          
-            <asp:SqlDataSource ID="SQLPlaceDetail" runat="server" 
+            <asp:SqlDataSource ID="SQLHotelDetail" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" 
                 
-        SelectCommand="SELECT * FROM [ThongTinDuLich] WHERE ([Travel_ID] = @Travel_ID)">
+        SelectCommand="SELECT * FROM [ThongTinKhachSan] WHERE ([Hotel_ID] = @Hotel_ID)">
                 <SelectParameters>
-                    <asp:QueryStringParameter DefaultValue="0" Name="Travel_ID" 
-                        QueryStringField="tid" Type="Int32" />
+                    <asp:QueryStringParameter DefaultValue="0" Name="Hotel_ID" 
+                        QueryStringField="hid" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
     <br />
@@ -174,6 +174,5 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
-
 </asp:Content>
 
