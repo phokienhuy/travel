@@ -33,6 +33,7 @@ public partial class MasterPage : User_MasterPage
         lblInfoEmail.Text = user.Email.ToString();
         lblInfoPhone.Text = user.Phone.ToString();
         lblInfoAdd.Text = user.Address.ToString();
+        hplChangePW.NavigateUrl = "forgetpass.aspx?ID=" + user.User_ID.ToString();
     }
 
     protected void BtnLogin_Click(object sender, EventArgs e)

@@ -1,9 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DetailMasterpage.master" AutoEventWireup="true" CodeFile="place_detail.aspx.cs" Inherits="place_detail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+    .ratingEmpty
+    {
+        background-image: url(resource/images/ratingStarEmpty.png);
+        width:32px;
+        height:32px;
+    }
+    .ratingFilled
+    {
+        background-image: url(resource/images/ratingStarFilled.png);
+        width:32px;
+        height:32px;
+    }
+    .ratingSaved
+    {
+        background-image: url(resource/images/ratingStarSaved.png);
+        width:32px;
+        height:32px;
+    }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" Runat="Server">
-<nav	class="" >
+    <nav	class="" >
 						        <ul class="sf-menu">
 									         <li><a href="main.aspx">Trang Chủ</a></li>
 									         <li class="current"><a href="places.aspx" >Địa Điểm</a></li>
@@ -21,12 +41,15 @@
 				    </nav>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
+    <ajaxtoolkit:ToolkitScriptManager ID="ScripManager1" runat="server" />
 <asp:DataList ID="PlaceDetail" runat="server" DataKeyField="Travel_ID" 
                 DataSourceID="SQLPlaceDetail">
                 <ItemTemplate>
                     <div class="grid_9">
                         <div class="">
                           <h3><%# Eval("Name") %></h3>
+                          <ajaxtoolkit:Rating ID="CurrentRatingControl" ReadOnly="true" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
+                          </ajaxtoolkit:Rating><br /><br />
                           <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft">
                           <p class="text1"><a href="#"><%# Eval("ShortDescription") %></a></p>
                           <div class="clear"></div>
@@ -119,11 +142,24 @@
         <td><asp:Label ID="lbl_cmt" runat="server" Text="Bình luận"></asp:Label><br /></td>
     </tr>
     <tr>
-        <td><asp:TextBox ID="tbx_cmt" TextMode="MultiLine" Height="88px" Width="372px" runat="server"></asp:TextBox></td>
+        <td><asp:TextBox ID="tbx_cmt" MaxLength="256" TextMode="MultiLine" Height="88px" Width="372px" runat="server"></asp:TextBox></td>
     </tr>
     <tr>
         <br />
-        <td align="right"><asp:Button ID="btn_cmt" runat="server" Text="Gửi" onclick="btn_cmt_Click" /><br /></td>
+
+        <td align="right">
+            
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <ajaxtoolkit:Rating ID="RatingControl" AutoPostBack="true" Visible="true" OnChanged="RatingControlChanged" StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
+                        </ajaxtoolkit:Rating>
+                        <asp:Button ID="btn_cmt" Enabled="false" runat="server" Text="Gửi" Height="32px" onclick="btn_cmt_Click" /><br />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                
+                
+
+                </td>
     </tr>
     
     </table>

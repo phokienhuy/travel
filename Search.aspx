@@ -2,6 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" runat="server">
+<nav	class="" >
+						        <ul class="sf-menu">
+									        <li><a href="main.aspx">Trang Chủ</a></li>
+									         <li><a href="places.aspx">Địa Điểm</a></li>
+									         <li class="with_ul"><a href="index-2.html">Nhà Hàng</a>
+										         <ul>
+												        <li><a href="#">Agency</a></li>
+												        <li><a href="#">News</a></li>
+												        <li><a href="#">Team</a></li>
+
+										         </ul>
+									         </li>
+									         <li><a href="index-3.html">Khách sạn</a></li>
+									         <li><a href="#">Đặt Trước</a></li>
+									         <li><a href="index-5.html">Liên Hệ</a></li>
+						        </ul>
+				    </nav>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" runat="server">
     

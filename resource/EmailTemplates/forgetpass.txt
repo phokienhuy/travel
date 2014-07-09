@@ -1,0 +1,13 @@
+﻿Chào bạn <%UserName%>
+<br /><br />
+có một yêu cầu khởi tạo lại mật khẩu cho tài khoản của bạn tại The Travel bạn hãy [ <a href="<%VerificationUrl%>">CLICK VÀO ĐÂY</a>] để xác thực yêu cầu này.
+<br /><br />
+Sau khi hoàn thành quá trình xác nhận tài khoản, bạn có thể tạo lại mật khẩu mới.
+<br /><br />
+Nếu không yêu cầu Email này, vui lòng bỏ qua.
+<br /><br />
+Mọi câu hỏi liên quan đến The Travel, vui long liên hệ với quản trị viên thông qua Email: phokienhuy@gmail.com
+<br /><br />
+Chân thành cảm ơn.
+<br /><br />
+Web Service Team.

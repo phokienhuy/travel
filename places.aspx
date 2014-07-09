@@ -2,25 +2,25 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxtoolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-.ratingEmpty
-{
-background-image: url(ratingStarEmpty.gif);
-width:18px;
-height:18px;
-}
-.ratingFilled
-{
-background-image: url(ratingStarFilled.gif);
-width:18px;
-height:18px;
-}
-.ratingSaved
-{
- background-image: url(ratingStarSaved.gif);
-width:18px;
-height:18px;
-}
-</style>
+    .ratingEmpty
+    {
+        background-image: url(resource/images/ratingStarEmpty.gif);
+        width:18px;
+        height:18px;
+    }
+    .ratingFilled
+    {
+        background-image: url(resource/images/ratingStarFilled.gif);
+        width:18px;
+        height:18px;
+    }
+    .ratingSaved
+    {
+        background-image: url(resource/images/ratingStarSaved.gif);
+        width:18px;
+        height:18px;
+    }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="menu" Runat="Server">
     <nav	class="" >
@@ -57,12 +57,13 @@ height:18px;
                 
                 <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>--%>
-                        <ajaxtoolkit:Rating ID="RatingControl" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
+                        <ajaxtoolkit:Rating ID="RatingControl" ReadOnly="true" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
                         </ajaxtoolkit:Rating>
                     <%--</ContentTemplate>
                 </asp:UpdatePanel>--%>
                 
-                <a href="#" class="comment"><asp:Label ID="Label1" runat="server" Text='<%# Eval("CommentNum") %> '></asp:Label> Comment(s)</a></div>
+                <a href="#" class="comment"><asp:Label ID="Commentnum" runat="server" Text='<%# Eval("CommentNum") %> '></asp:Label> Comment(s) 
+                    <asp:Label ID="Likenum" runat="server" Text='<%# Eval("LikeNum") %> '></asp:Label> Like(s)</a></div>
                 </div>
                 <div class="clear"></div>
                 <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft">

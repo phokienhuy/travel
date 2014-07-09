@@ -219,7 +219,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" align="center">
-                            <asp:HyperLink ID="hlForgotPW" runat="server">Quên mật khẩu?</asp:HyperLink>
+                            <asp:HyperLink ID="hlForgotPW" runat="server" NavigateUrl="~/forgetpass.aspx">Quên mật khẩu?</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>
@@ -237,25 +237,30 @@
                     <div class="newsletter_title">Xin Chào <asp:Label ID="lblInfoUN" runat="server" Text=""></asp:Label> </div>
                     <div class="n_container">
 		            <br class="clear">
-                    <table align="center">
+                    <table align="center" width="100%">
                         <tr>
                             <td>Tên: </td>
-                            <td><asp:Label ID="lblInfoName" runat="server" Text=""></asp:Label></td>
+                            <td align="right"><asp:Label ID="lblInfoName" runat="server" Text=""></asp:Label></td>
                             
                         </tr>
                         <tr>
                             <td>Email: </td>
-                            <td><asp:Label ID="lblInfoEmail" runat="server" Text=""></asp:Label></td>
+                            <td align="right"><asp:Label ID="lblInfoEmail" runat="server" Text=""></asp:Label></td>
                             
                         </tr>
                         <tr>
                             <td>Số điện thoại: </td>
-                            <td><asp:Label ID="lblInfoPhone" runat="server" Text=""></asp:Label></td>
+                            <td align="right"><asp:Label ID="lblInfoPhone" runat="server" Text=""></asp:Label></td>
                             
                         </tr>
                         <tr>
                             <td>Địa chỉ: </td>
-                            <td><asp:Label ID="lblInfoAdd" runat="server" Text=""></asp:Label></td>
+                            <td align="right"><asp:Label ID="lblInfoAdd" runat="server" Text=""></asp:Label></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <asp:HyperLink ID="hplChangePW" runat="server" >Đổi mật khẩu</asp:HyperLink></td>
                             
                         </tr>
                     </table>

@@ -8,8 +8,9 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Runtime.Remoting;
 using System.Web.UI.HtmlControls;
+using System.Data.Linq;
 
-public partial class place_detail : System.Web.UI.Page
+public partial class place_detail : User
 {
     SqlConnection conn = new SqlConnection();
     SqlCommand cmd = new SqlCommand();
@@ -151,21 +152,38 @@ public partial class place_detail : System.Web.UI.Page
                     add_comment.UserName = uid;
                     add_comment.Travel_ID = Convert.ToInt32(tID);
                     add_comment.Content = tbx_cmt.Text;
+                    add_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
                     DuLichDS_c.Travel_Comment_Rating.AddTravel_Comment_RatingRow(add_comment);
                     adapter_c.Update(DuLichDS_c.Travel_Comment_Rating);
+
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
                 else
                 {
                     ThongTinDuLich_DataSet.Travel_Comment_RatingRow edit_comment = DuLichDS_c.Travel_Comment_Rating[0];
                     edit_comment.Content = tbx_cmt.Text;
+                    edit_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
                     adapter_c.Update(DuLichDS_c.Travel_Comment_Rating);
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
             }
         }
     }
+    protected void UpdateRating(int current)
+    {
+        ThongTinDuLich place = db.ThongTinDuLiches.Single(x => x.Travel_ID == Convert.ToInt32(Request.QueryString["tid"]));
 
+        place.Rating = (RatingControl.CurrentRating + place.Rating * place.CommentNum) / (place.CommentNum + 1); // Assign the new value
+                        try
+                        {
+                            db.SubmitChanges();
+                        }
+                        catch (ChangeConflictException)
+                        {
+                            db.ChangeConflicts.ResolveAll(RefreshMode.KeepChanges);
+                            db.SubmitChanges();
+                        }
+    }
     SqlConnection conn_hit = new SqlConnection();
     SqlCommand cmd_hit = new SqlCommand();
     SqlDataAdapter adapter_hit = new SqlDataAdapter();
@@ -236,5 +254,9 @@ public partial class place_detail : System.Web.UI.Page
             adapter_hit.Update(Like_DS.Travel_Like);
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
+    }
+    protected void RatingControlChanged(object sender, AjaxControlToolkit.RatingEventArgs e)
+    {
+        btn_cmt.Enabled = true;
     }
 }
