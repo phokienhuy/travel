@@ -72,7 +72,7 @@ public partial class signuptest : User
         }
         catch (Exception ex)
         {
-
+            Response.Write(ex.Message);
         }
     }
 }

@@ -91,17 +91,6 @@
       <Association Name="ThongTinAmThuc_AmThuc_Comment_Rating" Member="AmThuc_Comment_Ratings" ThisKey="AmThuc_ID" OtherKey="AmThuc_ID" Type="AmThuc_Comment_Rating" />
     </Type>
   </Table>
-  <Table Name="dbo.ThongTinDuLich" Member="ThongTinDuLiches">
-    <Type Name="ThongTinDuLich">
-      <Column Name="Travel_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="ThongTinDuLich_Travel_Comment_Rating" Member="Travel_Comment_Ratings" ThisKey="Travel_ID" OtherKey="Travel_ID" Type="Travel_Comment_Rating" />
-    </Type>
-  </Table>
   <Table Name="dbo.ThongTinKhachSan" Member="ThongTinKhachSans">
     <Type Name="ThongTinKhachSan">
       <Column Name="Hotel_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -122,6 +111,29 @@
       <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="ThongTinNhaHang_Rest_Comment_Rating" Member="Rest_Comment_Ratings" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="Rest_Comment_Rating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinDuLich" Member="ThongTinDuLiches">
+    <Type Name="ThongTinDuLich">
+      <Column Name="Travel_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InsertDay" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="InsertMonth" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CommentNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoverPic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic5" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LikeNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ThongTinDuLich_Travel_Comment_Rating" Member="Travel_Comment_Ratings" ThisKey="Travel_ID" OtherKey="Travel_ID" Type="Travel_Comment_Rating" />
     </Type>
   </Table>
 </Database>
