@@ -26,6 +26,7 @@ public partial class food_detail : User
     SqlCommand cmd_like = new SqlCommand();
     SqlDataAdapter adapter_like = new SqlDataAdapter();
     ThongTinDuLich_DataSet AmThucDS_like = new ThongTinDuLich_DataSet();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         string fid = Request.QueryString["fid"];
@@ -61,16 +62,12 @@ public partial class food_detail : User
         conn_like.Open();
 
         cmd_like.Connection = conn_like;
-
-        //if (UName != "")
-        //{
-        cmd_like.CommandText = "select Like_Status from Rest_Like where AmThuc_ID='" + fid + "'and UserName='" + UName + "'";
+        cmd_like.CommandText = "select Like_Status from Food_Like where Food_ID='" + fid + "'and UserName='" + UName + "'";
         cmd_like.CommandType = System.Data.CommandType.Text;
 
         adapter_like.SelectCommand = cmd_like;
         SqlCommandBuilder builder_like = new SqlCommandBuilder(adapter_like);
         adapter_like.Fill(AmThucDS_like.Food_Like);
-
 
         if (AmThucDS_like.Food_Like.Count == 1)
         {
@@ -89,6 +86,7 @@ public partial class food_detail : User
             SetLikeView();
         }
     }
+
     private void SetLikeView()
     {
         MultiView_Like.ActiveViewIndex = 0;
@@ -105,7 +103,6 @@ public partial class food_detail : User
         string uid = Convert.ToString(Session["User"]);
         if (uid.Length == 0)
         {
-
             Response.Redirect("main.aspx");
         }
         else
@@ -116,8 +113,6 @@ public partial class food_detail : User
             }
             else
             {
-
-
                 conn_c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
                 conn_c.Open();
 
@@ -138,7 +133,6 @@ public partial class food_detail : User
                     add_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
                     AmThucDS_c.AmThuc_Comment_Rating.AddAmThuc_Comment_RatingRow(add_comment);
                     adapter_c.Update(AmThucDS_c.AmThuc_Comment_Rating);
-
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
                 else
@@ -152,6 +146,7 @@ public partial class food_detail : User
             }
         }
     }
+
     protected void UpdateRating(int current)
     {
         ThongTinAmThuc rest = db.ThongTinAmThucs.Single(x => x.AmThuc_ID == Convert.ToInt32(Request.QueryString["fid"]));
@@ -167,6 +162,8 @@ public partial class food_detail : User
             db.SubmitChanges();
         }
     }
+
+    //Like & Unlike
     SqlConnection conn_hit = new SqlConnection();
     SqlCommand cmd_hit = new SqlCommand();
     SqlDataAdapter adapter_hit = new SqlDataAdapter();
@@ -186,7 +183,7 @@ public partial class food_detail : User
             conn_hit.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
             conn_hit.Open();
             cmd_hit.Connection = conn_hit;
-            cmd_hit.CommandText = "select * from Rest_Like where AmThuc_ID='" + T_ID + "'and UserName='" + UN + "'";
+            cmd_hit.CommandText = "select * from Food_Like where Food_ID='" + T_ID + "'and UserName='" + UN + "'";
             cmd_hit.CommandType = System.Data.CommandType.Text;
             adapter_hit.SelectCommand = cmd_hit;
             SqlCommandBuilder builder_hit = new SqlCommandBuilder(adapter_hit);
@@ -196,7 +193,6 @@ public partial class food_detail : User
             {
                 ThongTinDuLich_DataSet.Food_LikeRow add_like = Like_DS.Food_Like.NewFood_LikeRow();
                 add_like.UserName = UN;
-
                 add_like.Food_ID = Convert.ToInt32(T_ID);
                 add_like.Like_Status = true;
                 Like_DS.Food_Like.AddFood_LikeRow(add_like);
@@ -227,7 +223,7 @@ public partial class food_detail : User
             conn_hit.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
             conn_hit.Open();
             cmd_hit.Connection = conn_hit;
-            cmd_hit.CommandText = "select * from Rest_Like where AmThuc_ID='" + T_ID + "'and UserName='" + UN + "'";
+            cmd_hit.CommandText = "select * from Food_Like where Food_ID='" + T_ID + "'and UserName='" + UN + "'";
             cmd_hit.CommandType = System.Data.CommandType.Text;
             adapter_hit.SelectCommand = cmd_hit;
             SqlCommandBuilder builder_hit = new SqlCommandBuilder(adapter_hit);
@@ -239,6 +235,7 @@ public partial class food_detail : User
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
+
     protected void RatingControlChanged(object sender, AjaxControlToolkit.RatingEventArgs e)
     {
         btn_cmt.Enabled = true;

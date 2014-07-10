@@ -14,7 +14,7 @@
   <xs:element name="ThongTinDuLich_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ThongTinDuLich_DataSet" msprop:Generator_UserDSName="ThongTinDuLich_DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ThongTinDuLich" msprop:Generator_TableClassName="ThongTinDuLichDataTable" msprop:Generator_TableVarName="tableThongTinDuLich" msprop:Generator_TablePropName="ThongTinDuLich" msprop:Generator_RowDeletingName="ThongTinDuLichRowDeleting" msprop:Generator_RowChangingName="ThongTinDuLichRowChanging" msprop:Generator_RowEvHandlerName="ThongTinDuLichRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinDuLichRowDeleted" msprop:Generator_UserTableName="ThongTinDuLich" msprop:Generator_RowChangedName="ThongTinDuLichRowChanged" msprop:Generator_RowEvArgName="ThongTinDuLichRowChangeEvent" msprop:Generator_RowClassName="ThongTinDuLichRow">
+        <xs:element name="ThongTinDuLich" msprop:Generator_TableClassName="ThongTinDuLichDataTable" msprop:Generator_TableVarName="tableThongTinDuLich" msprop:Generator_RowChangedName="ThongTinDuLichRowChanged" msprop:Generator_TablePropName="ThongTinDuLich" msprop:Generator_RowDeletingName="ThongTinDuLichRowDeleting" msprop:Generator_RowChangingName="ThongTinDuLichRowChanging" msprop:Generator_RowEvHandlerName="ThongTinDuLichRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinDuLichRowDeleted" msprop:Generator_RowClassName="ThongTinDuLichRow" msprop:Generator_UserTableName="ThongTinDuLich" msprop:Generator_RowEvArgName="ThongTinDuLichRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Travel_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTravel_ID" msprop:Generator_ColumnPropNameInRow="Travel_ID" msprop:Generator_ColumnPropNameInTable="Travel_IDColumn" msprop:Generator_UserColumnName="Travel_ID" type="xs:int" />
@@ -122,7 +122,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Travel_Like" msprop:Generator_TableClassName="Travel_LikeDataTable" msprop:Generator_TableVarName="tableTravel_Like" msprop:Generator_TablePropName="Travel_Like" msprop:Generator_RowDeletingName="Travel_LikeRowDeleting" msprop:Generator_RowChangingName="Travel_LikeRowChanging" msprop:Generator_RowEvHandlerName="Travel_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Travel_LikeRowDeleted" msprop:Generator_UserTableName="Travel_Like" msprop:Generator_RowChangedName="Travel_LikeRowChanged" msprop:Generator_RowEvArgName="Travel_LikeRowChangeEvent" msprop:Generator_RowClassName="Travel_LikeRow">
+        <xs:element name="Travel_Like" msprop:Generator_TableClassName="Travel_LikeDataTable" msprop:Generator_TableVarName="tableTravel_Like" msprop:Generator_RowChangedName="Travel_LikeRowChanged" msprop:Generator_TablePropName="Travel_Like" msprop:Generator_RowDeletingName="Travel_LikeRowDeleting" msprop:Generator_RowChangingName="Travel_LikeRowChanging" msprop:Generator_RowEvHandlerName="Travel_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Travel_LikeRowDeleted" msprop:Generator_RowClassName="Travel_LikeRow" msprop:Generator_UserTableName="Travel_Like" msprop:Generator_RowEvArgName="Travel_LikeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
@@ -138,7 +138,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Travel_Comment_Rating" msprop:Generator_TableClassName="Travel_Comment_RatingDataTable" msprop:Generator_TableVarName="tableTravel_Comment_Rating" msprop:Generator_TablePropName="Travel_Comment_Rating" msprop:Generator_RowDeletingName="Travel_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Travel_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Travel_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Travel_Comment_RatingRowDeleted" msprop:Generator_UserTableName="Travel_Comment_Rating" msprop:Generator_RowChangedName="Travel_Comment_RatingRowChanged" msprop:Generator_RowEvArgName="Travel_Comment_RatingRowChangeEvent" msprop:Generator_RowClassName="Travel_Comment_RatingRow">
+        <xs:element name="Travel_Comment_Rating" msprop:Generator_TableClassName="Travel_Comment_RatingDataTable" msprop:Generator_TableVarName="tableTravel_Comment_Rating" msprop:Generator_RowChangedName="Travel_Comment_RatingRowChanged" msprop:Generator_TablePropName="Travel_Comment_Rating" msprop:Generator_RowDeletingName="Travel_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Travel_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Travel_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Travel_Comment_RatingRowDeleted" msprop:Generator_RowClassName="Travel_Comment_RatingRow" msprop:Generator_UserTableName="Travel_Comment_Rating" msprop:Generator_RowEvArgName="Travel_Comment_RatingRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
@@ -161,10 +161,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Hotel_Comment_Rating" msprop:Generator_TableClassName="Hotel_Comment_RatingDataTable" msprop:Generator_TableVarName="tableHotel_Comment_Rating" msprop:Generator_RowChangedName="Hotel_Comment_RatingRowChanged" msprop:Generator_TablePropName="Hotel_Comment_Rating" msprop:Generator_RowDeletingName="Hotel_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Hotel_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Hotel_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Hotel_Comment_RatingRowDeleted" msprop:Generator_RowClassName="Hotel_Comment_RatingRow" msprop:Generator_UserTableName="Hotel_Comment_Rating" msprop:Generator_RowEvArgName="Hotel_Comment_RatingRowChangeEvent">
+        <xs:element name="Event_Like" msprop:Generator_TableClassName="Event_LikeDataTable" msprop:Generator_TableVarName="tableEvent_Like" msprop:Generator_TablePropName="Event_Like" msprop:Generator_RowDeletingName="Event_LikeRowDeleting" msprop:Generator_RowChangingName="Event_LikeRowChanging" msprop:Generator_RowEvHandlerName="Event_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Event_LikeRowDeleted" msprop:Generator_UserTableName="Event_Like" msprop:Generator_RowChangedName="Event_LikeRowChanged" msprop:Generator_RowEvArgName="Event_LikeRowChangeEvent" msprop:Generator_RowClassName="Event_LikeRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
+              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
               <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -172,45 +172,15 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Hotel_ID" msprop:Generator_ColumnVarNameInTable="columnHotel_ID" msprop:Generator_ColumnPropNameInRow="Hotel_ID" msprop:Generator_ColumnPropNameInTable="Hotel_IDColumn" msprop:Generator_UserColumnName="Hotel_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" />
+              <xs:element name="Event_ID" msprop:Generator_ColumnVarNameInTable="columnEvent_ID" msprop:Generator_ColumnPropNameInRow="Event_ID" msprop:Generator_ColumnPropNameInTable="Event_IDColumn" msprop:Generator_UserColumnName="Event_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Rest_Comment_Rating" msprop:Generator_TableClassName="Rest_Comment_RatingDataTable" msprop:Generator_TableVarName="tableRest_Comment_Rating" msprop:Generator_RowChangedName="Rest_Comment_RatingRowChanged" msprop:Generator_TablePropName="Rest_Comment_Rating" msprop:Generator_RowDeletingName="Rest_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Rest_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Rest_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Rest_Comment_RatingRowDeleted" msprop:Generator_RowClassName="Rest_Comment_RatingRow" msprop:Generator_UserTableName="Rest_Comment_Rating" msprop:Generator_RowEvArgName="Rest_Comment_RatingRowChangeEvent">
+        <xs:element name="Event" msprop:Generator_TableClassName="EventDataTable" msprop:Generator_TableVarName="tableEvent" msprop:Generator_TablePropName="Event" msprop:Generator_RowDeletingName="EventRowDeleting" msprop:Generator_RowChangingName="EventRowChanging" msprop:Generator_RowEvHandlerName="EventRowChangeEventHandler" msprop:Generator_RowDeletedName="EventRowDeleted" msprop:Generator_UserTableName="Event" msprop:Generator_RowChangedName="EventRowChanged" msprop:Generator_RowEvArgName="EventRowChangeEvent" msprop:Generator_RowClassName="EventRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Rest_ID" msprop:Generator_ColumnVarNameInTable="columnRest_ID" msprop:Generator_ColumnPropNameInRow="Rest_ID" msprop:Generator_ColumnPropNameInTable="Rest_IDColumn" msprop:Generator_UserColumnName="Rest_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="ThongTinAmThuc" msprop:Generator_TableClassName="ThongTinAmThucDataTable" msprop:Generator_TableVarName="tableThongTinAmThuc" msprop:Generator_RowChangedName="ThongTinAmThucRowChanged" msprop:Generator_TablePropName="ThongTinAmThuc" msprop:Generator_RowDeletingName="ThongTinAmThucRowDeleting" msprop:Generator_RowChangingName="ThongTinAmThucRowChanging" msprop:Generator_RowEvHandlerName="ThongTinAmThucRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinAmThucRowDeleted" msprop:Generator_RowClassName="ThongTinAmThucRow" msprop:Generator_UserTableName="ThongTinAmThuc" msprop:Generator_RowEvArgName="ThongTinAmThucRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="AmThuc_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAmThuc_ID" msprop:Generator_ColumnPropNameInRow="AmThuc_ID" msprop:Generator_ColumnPropNameInTable="AmThuc_IDColumn" msprop:Generator_UserColumnName="AmThuc_ID" type="xs:int" />
+              <xs:element name="Event_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEvent_ID" msprop:Generator_ColumnPropNameInRow="Event_ID" msprop:Generator_ColumnPropNameInTable="Event_IDColumn" msprop:Generator_UserColumnName="Event_ID" type="xs:int" />
               <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -294,7 +264,69 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ThongTinKhachSan" msprop:Generator_TableClassName="ThongTinKhachSanDataTable" msprop:Generator_TableVarName="tableThongTinKhachSan" msprop:Generator_RowChangedName="ThongTinKhachSanRowChanged" msprop:Generator_TablePropName="ThongTinKhachSan" msprop:Generator_RowDeletingName="ThongTinKhachSanRowDeleting" msprop:Generator_RowChangingName="ThongTinKhachSanRowChanging" msprop:Generator_RowEvHandlerName="ThongTinKhachSanRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinKhachSanRowDeleted" msprop:Generator_RowClassName="ThongTinKhachSanRow" msprop:Generator_UserTableName="ThongTinKhachSan" msprop:Generator_RowEvArgName="ThongTinKhachSanRowChangeEvent">
+        <xs:element name="Event_Comment_Rating" msprop:Generator_TableClassName="Event_Comment_RatingDataTable" msprop:Generator_TableVarName="tableEvent_Comment_Rating" msprop:Generator_TablePropName="Event_Comment_Rating" msprop:Generator_RowDeletingName="Event_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Event_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Event_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Event_Comment_RatingRowDeleted" msprop:Generator_UserTableName="Event_Comment_Rating" msprop:Generator_RowChangedName="Event_Comment_RatingRowChanged" msprop:Generator_RowEvArgName="Event_Comment_RatingRowChangeEvent" msprop:Generator_RowClassName="Event_Comment_RatingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Event_ID" msprop:Generator_ColumnVarNameInTable="columnEvent_ID" msprop:Generator_ColumnPropNameInRow="Event_ID" msprop:Generator_ColumnPropNameInTable="Event_IDColumn" msprop:Generator_UserColumnName="Event_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Hotel_Comment_Rating" msprop:Generator_TableClassName="Hotel_Comment_RatingDataTable" msprop:Generator_TableVarName="tableHotel_Comment_Rating" msprop:Generator_TablePropName="Hotel_Comment_Rating" msprop:Generator_RowDeletingName="Hotel_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Hotel_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Hotel_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Hotel_Comment_RatingRowDeleted" msprop:Generator_UserTableName="Hotel_Comment_Rating" msprop:Generator_RowChangedName="Hotel_Comment_RatingRowChanged" msprop:Generator_RowEvArgName="Hotel_Comment_RatingRowChangeEvent" msprop:Generator_RowClassName="Hotel_Comment_RatingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotel_ID" msprop:Generator_ColumnVarNameInTable="columnHotel_ID" msprop:Generator_ColumnPropNameInRow="Hotel_ID" msprop:Generator_ColumnPropNameInTable="Hotel_IDColumn" msprop:Generator_UserColumnName="Hotel_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Hotel_Like" msprop:Generator_TableClassName="Hotel_LikeDataTable" msprop:Generator_TableVarName="tableHotel_Like" msprop:Generator_TablePropName="Hotel_Like" msprop:Generator_RowDeletingName="Hotel_LikeRowDeleting" msprop:Generator_RowChangingName="Hotel_LikeRowChanging" msprop:Generator_RowEvHandlerName="Hotel_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Hotel_LikeRowDeleted" msprop:Generator_UserTableName="Hotel_Like" msprop:Generator_RowChangedName="Hotel_LikeRowChanged" msprop:Generator_RowEvArgName="Hotel_LikeRowChangeEvent" msprop:Generator_RowClassName="Hotel_LikeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hotel_ID" msprop:Generator_ColumnVarNameInTable="columnHotel_ID" msprop:Generator_ColumnPropNameInRow="Hotel_ID" msprop:Generator_ColumnPropNameInTable="Hotel_IDColumn" msprop:Generator_UserColumnName="Hotel_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ThongTinKhachSan" msprop:Generator_TableClassName="ThongTinKhachSanDataTable" msprop:Generator_TableVarName="tableThongTinKhachSan" msprop:Generator_TablePropName="ThongTinKhachSan" msprop:Generator_RowDeletingName="ThongTinKhachSanRowDeleting" msprop:Generator_RowChangingName="ThongTinKhachSanRowChanging" msprop:Generator_RowEvHandlerName="ThongTinKhachSanRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinKhachSanRowDeleted" msprop:Generator_UserTableName="ThongTinKhachSan" msprop:Generator_RowChangedName="ThongTinKhachSanRowChanged" msprop:Generator_RowEvArgName="ThongTinKhachSanRowChangeEvent" msprop:Generator_RowClassName="ThongTinKhachSanRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Hotel_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnHotel_ID" msprop:Generator_ColumnPropNameInRow="Hotel_ID" msprop:Generator_ColumnPropNameInTable="Hotel_IDColumn" msprop:Generator_UserColumnName="Hotel_ID" type="xs:int" />
@@ -402,7 +434,46 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ThongTinNhaHang" msprop:Generator_TableClassName="ThongTinNhaHangDataTable" msprop:Generator_TableVarName="tableThongTinNhaHang" msprop:Generator_RowChangedName="ThongTinNhaHangRowChanged" msprop:Generator_TablePropName="ThongTinNhaHang" msprop:Generator_RowDeletingName="ThongTinNhaHangRowDeleting" msprop:Generator_RowChangingName="ThongTinNhaHangRowChanging" msprop:Generator_RowEvHandlerName="ThongTinNhaHangRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinNhaHangRowDeleted" msprop:Generator_RowClassName="ThongTinNhaHangRow" msprop:Generator_UserTableName="ThongTinNhaHang" msprop:Generator_RowEvArgName="ThongTinNhaHangRowChangeEvent">
+        <xs:element name="Restaurant_Like" msprop:Generator_TableClassName="Restaurant_LikeDataTable" msprop:Generator_TableVarName="tableRestaurant_Like" msprop:Generator_TablePropName="Restaurant_Like" msprop:Generator_RowDeletingName="Restaurant_LikeRowDeleting" msprop:Generator_RowChangingName="Restaurant_LikeRowChanging" msprop:Generator_RowEvHandlerName="Restaurant_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Restaurant_LikeRowDeleted" msprop:Generator_UserTableName="Restaurant_Like" msprop:Generator_RowChangedName="Restaurant_LikeRowChanged" msprop:Generator_RowEvArgName="Restaurant_LikeRowChangeEvent" msprop:Generator_RowClassName="Restaurant_LikeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rest_ID" msprop:Generator_ColumnVarNameInTable="columnRest_ID" msprop:Generator_ColumnPropNameInRow="Rest_ID" msprop:Generator_ColumnPropNameInTable="Rest_IDColumn" msprop:Generator_UserColumnName="Rest_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rest_Comment_Rating" msprop:Generator_TableClassName="Rest_Comment_RatingDataTable" msprop:Generator_TableVarName="tableRest_Comment_Rating" msprop:Generator_TablePropName="Rest_Comment_Rating" msprop:Generator_RowDeletingName="Rest_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Rest_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Rest_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Rest_Comment_RatingRowDeleted" msprop:Generator_UserTableName="Rest_Comment_Rating" msprop:Generator_RowChangedName="Rest_Comment_RatingRowChanged" msprop:Generator_RowEvArgName="Rest_Comment_RatingRowChangeEvent" msprop:Generator_RowClassName="Rest_Comment_RatingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rest_ID" msprop:Generator_ColumnVarNameInTable="columnRest_ID" msprop:Generator_ColumnPropNameInRow="Rest_ID" msprop:Generator_ColumnPropNameInTable="Rest_IDColumn" msprop:Generator_UserColumnName="Rest_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ThongTinNhaHang" msprop:Generator_TableClassName="ThongTinNhaHangDataTable" msprop:Generator_TableVarName="tableThongTinNhaHang" msprop:Generator_TablePropName="ThongTinNhaHang" msprop:Generator_RowDeletingName="ThongTinNhaHangRowDeleting" msprop:Generator_RowChangingName="ThongTinNhaHangRowChanging" msprop:Generator_RowEvHandlerName="ThongTinNhaHangRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinNhaHangRowDeleted" msprop:Generator_UserTableName="ThongTinNhaHang" msprop:Generator_RowChangedName="ThongTinNhaHangRowChanged" msprop:Generator_RowEvArgName="ThongTinNhaHangRowChangeEvent" msprop:Generator_RowClassName="ThongTinNhaHangRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Rest_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnRest_ID" msprop:Generator_ColumnPropNameInRow="Rest_ID" msprop:Generator_ColumnPropNameInTable="Rest_IDColumn" msprop:Generator_UserColumnName="Rest_ID" type="xs:int" />
@@ -510,10 +581,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Event_Comment_Rating" msprop:Generator_TableClassName="Event_Comment_RatingDataTable" msprop:Generator_TableVarName="tableEvent_Comment_Rating" msprop:Generator_RowChangedName="Event_Comment_RatingRowChanged" msprop:Generator_TablePropName="Event_Comment_Rating" msprop:Generator_RowDeletingName="Event_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="Event_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="Event_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="Event_Comment_RatingRowDeleted" msprop:Generator_RowClassName="Event_Comment_RatingRow" msprop:Generator_UserTableName="Event_Comment_Rating" msprop:Generator_RowEvArgName="Event_Comment_RatingRowChangeEvent">
+        <xs:element name="Food_Like" msprop:Generator_TableClassName="Food_LikeDataTable" msprop:Generator_TableVarName="tableFood_Like" msprop:Generator_TablePropName="Food_Like" msprop:Generator_RowDeletingName="Food_LikeRowDeleting" msprop:Generator_RowChangingName="Food_LikeRowChanging" msprop:Generator_RowEvHandlerName="Food_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Food_LikeRowDeleted" msprop:Generator_UserTableName="Food_Like" msprop:Generator_RowChangedName="Food_LikeRowChanged" msprop:Generator_RowEvArgName="Food_LikeRowChangeEvent" msprop:Generator_RowClassName="Food_LikeRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
+              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
               <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -521,19 +592,12 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Event_ID" msprop:Generator_ColumnVarNameInTable="columnEvent_ID" msprop:Generator_ColumnPropNameInRow="Event_ID" msprop:Generator_ColumnPropNameInTable="Event_IDColumn" msprop:Generator_UserColumnName="Event_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Content" msprop:Generator_ColumnVarNameInTable="columnContent" msprop:Generator_ColumnPropNameInRow="Content" msprop:Generator_ColumnPropNameInTable="ContentColumn" msprop:Generator_UserColumnName="Content" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Rating" msprop:Generator_ColumnVarNameInTable="columnRating" msprop:Generator_ColumnPropNameInRow="Rating" msprop:Generator_ColumnPropNameInTable="RatingColumn" msprop:Generator_UserColumnName="Rating" type="xs:int" />
+              <xs:element name="Food_ID" msprop:Generator_ColumnVarNameInTable="columnFood_ID" msprop:Generator_ColumnPropNameInRow="Food_ID" msprop:Generator_ColumnPropNameInTable="Food_IDColumn" msprop:Generator_UserColumnName="Food_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AmThuc_Comment_Rating" msprop:Generator_TableClassName="AmThuc_Comment_RatingDataTable" msprop:Generator_TableVarName="tableAmThuc_Comment_Rating" msprop:Generator_RowChangedName="AmThuc_Comment_RatingRowChanged" msprop:Generator_TablePropName="AmThuc_Comment_Rating" msprop:Generator_RowDeletingName="AmThuc_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="AmThuc_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="AmThuc_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="AmThuc_Comment_RatingRowDeleted" msprop:Generator_RowClassName="AmThuc_Comment_RatingRow" msprop:Generator_UserTableName="AmThuc_Comment_Rating" msprop:Generator_RowEvArgName="AmThuc_Comment_RatingRowChangeEvent">
+        <xs:element name="AmThuc_Comment_Rating" msprop:Generator_TableClassName="AmThuc_Comment_RatingDataTable" msprop:Generator_TableVarName="tableAmThuc_Comment_Rating" msprop:Generator_TablePropName="AmThuc_Comment_Rating" msprop:Generator_RowDeletingName="AmThuc_Comment_RatingRowDeleting" msprop:Generator_RowChangingName="AmThuc_Comment_RatingRowChanging" msprop:Generator_RowEvHandlerName="AmThuc_Comment_RatingRowChangeEventHandler" msprop:Generator_RowDeletedName="AmThuc_Comment_RatingRowDeleted" msprop:Generator_UserTableName="AmThuc_Comment_Rating" msprop:Generator_RowChangedName="AmThuc_Comment_RatingRowChanged" msprop:Generator_RowEvArgName="AmThuc_Comment_RatingRowChangeEvent" msprop:Generator_RowClassName="AmThuc_Comment_RatingRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Comment_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnComment_ID" msprop:Generator_ColumnPropNameInRow="Comment_ID" msprop:Generator_ColumnPropNameInTable="Comment_IDColumn" msprop:Generator_UserColumnName="Comment_ID" type="xs:int" />
@@ -556,10 +620,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Event" msprop:Generator_TableClassName="EventDataTable" msprop:Generator_TableVarName="tableEvent" msprop:Generator_RowChangedName="EventRowChanged" msprop:Generator_TablePropName="Event" msprop:Generator_RowDeletingName="EventRowDeleting" msprop:Generator_RowChangingName="EventRowChanging" msprop:Generator_RowEvHandlerName="EventRowChangeEventHandler" msprop:Generator_RowDeletedName="EventRowDeleted" msprop:Generator_RowClassName="EventRow" msprop:Generator_UserTableName="Event" msprop:Generator_RowEvArgName="EventRowChangeEvent">
+        <xs:element name="ThongTinAmThuc" msprop:Generator_TableClassName="ThongTinAmThucDataTable" msprop:Generator_TableVarName="tableThongTinAmThuc" msprop:Generator_TablePropName="ThongTinAmThuc" msprop:Generator_RowDeletingName="ThongTinAmThucRowDeleting" msprop:Generator_RowChangingName="ThongTinAmThucRowChanging" msprop:Generator_RowEvHandlerName="ThongTinAmThucRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinAmThucRowDeleted" msprop:Generator_UserTableName="ThongTinAmThuc" msprop:Generator_RowChangedName="ThongTinAmThucRowChanged" msprop:Generator_RowEvArgName="ThongTinAmThucRowChangeEvent" msprop:Generator_RowClassName="ThongTinAmThucRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Event_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEvent_ID" msprop:Generator_ColumnPropNameInRow="Event_ID" msprop:Generator_ColumnPropNameInTable="Event_IDColumn" msprop:Generator_UserColumnName="Event_ID" type="xs:int" />
+              <xs:element name="AmThuc_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAmThuc_ID" msprop:Generator_ColumnPropNameInRow="AmThuc_ID" msprop:Generator_ColumnPropNameInTable="AmThuc_IDColumn" msprop:Generator_UserColumnName="AmThuc_ID" type="xs:int" />
               <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -643,70 +707,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Food_Like" msprop:Generator_TableClassName="Food_LikeDataTable" msprop:Generator_TableVarName="tableFood_Like" msprop:Generator_TablePropName="Food_Like" msprop:Generator_RowDeletingName="Food_LikeRowDeleting" msprop:Generator_RowChangingName="Food_LikeRowChanging" msprop:Generator_RowEvHandlerName="Food_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Food_LikeRowDeleted" msprop:Generator_UserTableName="Food_Like" msprop:Generator_RowChangedName="Food_LikeRowChanged" msprop:Generator_RowEvArgName="Food_LikeRowChangeEvent" msprop:Generator_RowClassName="Food_LikeRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Food_ID" msprop:Generator_ColumnVarNameInTable="columnFood_ID" msprop:Generator_ColumnPropNameInRow="Food_ID" msprop:Generator_ColumnPropNameInTable="Food_IDColumn" msprop:Generator_UserColumnName="Food_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Event_Like" msprop:Generator_TableClassName="Event_LikeDataTable" msprop:Generator_TableVarName="tableEvent_Like" msprop:Generator_TablePropName="Event_Like" msprop:Generator_RowDeletingName="Event_LikeRowDeleting" msprop:Generator_RowChangingName="Event_LikeRowChanging" msprop:Generator_RowEvHandlerName="Event_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Event_LikeRowDeleted" msprop:Generator_UserTableName="Event_Like" msprop:Generator_RowChangedName="Event_LikeRowChanged" msprop:Generator_RowEvArgName="Event_LikeRowChangeEvent" msprop:Generator_RowClassName="Event_LikeRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Event_ID" msprop:Generator_ColumnVarNameInTable="columnEvent_ID" msprop:Generator_ColumnPropNameInRow="Event_ID" msprop:Generator_ColumnPropNameInTable="Event_IDColumn" msprop:Generator_UserColumnName="Event_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Hotel_Like" msprop:Generator_TableClassName="Hotel_LikeDataTable" msprop:Generator_TableVarName="tableHotel_Like" msprop:Generator_TablePropName="Hotel_Like" msprop:Generator_RowDeletingName="Hotel_LikeRowDeleting" msprop:Generator_RowChangingName="Hotel_LikeRowChanging" msprop:Generator_RowEvHandlerName="Hotel_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Hotel_LikeRowDeleted" msprop:Generator_UserTableName="Hotel_Like" msprop:Generator_RowChangedName="Hotel_LikeRowChanged" msprop:Generator_RowEvArgName="Hotel_LikeRowChangeEvent" msprop:Generator_RowClassName="Hotel_LikeRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Like_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLike_ID" msprop:Generator_ColumnPropNameInRow="Like_ID" msprop:Generator_ColumnPropNameInTable="Like_IDColumn" msprop:Generator_UserColumnName="Like_ID" type="xs:int" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Hotel_ID" msprop:Generator_ColumnVarNameInTable="columnHotel_ID" msprop:Generator_ColumnPropNameInRow="Hotel_ID" msprop:Generator_ColumnPropNameInTable="Hotel_IDColumn" msprop:Generator_UserColumnName="Hotel_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Restaurant_Like" msprop:Generator_TableClassName="Restaurant_LikeDataTable" msprop:Generator_TableVarName="tableRestaurant_Like" msprop:Generator_TablePropName="Restaurant_Like" msprop:Generator_RowDeletingName="Restaurant_LikeRowDeleting" msprop:Generator_RowChangingName="Restaurant_LikeRowChanging" msprop:Generator_RowEvHandlerName="Restaurant_LikeRowChangeEventHandler" msprop:Generator_RowDeletedName="Restaurant_LikeRowDeleted" msprop:Generator_UserTableName="Restaurant_Like" msprop:Generator_RowChangedName="Restaurant_LikeRowChanged" msprop:Generator_RowEvArgName="Restaurant_LikeRowChangeEvent" msprop:Generator_RowClassName="Restaurant_LikeRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Rest_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnRest_ID" msprop:Generator_ColumnPropNameInRow="Rest_ID" msprop:Generator_ColumnPropNameInTable="Rest_IDColumn" msprop:Generator_UserColumnName="Rest_ID" type="xs:int" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Travel_ID" msprop:Generator_ColumnVarNameInTable="columnTravel_ID" msprop:Generator_ColumnPropNameInRow="Travel_ID" msprop:Generator_ColumnPropNameInTable="Travel_IDColumn" msprop:Generator_UserColumnName="Travel_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="Like_Status" msprop:Generator_ColumnVarNameInTable="columnLike_Status" msprop:Generator_ColumnPropNameInRow="Like_Status" msprop:Generator_ColumnPropNameInTable="Like_StatusColumn" msprop:Generator_UserColumnName="Like_Status" type="xs:boolean" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -721,46 +721,66 @@
       <xs:selector xpath=".//mstns:Travel_Comment_Rating" />
       <xs:field xpath="mstns:Comment_ID" />
     </xs:unique>
+    <xs:unique name="Event_Like_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Event_Like" />
+      <xs:field xpath="mstns:Like_ID" />
+    </xs:unique>
+    <xs:unique name="Event_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Event" />
+      <xs:field xpath="mstns:Event_ID" />
+    </xs:unique>
+    <xs:unique name="Event_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Event_Comment_Rating" />
+      <xs:field xpath="mstns:Comment_ID" />
+    </xs:unique>
     <xs:unique name="Hotel_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Hotel_Comment_Rating" />
       <xs:field xpath="mstns:Comment_ID" />
     </xs:unique>
+    <xs:unique name="Hotel_Like_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Hotel_Like" />
+      <xs:field xpath="mstns:Like_ID" />
+    </xs:unique>
+    <xs:unique name="ThongTinKhachSan_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ThongTinKhachSan" />
+      <xs:field xpath="mstns:Hotel_ID" />
+    </xs:unique>
+    <xs:unique name="Restaurant_Like_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Restaurant_Like" />
+      <xs:field xpath="mstns:Like_ID" />
+    </xs:unique>
     <xs:unique name="Rest_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Rest_Comment_Rating" />
+      <xs:field xpath="mstns:Comment_ID" />
+    </xs:unique>
+    <xs:unique name="ThongTinNhaHang_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ThongTinNhaHang" />
+      <xs:field xpath="mstns:Rest_ID" />
+    </xs:unique>
+    <xs:unique name="Food_Like_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Food_Like" />
+      <xs:field xpath="mstns:Like_ID" />
+    </xs:unique>
+    <xs:unique name="AmThuc_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AmThuc_Comment_Rating" />
       <xs:field xpath="mstns:Comment_ID" />
     </xs:unique>
     <xs:unique name="ThongTinAmThuc_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ThongTinAmThuc" />
       <xs:field xpath="mstns:AmThuc_ID" />
     </xs:unique>
-    <xs:unique name="ThongTinKhachSan_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ThongTinKhachSan" />
-      <xs:field xpath="mstns:Hotel_ID" />
-    </xs:unique>
-    <xs:unique name="ThongTinNhaHang_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ThongTinNhaHang" />
-      <xs:field xpath="mstns:Rest_ID" />
-    </xs:unique>
-    <xs:unique name="Event_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Event_Comment_Rating" />
-      <xs:field xpath="mstns:Comment_ID" />
-    </xs:unique>
-    <xs:unique name="AmThuc_Comment_Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:AmThuc_Comment_Rating" />
-      <xs:field xpath="mstns:Comment_ID" />
-    </xs:unique>
-    <xs:unique name="Event_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Event" />
-      <xs:field xpath="mstns:Event_ID" />
-    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Travel_Li__Trave__35BCFE0A" msdata:parent="ThongTinDuLich" msdata:child="Travel_Like" msdata:parentkey="Travel_ID" msdata:childkey="Travel_ID" msprop:Generator_UserChildTable="Travel_Like" msprop:Generator_ChildPropName="GetTravel_LikeRows" msprop:Generator_UserRelationName="FK__Travel_Li__Trave__35BCFE0A" msprop:Generator_ParentPropName="ThongTinDuLichRow" msprop:Generator_RelationVarName="relationFK__Travel_Li__Trave__35BCFE0A" msprop:Generator_UserParentTable="ThongTinDuLich" />
-      <msdata:Relationship name="FK__Travel_Co__Trave__1920BF5C" msdata:parent="ThongTinDuLich" msdata:child="Travel_Comment_Rating" msdata:parentkey="Travel_ID" msdata:childkey="Travel_ID" msprop:Generator_UserChildTable="Travel_Comment_Rating" msprop:Generator_ChildPropName="GetTravel_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Travel_Co__Trave__1920BF5C" msprop:Generator_ParentPropName="ThongTinDuLichRow" msprop:Generator_RelationVarName="relationFK__Travel_Co__Trave__1920BF5C" msprop:Generator_UserParentTable="ThongTinDuLich" />
-      <msdata:Relationship name="FK__Hotel_Com__Hotel__24927208" msdata:parent="ThongTinKhachSan" msdata:child="Hotel_Comment_Rating" msdata:parentkey="Hotel_ID" msdata:childkey="Hotel_ID" msprop:Generator_UserChildTable="Hotel_Comment_Rating" msprop:Generator_ChildPropName="GetHotel_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Hotel_Com__Hotel__24927208" msprop:Generator_ParentPropName="ThongTinKhachSanRow" msprop:Generator_RelationVarName="relationFK__Hotel_Com__Hotel__24927208" msprop:Generator_UserParentTable="ThongTinKhachSan" />
-      <msdata:Relationship name="FK__Rest_Comm__Rest___1ED998B2" msdata:parent="ThongTinNhaHang" msdata:child="Rest_Comment_Rating" msdata:parentkey="Rest_ID" msdata:childkey="Rest_ID" msprop:Generator_UserChildTable="Rest_Comment_Rating" msprop:Generator_ChildPropName="GetRest_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Rest_Comm__Rest___1ED998B2" msprop:Generator_ParentPropName="ThongTinNhaHangRow" msprop:Generator_RelationVarName="relationFK__Rest_Comm__Rest___1ED998B2" msprop:Generator_UserParentTable="ThongTinNhaHang" />
+      <msdata:Relationship name="FK__Travel_Li__Trave__35BCFE0A" msdata:parent="ThongTinDuLich" msdata:child="Travel_Like" msdata:parentkey="Travel_ID" msdata:childkey="Travel_ID" msprop:Generator_UserChildTable="Travel_Like" msprop:Generator_ChildPropName="GetTravel_LikeRows" msprop:Generator_UserRelationName="FK__Travel_Li__Trave__35BCFE0A" msprop:Generator_RelationVarName="relationFK__Travel_Li__Trave__35BCFE0A" msprop:Generator_UserParentTable="ThongTinDuLich" msprop:Generator_ParentPropName="ThongTinDuLichRow" />
+      <msdata:Relationship name="FK__Travel_Co__Trave__1920BF5C" msdata:parent="ThongTinDuLich" msdata:child="Travel_Comment_Rating" msdata:parentkey="Travel_ID" msdata:childkey="Travel_ID" msprop:Generator_UserChildTable="Travel_Comment_Rating" msprop:Generator_ChildPropName="GetTravel_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Travel_Co__Trave__1920BF5C" msprop:Generator_RelationVarName="relationFK__Travel_Co__Trave__1920BF5C" msprop:Generator_UserParentTable="ThongTinDuLich" msprop:Generator_ParentPropName="ThongTinDuLichRow" />
+      <msdata:Relationship name="FK__Event_Lik__Event__5070F446" msdata:parent="Event" msdata:child="Event_Like" msdata:parentkey="Event_ID" msdata:childkey="Event_ID" msprop:Generator_UserChildTable="Event_Like" msprop:Generator_ChildPropName="GetEvent_LikeRows" msprop:Generator_UserRelationName="FK__Event_Lik__Event__5070F446" msprop:Generator_RelationVarName="relationFK__Event_Lik__Event__5070F446" msprop:Generator_UserParentTable="Event" msprop:Generator_ParentPropName="EventRow" />
       <msdata:Relationship name="FK__Event_Com__Event__300424B4" msdata:parent="Event" msdata:child="Event_Comment_Rating" msdata:parentkey="Event_ID" msdata:childkey="Event_ID" msprop:Generator_UserChildTable="Event_Comment_Rating" msprop:Generator_ChildPropName="GetEvent_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Event_Com__Event__300424B4" msprop:Generator_ParentPropName="EventRow" msprop:Generator_RelationVarName="relationFK__Event_Com__Event__300424B4" msprop:Generator_UserParentTable="Event" />
+      <msdata:Relationship name="FK__Hotel_Com__Hotel__24927208" msdata:parent="ThongTinKhachSan" msdata:child="Hotel_Comment_Rating" msdata:parentkey="Hotel_ID" msdata:childkey="Hotel_ID" msprop:Generator_UserChildTable="Hotel_Comment_Rating" msprop:Generator_ChildPropName="GetHotel_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Hotel_Com__Hotel__24927208" msprop:Generator_RelationVarName="relationFK__Hotel_Com__Hotel__24927208" msprop:Generator_UserParentTable="ThongTinKhachSan" msprop:Generator_ParentPropName="ThongTinKhachSanRow" />
+      <msdata:Relationship name="FK__Hotel_Lik__Hotel__5629CD9C" msdata:parent="ThongTinKhachSan" msdata:child="Hotel_Like" msdata:parentkey="Hotel_ID" msdata:childkey="Hotel_ID" msprop:Generator_UserChildTable="Hotel_Like" msprop:Generator_ChildPropName="GetHotel_LikeRows" msprop:Generator_UserRelationName="FK__Hotel_Lik__Hotel__5629CD9C" msprop:Generator_RelationVarName="relationFK__Hotel_Lik__Hotel__5629CD9C" msprop:Generator_UserParentTable="ThongTinKhachSan" msprop:Generator_ParentPropName="ThongTinKhachSanRow" />
+      <msdata:Relationship name="FK__Restauran__Rest___619B8048" msdata:parent="ThongTinNhaHang" msdata:child="Restaurant_Like" msdata:parentkey="Rest_ID" msdata:childkey="Rest_ID" msprop:Generator_UserChildTable="Restaurant_Like" msprop:Generator_ChildPropName="GetRestaurant_LikeRows" msprop:Generator_UserRelationName="FK__Restauran__Rest___619B8048" msprop:Generator_RelationVarName="relationFK__Restauran__Rest___619B8048" msprop:Generator_UserParentTable="ThongTinNhaHang" msprop:Generator_ParentPropName="ThongTinNhaHangRow" />
+      <msdata:Relationship name="FK__Rest_Comm__Rest___1ED998B2" msdata:parent="ThongTinNhaHang" msdata:child="Rest_Comment_Rating" msdata:parentkey="Rest_ID" msdata:childkey="Rest_ID" msprop:Generator_UserChildTable="Rest_Comment_Rating" msprop:Generator_ChildPropName="GetRest_Comment_RatingRows" msprop:Generator_UserRelationName="FK__Rest_Comm__Rest___1ED998B2" msprop:Generator_RelationVarName="relationFK__Rest_Comm__Rest___1ED998B2" msprop:Generator_UserParentTable="ThongTinNhaHang" msprop:Generator_ParentPropName="ThongTinNhaHangRow" />
+      <msdata:Relationship name="FK__Food_Like__Food___5BE2A6F2" msdata:parent="ThongTinAmThuc" msdata:child="Food_Like" msdata:parentkey="AmThuc_ID" msdata:childkey="Food_ID" msprop:Generator_UserChildTable="Food_Like" msprop:Generator_ChildPropName="GetFood_LikeRows" msprop:Generator_UserRelationName="FK__Food_Like__Food___5BE2A6F2" msprop:Generator_RelationVarName="relationFK__Food_Like__Food___5BE2A6F2" msprop:Generator_UserParentTable="ThongTinAmThuc" msprop:Generator_ParentPropName="ThongTinAmThucRow" />
       <msdata:Relationship name="FK__AmThuc_Co__AmThu__2A4B4B5E" msdata:parent="ThongTinAmThuc" msdata:child="AmThuc_Comment_Rating" msdata:parentkey="AmThuc_ID" msdata:childkey="AmThuc_ID" msprop:Generator_UserChildTable="AmThuc_Comment_Rating" msprop:Generator_ChildPropName="GetAmThuc_Comment_RatingRows" msprop:Generator_UserRelationName="FK__AmThuc_Co__AmThu__2A4B4B5E" msprop:Generator_RelationVarName="relationFK__AmThuc_Co__AmThu__2A4B4B5E" msprop:Generator_UserParentTable="ThongTinAmThuc" msprop:Generator_ParentPropName="ThongTinAmThucRow" />
     </xs:appinfo>
   </xs:annotation>

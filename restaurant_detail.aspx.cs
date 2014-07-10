@@ -10,8 +10,6 @@ using System.Runtime.Remoting;
 using System.Web.UI.HtmlControls;
 using System.Data.Linq;
 
-
-
 public partial class restaurant_detail : User
 {
     SqlConnection conn = new SqlConnection();
@@ -28,6 +26,7 @@ public partial class restaurant_detail : User
     SqlCommand cmd_like = new SqlCommand();
     SqlDataAdapter adapter_like = new SqlDataAdapter();
     ThongTinDuLich_DataSet NhaHangDS_like = new ThongTinDuLich_DataSet();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         string rid = Request.QueryString["rid"];
@@ -35,7 +34,6 @@ public partial class restaurant_detail : User
 
         conn.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
         conn.Open();
-
 
         cmd.Connection = conn;
         cmd.CommandText = "select top 50 * from Rest_Comment_Rating where Rest_ID='" + rid + "'";
@@ -63,16 +61,12 @@ public partial class restaurant_detail : User
         conn_like.Open();
 
         cmd_like.Connection = conn_like;
-
-        //if (UName != "")
-        //{
-        cmd_like.CommandText = "select Like_Status from Rest_Like where Rest_ID='" + rid + "'and UserName='" + UName + "'";
+        cmd_like.CommandText = "select Like_Status from Restaurant_Like where Rest_ID='" + rid + "'and UserName='" + UName + "'";
         cmd_like.CommandType = System.Data.CommandType.Text;
 
         adapter_like.SelectCommand = cmd_like;
         SqlCommandBuilder builder_like = new SqlCommandBuilder(adapter_like);
         adapter_like.Fill(NhaHangDS_like.Restaurant_Like);
-
 
         if (NhaHangDS_like.Restaurant_Like.Count == 1)
         {
@@ -91,6 +85,7 @@ public partial class restaurant_detail : User
             SetLikeView();
         }
     }
+
     private void SetLikeView()
     {
         MultiView_Like.ActiveViewIndex = 0;
@@ -107,7 +102,6 @@ public partial class restaurant_detail : User
         string uid = Convert.ToString(Session["User"]);
         if (uid.Length == 0)
         {
-
             Response.Redirect("main.aspx");
         }
         else
@@ -118,8 +112,6 @@ public partial class restaurant_detail : User
             }
             else
             {
-
-
                 conn_c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
                 conn_c.Open();
 
@@ -140,7 +132,6 @@ public partial class restaurant_detail : User
                     add_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
                     NhaHangDS_c.Rest_Comment_Rating.AddRest_Comment_RatingRow(add_comment);
                     adapter_c.Update(NhaHangDS_c.Rest_Comment_Rating);
-
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
                 else
@@ -154,6 +145,7 @@ public partial class restaurant_detail : User
             }
         }
     }
+
     protected void UpdateRating(int current)
     {
         ThongTinNhaHang rest = db.ThongTinNhaHangs.Single(x => x.Rest_ID == Convert.ToInt32(Request.QueryString["rid"]));
@@ -169,6 +161,8 @@ public partial class restaurant_detail : User
             db.SubmitChanges();
         }
     }
+
+    //Like & Unlike
     SqlConnection conn_hit = new SqlConnection();
     SqlCommand cmd_hit = new SqlCommand();
     SqlDataAdapter adapter_hit = new SqlDataAdapter();
@@ -188,7 +182,7 @@ public partial class restaurant_detail : User
             conn_hit.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
             conn_hit.Open();
             cmd_hit.Connection = conn_hit;
-            cmd_hit.CommandText = "select * from Rest_Like where Rest_ID='" + T_ID + "'and UserName='" + UN + "'";
+            cmd_hit.CommandText = "select * from Restaurant_Like where Rest_ID='" + T_ID + "'and UserName='" + UN + "'";
             cmd_hit.CommandType = System.Data.CommandType.Text;
             adapter_hit.SelectCommand = cmd_hit;
             SqlCommandBuilder builder_hit = new SqlCommandBuilder(adapter_hit);
@@ -198,7 +192,6 @@ public partial class restaurant_detail : User
             {
                 ThongTinDuLich_DataSet.Restaurant_LikeRow add_like = Like_DS.Restaurant_Like.NewRestaurant_LikeRow();
                 add_like.UserName = UN;
-                
                 add_like.Rest_ID = Convert.ToInt32(T_ID);
                 add_like.Like_Status = true;
                 Like_DS.Restaurant_Like.AddRestaurant_LikeRow(add_like);
@@ -229,7 +222,7 @@ public partial class restaurant_detail : User
             conn_hit.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
             conn_hit.Open();
             cmd_hit.Connection = conn_hit;
-            cmd_hit.CommandText = "select * from Rest_Like where Rest_ID='" + T_ID + "'and UserName='" + UN + "'";
+            cmd_hit.CommandText = "select * from Restaurant_Like where Rest_ID='" + T_ID + "'and UserName='" + UN + "'";
             cmd_hit.CommandType = System.Data.CommandType.Text;
             adapter_hit.SelectCommand = cmd_hit;
             SqlCommandBuilder builder_hit = new SqlCommandBuilder(adapter_hit);
@@ -241,6 +234,7 @@ public partial class restaurant_detail : User
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
+
     protected void RatingControlChanged(object sender, AjaxControlToolkit.RatingEventArgs e)
     {
         btn_cmt.Enabled = true;

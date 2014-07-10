@@ -46,7 +46,7 @@
             <div class="blog">
                 <time datetime="2013-01-01"><%# Eval("InsertDay") %><br><%# Eval("InsertMonth") %></time>
                 <div class="extra_wrapper">
-                <div class="text1 upp"><asp:Label ID="lblEventlName" runat="server" Text='<%# Eval("Name") %>' /> </div>
+                <div class="text1 upp"><asp:Label ID="lblEventlName" runat="server" Text='<%# Eval("Title") %>' /> </div>
                 <div class="links">
                 
                 
@@ -64,7 +64,7 @@
                 <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft">
                 <div class="extra_wrapper">
                     <p class="text1"></p>
-                    <p><asp:Label ID="lblShortDes" runat="server" Text='<%# Eval("ShortDescription") %>' /></p>
+                    <p><asp:Label ID="lblShortDes" runat="server" Text='<%# Eval("Content") %>' /></p>
                     <br>
                     <a href="event_detail.aspx?eid=<%# Eval("Event_ID") %>" class="btn">Xem</a>
                 </div>

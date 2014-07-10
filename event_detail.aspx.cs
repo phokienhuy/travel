@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Runtime.Remoting;
 using System.Web.UI.HtmlControls;
 using System.Data.Linq;
+
 public partial class event_detail : User
 {
     SqlConnection conn = new SqlConnection();
@@ -35,13 +36,13 @@ public partial class event_detail : User
 
 
         cmd.Connection = conn;
-        cmd.CommandText = "select top 50 * from Rest_Comment_Rating where Event_ID='" + eid + "'";
+        cmd.CommandText = "select top 50 * from Event_Comment_Rating where Event_ID='" + eid + "'";
         cmd.CommandType = System.Data.CommandType.Text;
 
         adapter.SelectCommand = cmd;
         SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-        adapter.Fill(SuKienDS.Rest_Comment_Rating);
-        lst_cmt.DataSource = SuKienDS.Rest_Comment_Rating;
+        adapter.Fill(SuKienDS.Event_Comment_Rating);
+        lst_cmt.DataSource = SuKienDS.Event_Comment_Rating;
         lst_cmt.DataBind();
 
         //Facebook share button
@@ -60,10 +61,7 @@ public partial class event_detail : User
         conn_like.Open();
 
         cmd_like.Connection = conn_like;
-
-        //if (UName != "")
-        //{
-        cmd_like.CommandText = "select Like_Status from Rest_Like where Event_ID='" + eid + "'and UserName='" + UName + "'";
+        cmd_like.CommandText = "select Like_Status from Event_Like where Event_ID='" + eid + "'and UserName='" + UName + "'";
         cmd_like.CommandType = System.Data.CommandType.Text;
 
         adapter_like.SelectCommand = cmd_like;
@@ -104,7 +102,6 @@ public partial class event_detail : User
         string uid = Convert.ToString(Session["User"]);
         if (uid.Length == 0)
         {
-
             Response.Redirect("main.aspx");
         }
         else
@@ -115,20 +112,18 @@ public partial class event_detail : User
             }
             else
             {
-
-
                 conn_c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
                 conn_c.Open();
 
                 cmd_c.Connection = conn_c;
-                cmd_c.CommandText = "select * from Rest_Comment_Rating where Event_ID='" + eid + "' and UserName='" + uid + "'";
+                cmd_c.CommandText = "select * from Event_Comment_Rating where Event_ID='" + eid + "' and UserName='" + uid + "'";
                 cmd_c.CommandType = System.Data.CommandType.Text;
 
                 adapter_c.SelectCommand = cmd_c;
                 SqlCommandBuilder builder_c = new SqlCommandBuilder(adapter_c);
-                adapter_c.Fill(SuKienDS_c.Rest_Comment_Rating);
+                adapter_c.Fill(SuKienDS_c.Event_Comment_Rating);
 
-                if (SuKienDS_c.Rest_Comment_Rating.Count == 0)
+                if (SuKienDS_c.Event_Comment_Rating.Count == 0)
                 {
                     ThongTinDuLich_DataSet.Event_Comment_RatingRow add_comment = SuKienDS_c.Event_Comment_Rating.NewEvent_Comment_RatingRow();
                     add_comment.UserName = uid;
@@ -136,16 +131,16 @@ public partial class event_detail : User
                     add_comment.Content = tbx_cmt.Text;
                     add_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
                     SuKienDS_c.Event_Comment_Rating.AddEvent_Comment_RatingRow(add_comment);
-                    adapter_c.Update(SuKienDS_c.Rest_Comment_Rating);
+                    adapter_c.Update(SuKienDS_c.Event_Comment_Rating);
 
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
                 else
                 {
-                    ThongTinDuLich_DataSet.Rest_Comment_RatingRow edit_comment = SuKienDS_c.Rest_Comment_Rating[0];
+                    ThongTinDuLich_DataSet.Event_Comment_RatingRow edit_comment = SuKienDS_c.Event_Comment_Rating[0];
                     edit_comment.Content = tbx_cmt.Text;
                     edit_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
-                    adapter_c.Update(SuKienDS_c.Rest_Comment_Rating);
+                    adapter_c.Update(SuKienDS_c.Event_Comment_Rating);
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
             }
@@ -166,6 +161,8 @@ public partial class event_detail : User
             db.SubmitChanges();
         }
     }
+
+    //Like & Unlike
     SqlConnection conn_hit = new SqlConnection();
     SqlCommand cmd_hit = new SqlCommand();
     SqlDataAdapter adapter_hit = new SqlDataAdapter();
@@ -185,7 +182,7 @@ public partial class event_detail : User
             conn_hit.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
             conn_hit.Open();
             cmd_hit.Connection = conn_hit;
-            cmd_hit.CommandText = "select * from Rest_Like where Event_ID='" + T_ID + "'and UserName='" + UN + "'";
+            cmd_hit.CommandText = "select * from Event_Like where Event_ID='" + T_ID + "'and UserName='" + UN + "'";
             cmd_hit.CommandType = System.Data.CommandType.Text;
             adapter_hit.SelectCommand = cmd_hit;
             SqlCommandBuilder builder_hit = new SqlCommandBuilder(adapter_hit);
@@ -195,7 +192,6 @@ public partial class event_detail : User
             {
                 ThongTinDuLich_DataSet.Event_LikeRow add_like = Like_DS.Event_Like.NewEvent_LikeRow();
                 add_like.UserName = UN;
-
                 add_like.Event_ID = Convert.ToInt32(T_ID);
                 add_like.Like_Status = true;
                 Like_DS.Event_Like.AddEvent_LikeRow(add_like);
@@ -226,7 +222,7 @@ public partial class event_detail : User
             conn_hit.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
             conn_hit.Open();
             cmd_hit.Connection = conn_hit;
-            cmd_hit.CommandText = "select * from Rest_Like where Event_ID='" + T_ID + "'and UserName='" + UN + "'";
+            cmd_hit.CommandText = "select * from Event_Like where Event_ID='" + T_ID + "'and UserName='" + UN + "'";
             cmd_hit.CommandType = System.Data.CommandType.Text;
             adapter_hit.SelectCommand = cmd_hit;
             SqlCommandBuilder builder_hit = new SqlCommandBuilder(adapter_hit);
@@ -238,6 +234,7 @@ public partial class event_detail : User
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
+
     protected void RatingControlChanged(object sender, AjaxControlToolkit.RatingEventArgs e)
     {
         btn_cmt.Enabled = true;

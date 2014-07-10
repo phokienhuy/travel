@@ -28,7 +28,7 @@
 									         <li><a href="main.aspx">Trang Chủ</a></li>
 									         <li class="current"><a href="places.aspx" >Địa Điểm</a></li>
 									         <li><a href="restaurant.aspx">Nhà Hàng</a></li>
-									         <li><a href="index-3.html">Khách sạn</a></li>
+									         <li><a href="hotels.aspx">Khách sạn</a></li>
 									         <li><a href="events.aspx">Sự kiện</a></li>
 									         <li><a href="foods.aspx">Ẩm thực</a></li>
 						        </ul>

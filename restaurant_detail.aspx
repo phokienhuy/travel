@@ -107,7 +107,7 @@
       <div class="clear"></div>
                 </ItemTemplate>
             </asp:DataList>          
-            <asp:SqlDataSource ID="SQLHotelDetail" runat="server" 
+            <asp:SqlDataSource ID="SQLRestDetail" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" 
                 
         SelectCommand="SELECT * FROM [ThongTinNhaHang] WHERE ([Rest_ID] = @Rest_ID)">

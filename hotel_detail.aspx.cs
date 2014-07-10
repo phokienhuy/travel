@@ -27,6 +27,7 @@ public partial class hotel_detail : User
     SqlCommand cmd_like = new SqlCommand();
     SqlDataAdapter adapter_like = new SqlDataAdapter();
     ThongTinDuLich_DataSet KhachSanDS_like = new ThongTinDuLich_DataSet();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         string hid = Request.QueryString["hid"];
@@ -34,7 +35,6 @@ public partial class hotel_detail : User
 
         conn.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
         conn.Open();
-
 
         cmd.Connection = conn;
         cmd.CommandText = "select top 50 * from Hotel_Comment_Rating where Hotel_ID='" + hid + "'";
@@ -62,16 +62,12 @@ public partial class hotel_detail : User
         conn_like.Open();
 
         cmd_like.Connection = conn_like;
-
-        //if (UName != "")
-        //{
         cmd_like.CommandText = "select Like_Status from Hotel_Like where Hotel_ID='" + hid + "'and UserName='" + UName + "'";
         cmd_like.CommandType = System.Data.CommandType.Text;
 
         adapter_like.SelectCommand = cmd_like;
         SqlCommandBuilder builder_like = new SqlCommandBuilder(adapter_like);
         adapter_like.Fill(KhachSanDS_like.Hotel_Like);
-
 
         if (KhachSanDS_like.Hotel_Like.Count == 1)
         {
@@ -90,6 +86,7 @@ public partial class hotel_detail : User
             SetLikeView();
         }
     }
+
     private void SetLikeView()
     {
         MultiView_Like.ActiveViewIndex = 0;
@@ -106,7 +103,6 @@ public partial class hotel_detail : User
         string uid = Convert.ToString(Session["User"]);
         if (uid.Length == 0)
         {
-
             Response.Redirect("main.aspx");
         }
         else
@@ -117,8 +113,6 @@ public partial class hotel_detail : User
             }
             else
             {
-
-
                 conn_c.ConnectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Travel.mdf;Integrated Security=True;User Instance=True";
                 conn_c.Open();
 
@@ -139,7 +133,6 @@ public partial class hotel_detail : User
                     add_comment.Rating = Convert.ToInt32(RatingControl.CurrentRating);
                     KhachSanDS_c.Hotel_Comment_Rating.AddHotel_Comment_RatingRow(add_comment);
                     adapter_c.Update(KhachSanDS_c.Hotel_Comment_Rating);
-
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
                 }
                 else
@@ -153,6 +146,7 @@ public partial class hotel_detail : User
             }
         }
     }
+
     protected void UpdateRating(int current)
     {
         ThongTinKhachSan hotel = db.ThongTinKhachSans.Single(x => x.Hotel_ID == Convert.ToInt32(Request.QueryString["hid"]));
@@ -168,6 +162,8 @@ public partial class hotel_detail : User
             db.SubmitChanges();
         }
     }
+
+    //Like & Unlike
     SqlConnection conn_hit = new SqlConnection();
     SqlCommand cmd_hit = new SqlCommand();
     SqlDataAdapter adapter_hit = new SqlDataAdapter();
@@ -239,6 +235,7 @@ public partial class hotel_detail : User
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
+
     protected void RatingControlChanged(object sender, AjaxControlToolkit.RatingEventArgs e)
     {
         btn_cmt.Enabled = true;

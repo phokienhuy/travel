@@ -41,11 +41,11 @@
                 <ItemTemplate>
                     <div class="grid_9">
                         <div class="">
-                          <h3><%# Eval("Name") %></h3>
+                          <h3><%# Eval("Title") %></h3>
                           <ajaxtoolkit:Rating ID="CurrentRatingControl" ReadOnly="true" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
                           </ajaxtoolkit:Rating><br /><br />
                           <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft">
-                          <p class="text1"><a href="#"><%# Eval("ShortDescription") %></a></p>
+                          <p class="text1"><a href="#"><%--<%# Eval("ShortDescription") %>--%></a></p>
                           <div class="clear"></div>
                           <%# Eval("Content") %>
                           </div>
@@ -107,7 +107,7 @@
       <div class="clear"></div>
                 </ItemTemplate>
             </asp:DataList>          
-            <asp:SqlDataSource ID="SQLHotelDetail" runat="server" 
+            <asp:SqlDataSource ID="SQLEventDetail" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" 
                 
         SelectCommand="SELECT * FROM [Event] WHERE ([Event_ID] = @Event_ID)">

@@ -44,12 +44,24 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
   partial void InsertEvent_Comment_Rating(Event_Comment_Rating instance);
   partial void UpdateEvent_Comment_Rating(Event_Comment_Rating instance);
   partial void DeleteEvent_Comment_Rating(Event_Comment_Rating instance);
+  partial void InsertEvent_Like(Event_Like instance);
+  partial void UpdateEvent_Like(Event_Like instance);
+  partial void DeleteEvent_Like(Event_Like instance);
+  partial void InsertFood_Like(Food_Like instance);
+  partial void UpdateFood_Like(Food_Like instance);
+  partial void DeleteFood_Like(Food_Like instance);
   partial void InsertHotel_Comment_Rating(Hotel_Comment_Rating instance);
   partial void UpdateHotel_Comment_Rating(Hotel_Comment_Rating instance);
   partial void DeleteHotel_Comment_Rating(Hotel_Comment_Rating instance);
+  partial void InsertHotel_Like(Hotel_Like instance);
+  partial void UpdateHotel_Like(Hotel_Like instance);
+  partial void DeleteHotel_Like(Hotel_Like instance);
   partial void InsertRest_Comment_Rating(Rest_Comment_Rating instance);
   partial void UpdateRest_Comment_Rating(Rest_Comment_Rating instance);
   partial void DeleteRest_Comment_Rating(Rest_Comment_Rating instance);
+  partial void InsertRestaurant_Like(Restaurant_Like instance);
+  partial void UpdateRestaurant_Like(Restaurant_Like instance);
+  partial void DeleteRestaurant_Like(Restaurant_Like instance);
   partial void InsertThongTinAmThuc(ThongTinAmThuc instance);
   partial void UpdateThongTinAmThuc(ThongTinAmThuc instance);
   partial void DeleteThongTinAmThuc(ThongTinAmThuc instance);
@@ -137,6 +149,22 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
+	public System.Data.Linq.Table<Event_Like> Event_Likes
+	{
+		get
+		{
+			return this.GetTable<Event_Like>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Food_Like> Food_Likes
+	{
+		get
+		{
+			return this.GetTable<Food_Like>();
+		}
+	}
+	
 	public System.Data.Linq.Table<Hotel_Comment_Rating> Hotel_Comment_Ratings
 	{
 		get
@@ -145,11 +173,27 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
+	public System.Data.Linq.Table<Hotel_Like> Hotel_Likes
+	{
+		get
+		{
+			return this.GetTable<Hotel_Like>();
+		}
+	}
+	
 	public System.Data.Linq.Table<Rest_Comment_Rating> Rest_Comment_Ratings
 	{
 		get
 		{
 			return this.GetTable<Rest_Comment_Rating>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Restaurant_Like> Restaurant_Likes
+	{
+		get
+		{
+			return this.GetTable<Restaurant_Like>();
 		}
 	}
 	
@@ -224,9 +268,17 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private EntitySet<Event_Comment_Rating> _Event_Comment_Ratings;
 	
+	private EntitySet<Event_Like> _Event_Likes;
+	
+	private EntitySet<Food_Like> _Food_Likes;
+	
 	private EntitySet<Hotel_Comment_Rating> _Hotel_Comment_Ratings;
 	
+	private EntitySet<Hotel_Like> _Hotel_Likes;
+	
 	private EntitySet<Rest_Comment_Rating> _Rest_Comment_Ratings;
+	
+	private EntitySet<Restaurant_Like> _Restaurant_Likes;
 	
 	private EntitySet<Travel_Comment_Rating> _Travel_Comment_Ratings;
 	
@@ -259,8 +311,12 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		this._Travel_Likes = new EntitySet<Travel_Like>(new Action<Travel_Like>(this.attach_Travel_Likes), new Action<Travel_Like>(this.detach_Travel_Likes));
 		this._AmThuc_Comment_Ratings = new EntitySet<AmThuc_Comment_Rating>(new Action<AmThuc_Comment_Rating>(this.attach_AmThuc_Comment_Ratings), new Action<AmThuc_Comment_Rating>(this.detach_AmThuc_Comment_Ratings));
 		this._Event_Comment_Ratings = new EntitySet<Event_Comment_Rating>(new Action<Event_Comment_Rating>(this.attach_Event_Comment_Ratings), new Action<Event_Comment_Rating>(this.detach_Event_Comment_Ratings));
+		this._Event_Likes = new EntitySet<Event_Like>(new Action<Event_Like>(this.attach_Event_Likes), new Action<Event_Like>(this.detach_Event_Likes));
+		this._Food_Likes = new EntitySet<Food_Like>(new Action<Food_Like>(this.attach_Food_Likes), new Action<Food_Like>(this.detach_Food_Likes));
 		this._Hotel_Comment_Ratings = new EntitySet<Hotel_Comment_Rating>(new Action<Hotel_Comment_Rating>(this.attach_Hotel_Comment_Ratings), new Action<Hotel_Comment_Rating>(this.detach_Hotel_Comment_Ratings));
+		this._Hotel_Likes = new EntitySet<Hotel_Like>(new Action<Hotel_Like>(this.attach_Hotel_Likes), new Action<Hotel_Like>(this.detach_Hotel_Likes));
 		this._Rest_Comment_Ratings = new EntitySet<Rest_Comment_Rating>(new Action<Rest_Comment_Rating>(this.attach_Rest_Comment_Ratings), new Action<Rest_Comment_Rating>(this.detach_Rest_Comment_Ratings));
+		this._Restaurant_Likes = new EntitySet<Restaurant_Like>(new Action<Restaurant_Like>(this.attach_Restaurant_Likes), new Action<Restaurant_Like>(this.detach_Restaurant_Likes));
 		this._Travel_Comment_Ratings = new EntitySet<Travel_Comment_Rating>(new Action<Travel_Comment_Rating>(this.attach_Travel_Comment_Ratings), new Action<Travel_Comment_Rating>(this.detach_Travel_Comment_Ratings));
 		OnCreated();
 	}
@@ -484,6 +540,32 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Event_Like", Storage="_Event_Likes", ThisKey="UserName", OtherKey="UserName")]
+	public EntitySet<Event_Like> Event_Likes
+	{
+		get
+		{
+			return this._Event_Likes;
+		}
+		set
+		{
+			this._Event_Likes.Assign(value);
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Food_Like", Storage="_Food_Likes", ThisKey="UserName", OtherKey="UserName")]
+	public EntitySet<Food_Like> Food_Likes
+	{
+		get
+		{
+			return this._Food_Likes;
+		}
+		set
+		{
+			this._Food_Likes.Assign(value);
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Hotel_Comment_Rating", Storage="_Hotel_Comment_Ratings", ThisKey="UserName", OtherKey="UserName")]
 	public EntitySet<Hotel_Comment_Rating> Hotel_Comment_Ratings
 	{
@@ -497,6 +579,19 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Hotel_Like", Storage="_Hotel_Likes", ThisKey="UserName", OtherKey="UserName")]
+	public EntitySet<Hotel_Like> Hotel_Likes
+	{
+		get
+		{
+			return this._Hotel_Likes;
+		}
+		set
+		{
+			this._Hotel_Likes.Assign(value);
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Rest_Comment_Rating", Storage="_Rest_Comment_Ratings", ThisKey="UserName", OtherKey="UserName")]
 	public EntitySet<Rest_Comment_Rating> Rest_Comment_Ratings
 	{
@@ -507,6 +602,19 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		set
 		{
 			this._Rest_Comment_Ratings.Assign(value);
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Restaurant_Like", Storage="_Restaurant_Likes", ThisKey="UserName", OtherKey="UserName")]
+	public EntitySet<Restaurant_Like> Restaurant_Likes
+	{
+		get
+		{
+			return this._Restaurant_Likes;
+		}
+		set
+		{
+			this._Restaurant_Likes.Assign(value);
 		}
 	}
 	
@@ -579,6 +687,30 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		entity.Account = null;
 	}
 	
+	private void attach_Event_Likes(Event_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = this;
+	}
+	
+	private void detach_Event_Likes(Event_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = null;
+	}
+	
+	private void attach_Food_Likes(Food_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = this;
+	}
+	
+	private void detach_Food_Likes(Food_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = null;
+	}
+	
 	private void attach_Hotel_Comment_Ratings(Hotel_Comment_Rating entity)
 	{
 		this.SendPropertyChanging();
@@ -591,6 +723,18 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		entity.Account = null;
 	}
 	
+	private void attach_Hotel_Likes(Hotel_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = this;
+	}
+	
+	private void detach_Hotel_Likes(Hotel_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = null;
+	}
+	
 	private void attach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
 	{
 		this.SendPropertyChanging();
@@ -598,6 +742,18 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 	}
 	
 	private void detach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = null;
+	}
+	
+	private void attach_Restaurant_Likes(Restaurant_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Account = this;
+	}
+	
+	private void detach_Restaurant_Likes(Restaurant_Like entity)
 	{
 		this.SendPropertyChanging();
 		entity.Account = null;
@@ -1110,6 +1266,8 @@ public partial class Event : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private EntitySet<Event_Comment_Rating> _Event_Comment_Ratings;
 	
+	private EntitySet<Event_Like> _Event_Likes;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1149,6 +1307,7 @@ public partial class Event : INotifyPropertyChanging, INotifyPropertyChanged
 	public Event()
 	{
 		this._Event_Comment_Ratings = new EntitySet<Event_Comment_Rating>(new Action<Event_Comment_Rating>(this.attach_Event_Comment_Ratings), new Action<Event_Comment_Rating>(this.detach_Event_Comment_Ratings));
+		this._Event_Likes = new EntitySet<Event_Like>(new Action<Event_Like>(this.attach_Event_Likes), new Action<Event_Like>(this.detach_Event_Likes));
 		OnCreated();
 	}
 	
@@ -1465,6 +1624,19 @@ public partial class Event : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Event_Event_Like", Storage="_Event_Likes", ThisKey="Event_ID", OtherKey="Event_ID")]
+	public EntitySet<Event_Like> Event_Likes
+	{
+		get
+		{
+			return this._Event_Likes;
+		}
+		set
+		{
+			this._Event_Likes.Assign(value);
+		}
+	}
+	
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;
@@ -1492,6 +1664,18 @@ public partial class Event : INotifyPropertyChanging, INotifyPropertyChanged
 	}
 	
 	private void detach_Event_Comment_Ratings(Event_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.Event = null;
+	}
+	
+	private void attach_Event_Likes(Event_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.Event = this;
+	}
+	
+	private void detach_Event_Likes(Event_Like entity)
 	{
 		this.SendPropertyChanging();
 		entity.Event = null;
@@ -1738,6 +1922,438 @@ public partial class Event_Comment_Rating : INotifyPropertyChanging, INotifyProp
 	}
 }
 
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Event_Like")]
+public partial class Event_Like : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Like_ID;
+	
+	private string _UserName;
+	
+	private System.Nullable<int> _Event_ID;
+	
+	private bool _Like_Status;
+	
+	private EntityRef<Event> _Event;
+	
+	private EntityRef<Account> _Account;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLike_IDChanging(int value);
+    partial void OnLike_IDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnEvent_IDChanging(System.Nullable<int> value);
+    partial void OnEvent_IDChanged();
+    partial void OnLike_StatusChanging(bool value);
+    partial void OnLike_StatusChanged();
+    #endregion
+	
+	public Event_Like()
+	{
+		this._Event = default(EntityRef<Event>);
+		this._Account = default(EntityRef<Account>);
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Like_ID
+	{
+		get
+		{
+			return this._Like_ID;
+		}
+		set
+		{
+			if ((this._Like_ID != value))
+			{
+				this.OnLike_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Like_ID = value;
+				this.SendPropertyChanged("Like_ID");
+				this.OnLike_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(20)")]
+	public string UserName
+	{
+		get
+		{
+			return this._UserName;
+		}
+		set
+		{
+			if ((this._UserName != value))
+			{
+				if (this._Account.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnUserNameChanging(value);
+				this.SendPropertyChanging();
+				this._UserName = value;
+				this.SendPropertyChanged("UserName");
+				this.OnUserNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Event_ID", DbType="Int")]
+	public System.Nullable<int> Event_ID
+	{
+		get
+		{
+			return this._Event_ID;
+		}
+		set
+		{
+			if ((this._Event_ID != value))
+			{
+				if (this._Event.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnEvent_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Event_ID = value;
+				this.SendPropertyChanged("Event_ID");
+				this.OnEvent_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_Status", DbType="Bit NOT NULL")]
+	public bool Like_Status
+	{
+		get
+		{
+			return this._Like_Status;
+		}
+		set
+		{
+			if ((this._Like_Status != value))
+			{
+				this.OnLike_StatusChanging(value);
+				this.SendPropertyChanging();
+				this._Like_Status = value;
+				this.SendPropertyChanged("Like_Status");
+				this.OnLike_StatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Event_Event_Like", Storage="_Event", ThisKey="Event_ID", OtherKey="Event_ID", IsForeignKey=true)]
+	public Event Event
+	{
+		get
+		{
+			return this._Event.Entity;
+		}
+		set
+		{
+			Event previousValue = this._Event.Entity;
+			if (((previousValue != value) 
+						|| (this._Event.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Event.Entity = null;
+					previousValue.Event_Likes.Remove(this);
+				}
+				this._Event.Entity = value;
+				if ((value != null))
+				{
+					value.Event_Likes.Add(this);
+					this._Event_ID = value.Event_ID;
+				}
+				else
+				{
+					this._Event_ID = default(Nullable<int>);
+				}
+				this.SendPropertyChanged("Event");
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Event_Like", Storage="_Account", ThisKey="UserName", OtherKey="UserName", IsForeignKey=true)]
+	public Account Account
+	{
+		get
+		{
+			return this._Account.Entity;
+		}
+		set
+		{
+			Account previousValue = this._Account.Entity;
+			if (((previousValue != value) 
+						|| (this._Account.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Account.Entity = null;
+					previousValue.Event_Likes.Remove(this);
+				}
+				this._Account.Entity = value;
+				if ((value != null))
+				{
+					value.Event_Likes.Add(this);
+					this._UserName = value.UserName;
+				}
+				else
+				{
+					this._UserName = default(string);
+				}
+				this.SendPropertyChanged("Account");
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Food_Like")]
+public partial class Food_Like : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Like_ID;
+	
+	private string _UserName;
+	
+	private System.Nullable<int> _Food_ID;
+	
+	private bool _Like_Status;
+	
+	private EntityRef<Account> _Account;
+	
+	private EntityRef<ThongTinAmThuc> _ThongTinAmThuc;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLike_IDChanging(int value);
+    partial void OnLike_IDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnFood_IDChanging(System.Nullable<int> value);
+    partial void OnFood_IDChanged();
+    partial void OnLike_StatusChanging(bool value);
+    partial void OnLike_StatusChanged();
+    #endregion
+	
+	public Food_Like()
+	{
+		this._Account = default(EntityRef<Account>);
+		this._ThongTinAmThuc = default(EntityRef<ThongTinAmThuc>);
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Like_ID
+	{
+		get
+		{
+			return this._Like_ID;
+		}
+		set
+		{
+			if ((this._Like_ID != value))
+			{
+				this.OnLike_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Like_ID = value;
+				this.SendPropertyChanged("Like_ID");
+				this.OnLike_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(20)")]
+	public string UserName
+	{
+		get
+		{
+			return this._UserName;
+		}
+		set
+		{
+			if ((this._UserName != value))
+			{
+				if (this._Account.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnUserNameChanging(value);
+				this.SendPropertyChanging();
+				this._UserName = value;
+				this.SendPropertyChanged("UserName");
+				this.OnUserNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Food_ID", DbType="Int")]
+	public System.Nullable<int> Food_ID
+	{
+		get
+		{
+			return this._Food_ID;
+		}
+		set
+		{
+			if ((this._Food_ID != value))
+			{
+				if (this._ThongTinAmThuc.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnFood_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Food_ID = value;
+				this.SendPropertyChanged("Food_ID");
+				this.OnFood_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_Status", DbType="Bit NOT NULL")]
+	public bool Like_Status
+	{
+		get
+		{
+			return this._Like_Status;
+		}
+		set
+		{
+			if ((this._Like_Status != value))
+			{
+				this.OnLike_StatusChanging(value);
+				this.SendPropertyChanging();
+				this._Like_Status = value;
+				this.SendPropertyChanged("Like_Status");
+				this.OnLike_StatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Food_Like", Storage="_Account", ThisKey="UserName", OtherKey="UserName", IsForeignKey=true)]
+	public Account Account
+	{
+		get
+		{
+			return this._Account.Entity;
+		}
+		set
+		{
+			Account previousValue = this._Account.Entity;
+			if (((previousValue != value) 
+						|| (this._Account.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Account.Entity = null;
+					previousValue.Food_Likes.Remove(this);
+				}
+				this._Account.Entity = value;
+				if ((value != null))
+				{
+					value.Food_Likes.Add(this);
+					this._UserName = value.UserName;
+				}
+				else
+				{
+					this._UserName = default(string);
+				}
+				this.SendPropertyChanged("Account");
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinAmThuc_Food_Like", Storage="_ThongTinAmThuc", ThisKey="Food_ID", OtherKey="AmThuc_ID", IsForeignKey=true)]
+	public ThongTinAmThuc ThongTinAmThuc
+	{
+		get
+		{
+			return this._ThongTinAmThuc.Entity;
+		}
+		set
+		{
+			ThongTinAmThuc previousValue = this._ThongTinAmThuc.Entity;
+			if (((previousValue != value) 
+						|| (this._ThongTinAmThuc.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._ThongTinAmThuc.Entity = null;
+					previousValue.Food_Likes.Remove(this);
+				}
+				this._ThongTinAmThuc.Entity = value;
+				if ((value != null))
+				{
+					value.Food_Likes.Add(this);
+					this._Food_ID = value.AmThuc_ID;
+				}
+				else
+				{
+					this._Food_ID = default(Nullable<int>);
+				}
+				this.SendPropertyChanged("ThongTinAmThuc");
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hotel_Comment_Rating")]
 public partial class Hotel_Comment_Rating : INotifyPropertyChanging, INotifyPropertyChanged
 {
@@ -1946,6 +2562,222 @@ public partial class Hotel_Comment_Rating : INotifyPropertyChanging, INotifyProp
 				if ((value != null))
 				{
 					value.Hotel_Comment_Ratings.Add(this);
+					this._Hotel_ID = value.Hotel_ID;
+				}
+				else
+				{
+					this._Hotel_ID = default(Nullable<int>);
+				}
+				this.SendPropertyChanged("ThongTinKhachSan");
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Hotel_Like")]
+public partial class Hotel_Like : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Like_ID;
+	
+	private string _UserName;
+	
+	private System.Nullable<int> _Hotel_ID;
+	
+	private bool _Like_Status;
+	
+	private EntityRef<Account> _Account;
+	
+	private EntityRef<ThongTinKhachSan> _ThongTinKhachSan;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLike_IDChanging(int value);
+    partial void OnLike_IDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnHotel_IDChanging(System.Nullable<int> value);
+    partial void OnHotel_IDChanged();
+    partial void OnLike_StatusChanging(bool value);
+    partial void OnLike_StatusChanged();
+    #endregion
+	
+	public Hotel_Like()
+	{
+		this._Account = default(EntityRef<Account>);
+		this._ThongTinKhachSan = default(EntityRef<ThongTinKhachSan>);
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Like_ID
+	{
+		get
+		{
+			return this._Like_ID;
+		}
+		set
+		{
+			if ((this._Like_ID != value))
+			{
+				this.OnLike_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Like_ID = value;
+				this.SendPropertyChanged("Like_ID");
+				this.OnLike_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(20)")]
+	public string UserName
+	{
+		get
+		{
+			return this._UserName;
+		}
+		set
+		{
+			if ((this._UserName != value))
+			{
+				if (this._Account.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnUserNameChanging(value);
+				this.SendPropertyChanging();
+				this._UserName = value;
+				this.SendPropertyChanged("UserName");
+				this.OnUserNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hotel_ID", DbType="Int")]
+	public System.Nullable<int> Hotel_ID
+	{
+		get
+		{
+			return this._Hotel_ID;
+		}
+		set
+		{
+			if ((this._Hotel_ID != value))
+			{
+				if (this._ThongTinKhachSan.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnHotel_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Hotel_ID = value;
+				this.SendPropertyChanged("Hotel_ID");
+				this.OnHotel_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_Status", DbType="Bit NOT NULL")]
+	public bool Like_Status
+	{
+		get
+		{
+			return this._Like_Status;
+		}
+		set
+		{
+			if ((this._Like_Status != value))
+			{
+				this.OnLike_StatusChanging(value);
+				this.SendPropertyChanging();
+				this._Like_Status = value;
+				this.SendPropertyChanged("Like_Status");
+				this.OnLike_StatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Hotel_Like", Storage="_Account", ThisKey="UserName", OtherKey="UserName", IsForeignKey=true)]
+	public Account Account
+	{
+		get
+		{
+			return this._Account.Entity;
+		}
+		set
+		{
+			Account previousValue = this._Account.Entity;
+			if (((previousValue != value) 
+						|| (this._Account.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Account.Entity = null;
+					previousValue.Hotel_Likes.Remove(this);
+				}
+				this._Account.Entity = value;
+				if ((value != null))
+				{
+					value.Hotel_Likes.Add(this);
+					this._UserName = value.UserName;
+				}
+				else
+				{
+					this._UserName = default(string);
+				}
+				this.SendPropertyChanged("Account");
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinKhachSan_Hotel_Like", Storage="_ThongTinKhachSan", ThisKey="Hotel_ID", OtherKey="Hotel_ID", IsForeignKey=true)]
+	public ThongTinKhachSan ThongTinKhachSan
+	{
+		get
+		{
+			return this._ThongTinKhachSan.Entity;
+		}
+		set
+		{
+			ThongTinKhachSan previousValue = this._ThongTinKhachSan.Entity;
+			if (((previousValue != value) 
+						|| (this._ThongTinKhachSan.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._ThongTinKhachSan.Entity = null;
+					previousValue.Hotel_Likes.Remove(this);
+				}
+				this._ThongTinKhachSan.Entity = value;
+				if ((value != null))
+				{
+					value.Hotel_Likes.Add(this);
 					this._Hotel_ID = value.Hotel_ID;
 				}
 				else
@@ -2218,6 +3050,222 @@ public partial class Rest_Comment_Rating : INotifyPropertyChanging, INotifyPrope
 	}
 }
 
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Restaurant_Like")]
+public partial class Restaurant_Like : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Like_ID;
+	
+	private string _UserName;
+	
+	private System.Nullable<int> _Rest_ID;
+	
+	private bool _Like_Status;
+	
+	private EntityRef<Account> _Account;
+	
+	private EntityRef<ThongTinNhaHang> _ThongTinNhaHang;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnLike_IDChanging(int value);
+    partial void OnLike_IDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnRest_IDChanging(System.Nullable<int> value);
+    partial void OnRest_IDChanged();
+    partial void OnLike_StatusChanging(bool value);
+    partial void OnLike_StatusChanged();
+    #endregion
+	
+	public Restaurant_Like()
+	{
+		this._Account = default(EntityRef<Account>);
+		this._ThongTinNhaHang = default(EntityRef<ThongTinNhaHang>);
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Like_ID
+	{
+		get
+		{
+			return this._Like_ID;
+		}
+		set
+		{
+			if ((this._Like_ID != value))
+			{
+				this.OnLike_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Like_ID = value;
+				this.SendPropertyChanged("Like_ID");
+				this.OnLike_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(20)")]
+	public string UserName
+	{
+		get
+		{
+			return this._UserName;
+		}
+		set
+		{
+			if ((this._UserName != value))
+			{
+				if (this._Account.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnUserNameChanging(value);
+				this.SendPropertyChanging();
+				this._UserName = value;
+				this.SendPropertyChanged("UserName");
+				this.OnUserNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rest_ID", DbType="Int")]
+	public System.Nullable<int> Rest_ID
+	{
+		get
+		{
+			return this._Rest_ID;
+		}
+		set
+		{
+			if ((this._Rest_ID != value))
+			{
+				if (this._ThongTinNhaHang.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnRest_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Rest_ID = value;
+				this.SendPropertyChanged("Rest_ID");
+				this.OnRest_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Like_Status", DbType="Bit NOT NULL")]
+	public bool Like_Status
+	{
+		get
+		{
+			return this._Like_Status;
+		}
+		set
+		{
+			if ((this._Like_Status != value))
+			{
+				this.OnLike_StatusChanging(value);
+				this.SendPropertyChanging();
+				this._Like_Status = value;
+				this.SendPropertyChanged("Like_Status");
+				this.OnLike_StatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Restaurant_Like", Storage="_Account", ThisKey="UserName", OtherKey="UserName", IsForeignKey=true)]
+	public Account Account
+	{
+		get
+		{
+			return this._Account.Entity;
+		}
+		set
+		{
+			Account previousValue = this._Account.Entity;
+			if (((previousValue != value) 
+						|| (this._Account.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Account.Entity = null;
+					previousValue.Restaurant_Likes.Remove(this);
+				}
+				this._Account.Entity = value;
+				if ((value != null))
+				{
+					value.Restaurant_Likes.Add(this);
+					this._UserName = value.UserName;
+				}
+				else
+				{
+					this._UserName = default(string);
+				}
+				this.SendPropertyChanged("Account");
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinNhaHang_Restaurant_Like", Storage="_ThongTinNhaHang", ThisKey="Rest_ID", OtherKey="Rest_ID", IsForeignKey=true)]
+	public ThongTinNhaHang ThongTinNhaHang
+	{
+		get
+		{
+			return this._ThongTinNhaHang.Entity;
+		}
+		set
+		{
+			ThongTinNhaHang previousValue = this._ThongTinNhaHang.Entity;
+			if (((previousValue != value) 
+						|| (this._ThongTinNhaHang.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._ThongTinNhaHang.Entity = null;
+					previousValue.Restaurant_Likes.Remove(this);
+				}
+				this._ThongTinNhaHang.Entity = value;
+				if ((value != null))
+				{
+					value.Restaurant_Likes.Add(this);
+					this._Rest_ID = value.Rest_ID;
+				}
+				else
+				{
+					this._Rest_ID = default(Nullable<int>);
+				}
+				this.SendPropertyChanged("ThongTinNhaHang");
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ThongTinAmThuc")]
 public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyChanged
 {
@@ -2255,6 +3303,8 @@ public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyCh
 	private int _LikeNum;
 	
 	private EntitySet<AmThuc_Comment_Rating> _AmThuc_Comment_Ratings;
+	
+	private EntitySet<Food_Like> _Food_Likes;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2295,6 +3345,7 @@ public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyCh
 	public ThongTinAmThuc()
 	{
 		this._AmThuc_Comment_Ratings = new EntitySet<AmThuc_Comment_Rating>(new Action<AmThuc_Comment_Rating>(this.attach_AmThuc_Comment_Ratings), new Action<AmThuc_Comment_Rating>(this.detach_AmThuc_Comment_Ratings));
+		this._Food_Likes = new EntitySet<Food_Like>(new Action<Food_Like>(this.attach_Food_Likes), new Action<Food_Like>(this.detach_Food_Likes));
 		OnCreated();
 	}
 	
@@ -2611,6 +3662,19 @@ public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyCh
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinAmThuc_Food_Like", Storage="_Food_Likes", ThisKey="AmThuc_ID", OtherKey="Food_ID")]
+	public EntitySet<Food_Like> Food_Likes
+	{
+		get
+		{
+			return this._Food_Likes;
+		}
+		set
+		{
+			this._Food_Likes.Assign(value);
+		}
+	}
+	
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;
@@ -2638,6 +3702,18 @@ public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyCh
 	}
 	
 	private void detach_AmThuc_Comment_Ratings(AmThuc_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinAmThuc = null;
+	}
+	
+	private void attach_Food_Likes(Food_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinAmThuc = this;
+	}
+	
+	private void detach_Food_Likes(Food_Like entity)
 	{
 		this.SendPropertyChanging();
 		entity.ThongTinAmThuc = null;
@@ -3214,6 +4290,8 @@ public partial class ThongTinKhachSan : INotifyPropertyChanging, INotifyProperty
 	
 	private EntitySet<Hotel_Comment_Rating> _Hotel_Comment_Ratings;
 	
+	private EntitySet<Hotel_Like> _Hotel_Likes;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3259,6 +4337,7 @@ public partial class ThongTinKhachSan : INotifyPropertyChanging, INotifyProperty
 	public ThongTinKhachSan()
 	{
 		this._Hotel_Comment_Ratings = new EntitySet<Hotel_Comment_Rating>(new Action<Hotel_Comment_Rating>(this.attach_Hotel_Comment_Ratings), new Action<Hotel_Comment_Rating>(this.detach_Hotel_Comment_Ratings));
+		this._Hotel_Likes = new EntitySet<Hotel_Like>(new Action<Hotel_Like>(this.attach_Hotel_Likes), new Action<Hotel_Like>(this.detach_Hotel_Likes));
 		OnCreated();
 	}
 	
@@ -3635,6 +4714,19 @@ public partial class ThongTinKhachSan : INotifyPropertyChanging, INotifyProperty
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinKhachSan_Hotel_Like", Storage="_Hotel_Likes", ThisKey="Hotel_ID", OtherKey="Hotel_ID")]
+	public EntitySet<Hotel_Like> Hotel_Likes
+	{
+		get
+		{
+			return this._Hotel_Likes;
+		}
+		set
+		{
+			this._Hotel_Likes.Assign(value);
+		}
+	}
+	
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;
@@ -3662,6 +4754,18 @@ public partial class ThongTinKhachSan : INotifyPropertyChanging, INotifyProperty
 	}
 	
 	private void detach_Hotel_Comment_Ratings(Hotel_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinKhachSan = null;
+	}
+	
+	private void attach_Hotel_Likes(Hotel_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinKhachSan = this;
+	}
+	
+	private void detach_Hotel_Likes(Hotel_Like entity)
 	{
 		this.SendPropertyChanging();
 		entity.ThongTinKhachSan = null;
@@ -3712,6 +4816,8 @@ public partial class ThongTinNhaHang : INotifyPropertyChanging, INotifyPropertyC
 	
 	private EntitySet<Rest_Comment_Rating> _Rest_Comment_Ratings;
 	
+	private EntitySet<Restaurant_Like> _Restaurant_Likes;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3757,6 +4863,7 @@ public partial class ThongTinNhaHang : INotifyPropertyChanging, INotifyPropertyC
 	public ThongTinNhaHang()
 	{
 		this._Rest_Comment_Ratings = new EntitySet<Rest_Comment_Rating>(new Action<Rest_Comment_Rating>(this.attach_Rest_Comment_Ratings), new Action<Rest_Comment_Rating>(this.detach_Rest_Comment_Ratings));
+		this._Restaurant_Likes = new EntitySet<Restaurant_Like>(new Action<Restaurant_Like>(this.attach_Restaurant_Likes), new Action<Restaurant_Like>(this.detach_Restaurant_Likes));
 		OnCreated();
 	}
 	
@@ -4133,6 +5240,19 @@ public partial class ThongTinNhaHang : INotifyPropertyChanging, INotifyPropertyC
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinNhaHang_Restaurant_Like", Storage="_Restaurant_Likes", ThisKey="Rest_ID", OtherKey="Rest_ID")]
+	public EntitySet<Restaurant_Like> Restaurant_Likes
+	{
+		get
+		{
+			return this._Restaurant_Likes;
+		}
+		set
+		{
+			this._Restaurant_Likes.Assign(value);
+		}
+	}
+	
 	public event PropertyChangingEventHandler PropertyChanging;
 	
 	public event PropertyChangedEventHandler PropertyChanged;
@@ -4160,6 +5280,18 @@ public partial class ThongTinNhaHang : INotifyPropertyChanging, INotifyPropertyC
 	}
 	
 	private void detach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinNhaHang = null;
+	}
+	
+	private void attach_Restaurant_Likes(Restaurant_Like entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinNhaHang = this;
+	}
+	
+	private void detach_Restaurant_Likes(Restaurant_Like entity)
 	{
 		this.SendPropertyChanging();
 		entity.ThongTinNhaHang = null;

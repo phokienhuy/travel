@@ -14,8 +14,12 @@
       <Association Name="Account_Travel_Like" Member="Travel_Likes" ThisKey="UserName" OtherKey="UserName" Type="Travel_Like" />
       <Association Name="Account_AmThuc_Comment_Rating" Member="AmThuc_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="AmThuc_Comment_Rating" />
       <Association Name="Account_Event_Comment_Rating" Member="Event_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="Event_Comment_Rating" />
+      <Association Name="Account_Event_Like" Member="Event_Likes" ThisKey="UserName" OtherKey="UserName" Type="Event_Like" />
+      <Association Name="Account_Food_Like" Member="Food_Likes" ThisKey="UserName" OtherKey="UserName" Type="Food_Like" />
       <Association Name="Account_Hotel_Comment_Rating" Member="Hotel_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="Hotel_Comment_Rating" />
+      <Association Name="Account_Hotel_Like" Member="Hotel_Likes" ThisKey="UserName" OtherKey="UserName" Type="Hotel_Like" />
       <Association Name="Account_Rest_Comment_Rating" Member="Rest_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="Rest_Comment_Rating" />
+      <Association Name="Account_Restaurant_Like" Member="Restaurant_Likes" ThisKey="UserName" OtherKey="UserName" Type="Restaurant_Like" />
       <Association Name="Account_Travel_Comment_Rating" Member="Travel_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="Travel_Comment_Rating" />
     </Type>
   </Table>
@@ -58,6 +62,7 @@
       <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="LikeNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Event_Event_Comment_Rating" Member="Event_Comment_Ratings" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event_Comment_Rating" />
+      <Association Name="Event_Event_Like" Member="Event_Likes" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event_Like" />
     </Type>
   </Table>
   <Table Name="dbo.Event_Comment_Rating" Member="Event_Comment_Ratings">
@@ -71,6 +76,26 @@
       <Association Name="Account_Event_Comment_Rating" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Event_Like" Member="Event_Likes">
+    <Type Name="Event_Like">
+      <Column Name="Like_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Event_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Like_Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Event_Event_Like" Member="Event" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event" IsForeignKey="true" />
+      <Association Name="Account_Event_Like" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Food_Like" Member="Food_Likes">
+    <Type Name="Food_Like">
+      <Column Name="Like_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Food_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Like_Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Account_Food_Like" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
+      <Association Name="ThongTinAmThuc_Food_Like" Member="ThongTinAmThuc" ThisKey="Food_ID" OtherKey="AmThuc_ID" Type="ThongTinAmThuc" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Hotel_Comment_Rating" Member="Hotel_Comment_Ratings">
     <Type Name="Hotel_Comment_Rating">
       <Column Name="Comment_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -82,6 +107,16 @@
       <Association Name="ThongTinKhachSan_Hotel_Comment_Rating" Member="ThongTinKhachSan" ThisKey="Hotel_ID" OtherKey="Hotel_ID" Type="ThongTinKhachSan" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Hotel_Like" Member="Hotel_Likes">
+    <Type Name="Hotel_Like">
+      <Column Name="Like_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Hotel_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Like_Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Account_Hotel_Like" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
+      <Association Name="ThongTinKhachSan_Hotel_Like" Member="ThongTinKhachSan" ThisKey="Hotel_ID" OtherKey="Hotel_ID" Type="ThongTinKhachSan" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Rest_Comment_Rating" Member="Rest_Comment_Ratings">
     <Type Name="Rest_Comment_Rating">
       <Column Name="Comment_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -91,6 +126,16 @@
       <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Account_Rest_Comment_Rating" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
       <Association Name="ThongTinNhaHang_Rest_Comment_Rating" Member="ThongTinNhaHang" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="ThongTinNhaHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Restaurant_Like" Member="Restaurant_Likes">
+    <Type Name="Restaurant_Like">
+      <Column Name="Like_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Rest_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Like_Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Account_Restaurant_Like" Member="Account" ThisKey="UserName" OtherKey="UserName" Type="Account" IsForeignKey="true" />
+      <Association Name="ThongTinNhaHang_Restaurant_Like" Member="ThongTinNhaHang" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="ThongTinNhaHang" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ThongTinAmThuc" Member="ThongTinAmThucs">
@@ -111,6 +156,7 @@
       <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="LikeNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="ThongTinAmThuc_AmThuc_Comment_Rating" Member="AmThuc_Comment_Ratings" ThisKey="AmThuc_ID" OtherKey="AmThuc_ID" Type="AmThuc_Comment_Rating" />
+      <Association Name="ThongTinAmThuc_Food_Like" Member="Food_Likes" ThisKey="AmThuc_ID" OtherKey="Food_ID" Type="Food_Like" />
     </Type>
   </Table>
   <Table Name="dbo.ThongTinDuLich" Member="ThongTinDuLiches">
@@ -158,6 +204,7 @@
       <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="LikeNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="ThongTinKhachSan_Hotel_Comment_Rating" Member="Hotel_Comment_Ratings" ThisKey="Hotel_ID" OtherKey="Hotel_ID" Type="Hotel_Comment_Rating" />
+      <Association Name="ThongTinKhachSan_Hotel_Like" Member="Hotel_Likes" ThisKey="Hotel_ID" OtherKey="Hotel_ID" Type="Hotel_Like" />
     </Type>
   </Table>
   <Table Name="dbo.ThongTinNhaHang" Member="ThongTinNhaHangs">
@@ -181,6 +228,7 @@
       <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="LikeNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="ThongTinNhaHang_Rest_Comment_Rating" Member="Rest_Comment_Ratings" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="Rest_Comment_Rating" />
+      <Association Name="ThongTinNhaHang_Restaurant_Like" Member="Restaurant_Likes" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="Restaurant_Like" />
     </Type>
   </Table>
   <Table Name="dbo.Travel_Comment_Rating" Member="Travel_Comment_Ratings">
