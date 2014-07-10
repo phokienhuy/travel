@@ -29,15 +29,6 @@
       <Association Name="ThongTinAmThuc_AmThuc_Comment_Rating" Member="ThongTinAmThuc" ThisKey="AmThuc_ID" OtherKey="AmThuc_ID" Type="ThongTinAmThuc" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Event" Member="Events">
-    <Type Name="Event">
-      <Column Name="Event_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Event_Event_Comment_Rating" Member="Event_Comment_Ratings" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event_Comment_Rating" />
-    </Type>
-  </Table>
   <Table Name="dbo.Travel_Comment_Rating" Member="Travel_Comment_Ratings">
     <Type Name="Travel_Comment_Rating">
       <Column Name="Comment_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -56,8 +47,8 @@
       <Column Name="Event_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Content" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Event_Event_Comment_Rating" Member="Event" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event" IsForeignKey="true" />
       <Association Name="Account_Event_Comment_Rating" Member="Account" ThisKey="User_ID" OtherKey="User_ID" Type="Account" IsForeignKey="true" />
+      <Association Name="Event_Event_Comment_Rating" Member="Event" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Hotel_Comment_Rating" Member="Hotel_Comment_Ratings">
@@ -80,26 +71,6 @@
       <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Account_Rest_Comment_Rating" Member="Account" ThisKey="User_ID" OtherKey="User_ID" Type="Account" IsForeignKey="true" />
       <Association Name="ThongTinNhaHang_Rest_Comment_Rating" Member="ThongTinNhaHang" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="ThongTinNhaHang" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ThongTinAmThuc" Member="ThongTinAmThucs">
-    <Type Name="ThongTinAmThuc">
-      <Column Name="AmThuc_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="ThongTinAmThuc_AmThuc_Comment_Rating" Member="AmThuc_Comment_Ratings" ThisKey="AmThuc_ID" OtherKey="AmThuc_ID" Type="AmThuc_Comment_Rating" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ThongTinNhaHang" Member="ThongTinNhaHangs">
-    <Type Name="ThongTinNhaHang">
-      <Column Name="Rest_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="ThongTinNhaHang_Rest_Comment_Rating" Member="Rest_Comment_Ratings" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="Rest_Comment_Rating" />
     </Type>
   </Table>
   <Table Name="dbo.ThongTinDuLich" Member="ThongTinDuLiches">
@@ -146,6 +117,69 @@
       <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="LikeNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="ThongTinKhachSan_Hotel_Comment_Rating" Member="Hotel_Comment_Ratings" ThisKey="Hotel_ID" OtherKey="Hotel_ID" Type="Hotel_Comment_Rating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinNhaHang" Member="ThongTinNhaHangs">
+    <Type Name="ThongTinNhaHang">
+      <Column Name="Rest_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InsertDay" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="InsertMonth" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CommentNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoverPic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic5" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LikeNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ThongTinNhaHang_Rest_Comment_Rating" Member="Rest_Comment_Ratings" ThisKey="Rest_ID" OtherKey="Rest_ID" Type="Rest_Comment_Rating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinAmThuc" Member="ThongTinAmThucs">
+    <Type Name="ThongTinAmThuc">
+      <Column Name="AmThuc_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InsertDay" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="InsertMonth" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CommentNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoverPic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic5" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LikeNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ThongTinAmThuc_AmThuc_Comment_Rating" Member="AmThuc_Comment_Ratings" ThisKey="AmThuc_ID" OtherKey="AmThuc_ID" Type="AmThuc_Comment_Rating" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event" Member="Events">
+    <Type Name="Event">
+      <Column Name="Event_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InsertDay" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="InsertMonth" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="CommentNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoverPic" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic5" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pic6" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LikeNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Event_Event_Comment_Rating" Member="Event_Comment_Ratings" ThisKey="Event_ID" OtherKey="Event_ID" Type="Event_Comment_Rating" />
     </Type>
   </Table>
 </Database>

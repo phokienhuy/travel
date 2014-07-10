@@ -35,9 +35,6 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
   partial void InsertAmThuc_Comment_Rating(AmThuc_Comment_Rating instance);
   partial void UpdateAmThuc_Comment_Rating(AmThuc_Comment_Rating instance);
   partial void DeleteAmThuc_Comment_Rating(AmThuc_Comment_Rating instance);
-  partial void InsertEvent(Event instance);
-  partial void UpdateEvent(Event instance);
-  partial void DeleteEvent(Event instance);
   partial void InsertTravel_Comment_Rating(Travel_Comment_Rating instance);
   partial void UpdateTravel_Comment_Rating(Travel_Comment_Rating instance);
   partial void DeleteTravel_Comment_Rating(Travel_Comment_Rating instance);
@@ -50,18 +47,21 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
   partial void InsertRest_Comment_Rating(Rest_Comment_Rating instance);
   partial void UpdateRest_Comment_Rating(Rest_Comment_Rating instance);
   partial void DeleteRest_Comment_Rating(Rest_Comment_Rating instance);
-  partial void InsertThongTinAmThuc(ThongTinAmThuc instance);
-  partial void UpdateThongTinAmThuc(ThongTinAmThuc instance);
-  partial void DeleteThongTinAmThuc(ThongTinAmThuc instance);
-  partial void InsertThongTinNhaHang(ThongTinNhaHang instance);
-  partial void UpdateThongTinNhaHang(ThongTinNhaHang instance);
-  partial void DeleteThongTinNhaHang(ThongTinNhaHang instance);
   partial void InsertThongTinDuLich(ThongTinDuLich instance);
   partial void UpdateThongTinDuLich(ThongTinDuLich instance);
   partial void DeleteThongTinDuLich(ThongTinDuLich instance);
   partial void InsertThongTinKhachSan(ThongTinKhachSan instance);
   partial void UpdateThongTinKhachSan(ThongTinKhachSan instance);
   partial void DeleteThongTinKhachSan(ThongTinKhachSan instance);
+  partial void InsertThongTinNhaHang(ThongTinNhaHang instance);
+  partial void UpdateThongTinNhaHang(ThongTinNhaHang instance);
+  partial void DeleteThongTinNhaHang(ThongTinNhaHang instance);
+  partial void InsertThongTinAmThuc(ThongTinAmThuc instance);
+  partial void UpdateThongTinAmThuc(ThongTinAmThuc instance);
+  partial void DeleteThongTinAmThuc(ThongTinAmThuc instance);
+  partial void InsertEvent(Event instance);
+  partial void UpdateEvent(Event instance);
+  partial void DeleteEvent(Event instance);
   #endregion
 	
 	public TravelDataContext() : 
@@ -110,14 +110,6 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
-	public System.Data.Linq.Table<Event> Events
-	{
-		get
-		{
-			return this.GetTable<Event>();
-		}
-	}
-	
 	public System.Data.Linq.Table<Travel_Comment_Rating> Travel_Comment_Ratings
 	{
 		get
@@ -150,22 +142,6 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
-	public System.Data.Linq.Table<ThongTinAmThuc> ThongTinAmThucs
-	{
-		get
-		{
-			return this.GetTable<ThongTinAmThuc>();
-		}
-	}
-	
-	public System.Data.Linq.Table<ThongTinNhaHang> ThongTinNhaHangs
-	{
-		get
-		{
-			return this.GetTable<ThongTinNhaHang>();
-		}
-	}
-	
 	public System.Data.Linq.Table<ThongTinDuLich> ThongTinDuLiches
 	{
 		get
@@ -179,6 +155,30 @@ public partial class TravelDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<ThongTinKhachSan>();
+		}
+	}
+	
+	public System.Data.Linq.Table<ThongTinNhaHang> ThongTinNhaHangs
+	{
+		get
+		{
+			return this.GetTable<ThongTinNhaHang>();
+		}
+	}
+	
+	public System.Data.Linq.Table<ThongTinAmThuc> ThongTinAmThucs
+	{
+		get
+		{
+			return this.GetTable<ThongTinAmThuc>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Event> Events
+	{
+		get
+		{
+			return this.GetTable<Event>();
 		}
 	}
 }
@@ -817,168 +817,6 @@ public partial class AmThuc_Comment_Rating : INotifyPropertyChanging, INotifyPro
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Event")]
-public partial class Event : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _Event_ID;
-	
-	private string _Title;
-	
-	private string _Content;
-	
-	private System.Nullable<int> _Rating;
-	
-	private EntitySet<Event_Comment_Rating> _Event_Comment_Ratings;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEvent_IDChanging(int value);
-    partial void OnEvent_IDChanged();
-    partial void OnTitleChanging(string value);
-    partial void OnTitleChanged();
-    partial void OnContentChanging(string value);
-    partial void OnContentChanged();
-    partial void OnRatingChanging(System.Nullable<int> value);
-    partial void OnRatingChanged();
-    #endregion
-	
-	public Event()
-	{
-		this._Event_Comment_Ratings = new EntitySet<Event_Comment_Rating>(new Action<Event_Comment_Rating>(this.attach_Event_Comment_Ratings), new Action<Event_Comment_Rating>(this.detach_Event_Comment_Ratings));
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Event_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-	public int Event_ID
-	{
-		get
-		{
-			return this._Event_ID;
-		}
-		set
-		{
-			if ((this._Event_ID != value))
-			{
-				this.OnEvent_IDChanging(value);
-				this.SendPropertyChanging();
-				this._Event_ID = value;
-				this.SendPropertyChanged("Event_ID");
-				this.OnEvent_IDChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(100)")]
-	public string Title
-	{
-		get
-		{
-			return this._Title;
-		}
-		set
-		{
-			if ((this._Title != value))
-			{
-				this.OnTitleChanging(value);
-				this.SendPropertyChanging();
-				this._Title = value;
-				this.SendPropertyChanged("Title");
-				this.OnTitleChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-	public string Content
-	{
-		get
-		{
-			return this._Content;
-		}
-		set
-		{
-			if ((this._Content != value))
-			{
-				this.OnContentChanging(value);
-				this.SendPropertyChanging();
-				this._Content = value;
-				this.SendPropertyChanged("Content");
-				this.OnContentChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
-	public System.Nullable<int> Rating
-	{
-		get
-		{
-			return this._Rating;
-		}
-		set
-		{
-			if ((this._Rating != value))
-			{
-				this.OnRatingChanging(value);
-				this.SendPropertyChanging();
-				this._Rating = value;
-				this.SendPropertyChanged("Rating");
-				this.OnRatingChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Event_Event_Comment_Rating", Storage="_Event_Comment_Ratings", ThisKey="Event_ID", OtherKey="Event_ID")]
-	public EntitySet<Event_Comment_Rating> Event_Comment_Ratings
-	{
-		get
-		{
-			return this._Event_Comment_Ratings;
-		}
-		set
-		{
-			this._Event_Comment_Ratings.Assign(value);
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-	
-	private void attach_Event_Comment_Ratings(Event_Comment_Rating entity)
-	{
-		this.SendPropertyChanging();
-		entity.Event = this;
-	}
-	
-	private void detach_Event_Comment_Ratings(Event_Comment_Rating entity)
-	{
-		this.SendPropertyChanging();
-		entity.Event = null;
-	}
-}
-
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Travel_Comment_Rating")]
 public partial class Travel_Comment_Rating : INotifyPropertyChanging, INotifyPropertyChanged
 {
@@ -1235,9 +1073,9 @@ public partial class Event_Comment_Rating : INotifyPropertyChanging, INotifyProp
 	
 	private System.Nullable<int> _Rating;
 	
-	private EntityRef<Event> _Event;
-	
 	private EntityRef<Account> _Account;
+	
+	private EntityRef<Event> _Event;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1257,8 +1095,8 @@ public partial class Event_Comment_Rating : INotifyPropertyChanging, INotifyProp
 	
 	public Event_Comment_Rating()
 	{
-		this._Event = default(EntityRef<Event>);
 		this._Account = default(EntityRef<Account>);
+		this._Event = default(EntityRef<Event>);
 		OnCreated();
 	}
 	
@@ -1370,40 +1208,6 @@ public partial class Event_Comment_Rating : INotifyPropertyChanging, INotifyProp
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Event_Event_Comment_Rating", Storage="_Event", ThisKey="Event_ID", OtherKey="Event_ID", IsForeignKey=true)]
-	public Event Event
-	{
-		get
-		{
-			return this._Event.Entity;
-		}
-		set
-		{
-			Event previousValue = this._Event.Entity;
-			if (((previousValue != value) 
-						|| (this._Event.HasLoadedOrAssignedValue == false)))
-			{
-				this.SendPropertyChanging();
-				if ((previousValue != null))
-				{
-					this._Event.Entity = null;
-					previousValue.Event_Comment_Ratings.Remove(this);
-				}
-				this._Event.Entity = value;
-				if ((value != null))
-				{
-					value.Event_Comment_Ratings.Add(this);
-					this._Event_ID = value.Event_ID;
-				}
-				else
-				{
-					this._Event_ID = default(Nullable<int>);
-				}
-				this.SendPropertyChanged("Event");
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Event_Comment_Rating", Storage="_Account", ThisKey="User_ID", OtherKey="User_ID", IsForeignKey=true)]
 	public Account Account
 	{
@@ -1434,6 +1238,40 @@ public partial class Event_Comment_Rating : INotifyPropertyChanging, INotifyProp
 					this._User_ID = default(Nullable<System.Guid>);
 				}
 				this.SendPropertyChanged("Account");
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Event_Event_Comment_Rating", Storage="_Event", ThisKey="Event_ID", OtherKey="Event_ID", IsForeignKey=true)]
+	public Event Event
+	{
+		get
+		{
+			return this._Event.Entity;
+		}
+		set
+		{
+			Event previousValue = this._Event.Entity;
+			if (((previousValue != value) 
+						|| (this._Event.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Event.Entity = null;
+					previousValue.Event_Comment_Ratings.Remove(this);
+				}
+				this._Event.Entity = value;
+				if ((value != null))
+				{
+					value.Event_Comment_Ratings.Add(this);
+					this._Event_ID = value.Event_ID;
+				}
+				else
+				{
+					this._Event_ID = default(Nullable<int>);
+				}
+				this.SendPropertyChanged("Event");
 			}
 		}
 	}
@@ -1936,378 +1774,6 @@ public partial class Rest_Comment_Rating : INotifyPropertyChanging, INotifyPrope
 		{
 			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ThongTinAmThuc")]
-public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _AmThuc_ID;
-	
-	private string _Title;
-	
-	private string _Content;
-	
-	private System.Nullable<int> _Rating;
-	
-	private EntitySet<AmThuc_Comment_Rating> _AmThuc_Comment_Ratings;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAmThuc_IDChanging(int value);
-    partial void OnAmThuc_IDChanged();
-    partial void OnTitleChanging(string value);
-    partial void OnTitleChanged();
-    partial void OnContentChanging(string value);
-    partial void OnContentChanged();
-    partial void OnRatingChanging(System.Nullable<int> value);
-    partial void OnRatingChanged();
-    #endregion
-	
-	public ThongTinAmThuc()
-	{
-		this._AmThuc_Comment_Ratings = new EntitySet<AmThuc_Comment_Rating>(new Action<AmThuc_Comment_Rating>(this.attach_AmThuc_Comment_Ratings), new Action<AmThuc_Comment_Rating>(this.detach_AmThuc_Comment_Ratings));
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AmThuc_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-	public int AmThuc_ID
-	{
-		get
-		{
-			return this._AmThuc_ID;
-		}
-		set
-		{
-			if ((this._AmThuc_ID != value))
-			{
-				this.OnAmThuc_IDChanging(value);
-				this.SendPropertyChanging();
-				this._AmThuc_ID = value;
-				this.SendPropertyChanged("AmThuc_ID");
-				this.OnAmThuc_IDChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(100)")]
-	public string Title
-	{
-		get
-		{
-			return this._Title;
-		}
-		set
-		{
-			if ((this._Title != value))
-			{
-				this.OnTitleChanging(value);
-				this.SendPropertyChanging();
-				this._Title = value;
-				this.SendPropertyChanged("Title");
-				this.OnTitleChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-	public string Content
-	{
-		get
-		{
-			return this._Content;
-		}
-		set
-		{
-			if ((this._Content != value))
-			{
-				this.OnContentChanging(value);
-				this.SendPropertyChanging();
-				this._Content = value;
-				this.SendPropertyChanged("Content");
-				this.OnContentChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
-	public System.Nullable<int> Rating
-	{
-		get
-		{
-			return this._Rating;
-		}
-		set
-		{
-			if ((this._Rating != value))
-			{
-				this.OnRatingChanging(value);
-				this.SendPropertyChanging();
-				this._Rating = value;
-				this.SendPropertyChanged("Rating");
-				this.OnRatingChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinAmThuc_AmThuc_Comment_Rating", Storage="_AmThuc_Comment_Ratings", ThisKey="AmThuc_ID", OtherKey="AmThuc_ID")]
-	public EntitySet<AmThuc_Comment_Rating> AmThuc_Comment_Ratings
-	{
-		get
-		{
-			return this._AmThuc_Comment_Ratings;
-		}
-		set
-		{
-			this._AmThuc_Comment_Ratings.Assign(value);
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-	
-	private void attach_AmThuc_Comment_Ratings(AmThuc_Comment_Rating entity)
-	{
-		this.SendPropertyChanging();
-		entity.ThongTinAmThuc = this;
-	}
-	
-	private void detach_AmThuc_Comment_Ratings(AmThuc_Comment_Rating entity)
-	{
-		this.SendPropertyChanging();
-		entity.ThongTinAmThuc = null;
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ThongTinNhaHang")]
-public partial class ThongTinNhaHang : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _Rest_ID;
-	
-	private string _Name;
-	
-	private string _Address;
-	
-	private string _Phone;
-	
-	private string _Content;
-	
-	private System.Nullable<int> _Rating;
-	
-	private EntitySet<Rest_Comment_Rating> _Rest_Comment_Ratings;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnRest_IDChanging(int value);
-    partial void OnRest_IDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnAddressChanging(string value);
-    partial void OnAddressChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
-    partial void OnContentChanging(string value);
-    partial void OnContentChanged();
-    partial void OnRatingChanging(System.Nullable<int> value);
-    partial void OnRatingChanged();
-    #endregion
-	
-	public ThongTinNhaHang()
-	{
-		this._Rest_Comment_Ratings = new EntitySet<Rest_Comment_Rating>(new Action<Rest_Comment_Rating>(this.attach_Rest_Comment_Ratings), new Action<Rest_Comment_Rating>(this.detach_Rest_Comment_Ratings));
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rest_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-	public int Rest_ID
-	{
-		get
-		{
-			return this._Rest_ID;
-		}
-		set
-		{
-			if ((this._Rest_ID != value))
-			{
-				this.OnRest_IDChanging(value);
-				this.SendPropertyChanging();
-				this._Rest_ID = value;
-				this.SendPropertyChanged("Rest_ID");
-				this.OnRest_IDChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(20)")]
-	public string Name
-	{
-		get
-		{
-			return this._Name;
-		}
-		set
-		{
-			if ((this._Name != value))
-			{
-				this.OnNameChanging(value);
-				this.SendPropertyChanging();
-				this._Name = value;
-				this.SendPropertyChanged("Name");
-				this.OnNameChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
-	public string Address
-	{
-		get
-		{
-			return this._Address;
-		}
-		set
-		{
-			if ((this._Address != value))
-			{
-				this.OnAddressChanging(value);
-				this.SendPropertyChanging();
-				this._Address = value;
-				this.SendPropertyChanged("Address");
-				this.OnAddressChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(15)")]
-	public string Phone
-	{
-		get
-		{
-			return this._Phone;
-		}
-		set
-		{
-			if ((this._Phone != value))
-			{
-				this.OnPhoneChanging(value);
-				this.SendPropertyChanging();
-				this._Phone = value;
-				this.SendPropertyChanged("Phone");
-				this.OnPhoneChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-	public string Content
-	{
-		get
-		{
-			return this._Content;
-		}
-		set
-		{
-			if ((this._Content != value))
-			{
-				this.OnContentChanging(value);
-				this.SendPropertyChanging();
-				this._Content = value;
-				this.SendPropertyChanged("Content");
-				this.OnContentChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
-	public System.Nullable<int> Rating
-	{
-		get
-		{
-			return this._Rating;
-		}
-		set
-		{
-			if ((this._Rating != value))
-			{
-				this.OnRatingChanging(value);
-				this.SendPropertyChanging();
-				this._Rating = value;
-				this.SendPropertyChanged("Rating");
-				this.OnRatingChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinNhaHang_Rest_Comment_Rating", Storage="_Rest_Comment_Ratings", ThisKey="Rest_ID", OtherKey="Rest_ID")]
-	public EntitySet<Rest_Comment_Rating> Rest_Comment_Ratings
-	{
-		get
-		{
-			return this._Rest_Comment_Ratings;
-		}
-		set
-		{
-			this._Rest_Comment_Ratings.Assign(value);
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-	
-	private void attach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
-	{
-		this.SendPropertyChanging();
-		entity.ThongTinNhaHang = this;
-	}
-	
-	private void detach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
-	{
-		this.SendPropertyChanging();
-		entity.ThongTinNhaHang = null;
 	}
 }
 
@@ -3304,6 +2770,1356 @@ public partial class ThongTinKhachSan : INotifyPropertyChanging, INotifyProperty
 	{
 		this.SendPropertyChanging();
 		entity.ThongTinKhachSan = null;
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ThongTinNhaHang")]
+public partial class ThongTinNhaHang : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Rest_ID;
+	
+	private string _Name;
+	
+	private string _Address;
+	
+	private string _Phone;
+	
+	private string _ShortDescription;
+	
+	private string _Content;
+	
+	private System.Nullable<int> _Rating;
+	
+	private string _InsertDay;
+	
+	private string _InsertMonth;
+	
+	private System.Nullable<int> _CommentNum;
+	
+	private string _CoverPic;
+	
+	private string _Pic1;
+	
+	private string _Pic2;
+	
+	private string _Pic3;
+	
+	private string _Pic4;
+	
+	private string _Pic5;
+	
+	private string _Pic6;
+	
+	private System.Nullable<int> _LikeNum;
+	
+	private EntitySet<Rest_Comment_Rating> _Rest_Comment_Ratings;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRest_IDChanging(int value);
+    partial void OnRest_IDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnShortDescriptionChanging(string value);
+    partial void OnShortDescriptionChanged();
+    partial void OnContentChanging(string value);
+    partial void OnContentChanged();
+    partial void OnRatingChanging(System.Nullable<int> value);
+    partial void OnRatingChanged();
+    partial void OnInsertDayChanging(string value);
+    partial void OnInsertDayChanged();
+    partial void OnInsertMonthChanging(string value);
+    partial void OnInsertMonthChanged();
+    partial void OnCommentNumChanging(System.Nullable<int> value);
+    partial void OnCommentNumChanged();
+    partial void OnCoverPicChanging(string value);
+    partial void OnCoverPicChanged();
+    partial void OnPic1Changing(string value);
+    partial void OnPic1Changed();
+    partial void OnPic2Changing(string value);
+    partial void OnPic2Changed();
+    partial void OnPic3Changing(string value);
+    partial void OnPic3Changed();
+    partial void OnPic4Changing(string value);
+    partial void OnPic4Changed();
+    partial void OnPic5Changing(string value);
+    partial void OnPic5Changed();
+    partial void OnPic6Changing(string value);
+    partial void OnPic6Changed();
+    partial void OnLikeNumChanging(System.Nullable<int> value);
+    partial void OnLikeNumChanged();
+    #endregion
+	
+	public ThongTinNhaHang()
+	{
+		this._Rest_Comment_Ratings = new EntitySet<Rest_Comment_Rating>(new Action<Rest_Comment_Rating>(this.attach_Rest_Comment_Ratings), new Action<Rest_Comment_Rating>(this.detach_Rest_Comment_Ratings));
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rest_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Rest_ID
+	{
+		get
+		{
+			return this._Rest_ID;
+		}
+		set
+		{
+			if ((this._Rest_ID != value))
+			{
+				this.OnRest_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Rest_ID = value;
+				this.SendPropertyChanged("Rest_ID");
+				this.OnRest_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(20)")]
+	public string Name
+	{
+		get
+		{
+			return this._Name;
+		}
+		set
+		{
+			if ((this._Name != value))
+			{
+				this.OnNameChanging(value);
+				this.SendPropertyChanging();
+				this._Name = value;
+				this.SendPropertyChanged("Name");
+				this.OnNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
+	public string Address
+	{
+		get
+		{
+			return this._Address;
+		}
+		set
+		{
+			if ((this._Address != value))
+			{
+				this.OnAddressChanging(value);
+				this.SendPropertyChanging();
+				this._Address = value;
+				this.SendPropertyChanged("Address");
+				this.OnAddressChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(15)")]
+	public string Phone
+	{
+		get
+		{
+			return this._Phone;
+		}
+		set
+		{
+			if ((this._Phone != value))
+			{
+				this.OnPhoneChanging(value);
+				this.SendPropertyChanging();
+				this._Phone = value;
+				this.SendPropertyChanged("Phone");
+				this.OnPhoneChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShortDescription", DbType="NVarChar(1000)")]
+	public string ShortDescription
+	{
+		get
+		{
+			return this._ShortDescription;
+		}
+		set
+		{
+			if ((this._ShortDescription != value))
+			{
+				this.OnShortDescriptionChanging(value);
+				this.SendPropertyChanging();
+				this._ShortDescription = value;
+				this.SendPropertyChanged("ShortDescription");
+				this.OnShortDescriptionChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+	public string Content
+	{
+		get
+		{
+			return this._Content;
+		}
+		set
+		{
+			if ((this._Content != value))
+			{
+				this.OnContentChanging(value);
+				this.SendPropertyChanging();
+				this._Content = value;
+				this.SendPropertyChanged("Content");
+				this.OnContentChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
+	public System.Nullable<int> Rating
+	{
+		get
+		{
+			return this._Rating;
+		}
+		set
+		{
+			if ((this._Rating != value))
+			{
+				this.OnRatingChanging(value);
+				this.SendPropertyChanging();
+				this._Rating = value;
+				this.SendPropertyChanged("Rating");
+				this.OnRatingChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDay", DbType="Char(2)")]
+	public string InsertDay
+	{
+		get
+		{
+			return this._InsertDay;
+		}
+		set
+		{
+			if ((this._InsertDay != value))
+			{
+				this.OnInsertDayChanging(value);
+				this.SendPropertyChanging();
+				this._InsertDay = value;
+				this.SendPropertyChanged("InsertDay");
+				this.OnInsertDayChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertMonth", DbType="Char(3)")]
+	public string InsertMonth
+	{
+		get
+		{
+			return this._InsertMonth;
+		}
+		set
+		{
+			if ((this._InsertMonth != value))
+			{
+				this.OnInsertMonthChanging(value);
+				this.SendPropertyChanging();
+				this._InsertMonth = value;
+				this.SendPropertyChanged("InsertMonth");
+				this.OnInsertMonthChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CommentNum", DbType="Int")]
+	public System.Nullable<int> CommentNum
+	{
+		get
+		{
+			return this._CommentNum;
+		}
+		set
+		{
+			if ((this._CommentNum != value))
+			{
+				this.OnCommentNumChanging(value);
+				this.SendPropertyChanging();
+				this._CommentNum = value;
+				this.SendPropertyChanged("CommentNum");
+				this.OnCommentNumChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoverPic", DbType="NVarChar(255)")]
+	public string CoverPic
+	{
+		get
+		{
+			return this._CoverPic;
+		}
+		set
+		{
+			if ((this._CoverPic != value))
+			{
+				this.OnCoverPicChanging(value);
+				this.SendPropertyChanging();
+				this._CoverPic = value;
+				this.SendPropertyChanged("CoverPic");
+				this.OnCoverPicChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic1", DbType="NVarChar(255)")]
+	public string Pic1
+	{
+		get
+		{
+			return this._Pic1;
+		}
+		set
+		{
+			if ((this._Pic1 != value))
+			{
+				this.OnPic1Changing(value);
+				this.SendPropertyChanging();
+				this._Pic1 = value;
+				this.SendPropertyChanged("Pic1");
+				this.OnPic1Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic2", DbType="NVarChar(255)")]
+	public string Pic2
+	{
+		get
+		{
+			return this._Pic2;
+		}
+		set
+		{
+			if ((this._Pic2 != value))
+			{
+				this.OnPic2Changing(value);
+				this.SendPropertyChanging();
+				this._Pic2 = value;
+				this.SendPropertyChanged("Pic2");
+				this.OnPic2Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic3", DbType="NVarChar(255)")]
+	public string Pic3
+	{
+		get
+		{
+			return this._Pic3;
+		}
+		set
+		{
+			if ((this._Pic3 != value))
+			{
+				this.OnPic3Changing(value);
+				this.SendPropertyChanging();
+				this._Pic3 = value;
+				this.SendPropertyChanged("Pic3");
+				this.OnPic3Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic4", DbType="NVarChar(255)")]
+	public string Pic4
+	{
+		get
+		{
+			return this._Pic4;
+		}
+		set
+		{
+			if ((this._Pic4 != value))
+			{
+				this.OnPic4Changing(value);
+				this.SendPropertyChanging();
+				this._Pic4 = value;
+				this.SendPropertyChanged("Pic4");
+				this.OnPic4Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic5", DbType="NVarChar(255)")]
+	public string Pic5
+	{
+		get
+		{
+			return this._Pic5;
+		}
+		set
+		{
+			if ((this._Pic5 != value))
+			{
+				this.OnPic5Changing(value);
+				this.SendPropertyChanging();
+				this._Pic5 = value;
+				this.SendPropertyChanged("Pic5");
+				this.OnPic5Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic6", DbType="NVarChar(255)")]
+	public string Pic6
+	{
+		get
+		{
+			return this._Pic6;
+		}
+		set
+		{
+			if ((this._Pic6 != value))
+			{
+				this.OnPic6Changing(value);
+				this.SendPropertyChanging();
+				this._Pic6 = value;
+				this.SendPropertyChanged("Pic6");
+				this.OnPic6Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LikeNum", DbType="Int")]
+	public System.Nullable<int> LikeNum
+	{
+		get
+		{
+			return this._LikeNum;
+		}
+		set
+		{
+			if ((this._LikeNum != value))
+			{
+				this.OnLikeNumChanging(value);
+				this.SendPropertyChanging();
+				this._LikeNum = value;
+				this.SendPropertyChanged("LikeNum");
+				this.OnLikeNumChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinNhaHang_Rest_Comment_Rating", Storage="_Rest_Comment_Ratings", ThisKey="Rest_ID", OtherKey="Rest_ID")]
+	public EntitySet<Rest_Comment_Rating> Rest_Comment_Ratings
+	{
+		get
+		{
+			return this._Rest_Comment_Ratings;
+		}
+		set
+		{
+			this._Rest_Comment_Ratings.Assign(value);
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+	
+	private void attach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinNhaHang = this;
+	}
+	
+	private void detach_Rest_Comment_Ratings(Rest_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinNhaHang = null;
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ThongTinAmThuc")]
+public partial class ThongTinAmThuc : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _AmThuc_ID;
+	
+	private string _Title;
+	
+	private string _Content;
+	
+	private System.Nullable<int> _Rating;
+	
+	private string _InsertDay;
+	
+	private string _InsertMonth;
+	
+	private System.Nullable<int> _CommentNum;
+	
+	private string _CoverPic;
+	
+	private string _Pic1;
+	
+	private string _Pic2;
+	
+	private string _Pic3;
+	
+	private string _Pic4;
+	
+	private string _Pic5;
+	
+	private string _Pic6;
+	
+	private System.Nullable<int> _LikeNum;
+	
+	private EntitySet<AmThuc_Comment_Rating> _AmThuc_Comment_Ratings;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAmThuc_IDChanging(int value);
+    partial void OnAmThuc_IDChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnContentChanging(string value);
+    partial void OnContentChanged();
+    partial void OnRatingChanging(System.Nullable<int> value);
+    partial void OnRatingChanged();
+    partial void OnInsertDayChanging(string value);
+    partial void OnInsertDayChanged();
+    partial void OnInsertMonthChanging(string value);
+    partial void OnInsertMonthChanged();
+    partial void OnCommentNumChanging(System.Nullable<int> value);
+    partial void OnCommentNumChanged();
+    partial void OnCoverPicChanging(string value);
+    partial void OnCoverPicChanged();
+    partial void OnPic1Changing(string value);
+    partial void OnPic1Changed();
+    partial void OnPic2Changing(string value);
+    partial void OnPic2Changed();
+    partial void OnPic3Changing(string value);
+    partial void OnPic3Changed();
+    partial void OnPic4Changing(string value);
+    partial void OnPic4Changed();
+    partial void OnPic5Changing(string value);
+    partial void OnPic5Changed();
+    partial void OnPic6Changing(string value);
+    partial void OnPic6Changed();
+    partial void OnLikeNumChanging(System.Nullable<int> value);
+    partial void OnLikeNumChanged();
+    #endregion
+	
+	public ThongTinAmThuc()
+	{
+		this._AmThuc_Comment_Ratings = new EntitySet<AmThuc_Comment_Rating>(new Action<AmThuc_Comment_Rating>(this.attach_AmThuc_Comment_Ratings), new Action<AmThuc_Comment_Rating>(this.detach_AmThuc_Comment_Ratings));
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AmThuc_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int AmThuc_ID
+	{
+		get
+		{
+			return this._AmThuc_ID;
+		}
+		set
+		{
+			if ((this._AmThuc_ID != value))
+			{
+				this.OnAmThuc_IDChanging(value);
+				this.SendPropertyChanging();
+				this._AmThuc_ID = value;
+				this.SendPropertyChanged("AmThuc_ID");
+				this.OnAmThuc_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(100)")]
+	public string Title
+	{
+		get
+		{
+			return this._Title;
+		}
+		set
+		{
+			if ((this._Title != value))
+			{
+				this.OnTitleChanging(value);
+				this.SendPropertyChanging();
+				this._Title = value;
+				this.SendPropertyChanged("Title");
+				this.OnTitleChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+	public string Content
+	{
+		get
+		{
+			return this._Content;
+		}
+		set
+		{
+			if ((this._Content != value))
+			{
+				this.OnContentChanging(value);
+				this.SendPropertyChanging();
+				this._Content = value;
+				this.SendPropertyChanged("Content");
+				this.OnContentChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
+	public System.Nullable<int> Rating
+	{
+		get
+		{
+			return this._Rating;
+		}
+		set
+		{
+			if ((this._Rating != value))
+			{
+				this.OnRatingChanging(value);
+				this.SendPropertyChanging();
+				this._Rating = value;
+				this.SendPropertyChanged("Rating");
+				this.OnRatingChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDay", DbType="Char(2)")]
+	public string InsertDay
+	{
+		get
+		{
+			return this._InsertDay;
+		}
+		set
+		{
+			if ((this._InsertDay != value))
+			{
+				this.OnInsertDayChanging(value);
+				this.SendPropertyChanging();
+				this._InsertDay = value;
+				this.SendPropertyChanged("InsertDay");
+				this.OnInsertDayChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertMonth", DbType="Char(3)")]
+	public string InsertMonth
+	{
+		get
+		{
+			return this._InsertMonth;
+		}
+		set
+		{
+			if ((this._InsertMonth != value))
+			{
+				this.OnInsertMonthChanging(value);
+				this.SendPropertyChanging();
+				this._InsertMonth = value;
+				this.SendPropertyChanged("InsertMonth");
+				this.OnInsertMonthChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CommentNum", DbType="Int")]
+	public System.Nullable<int> CommentNum
+	{
+		get
+		{
+			return this._CommentNum;
+		}
+		set
+		{
+			if ((this._CommentNum != value))
+			{
+				this.OnCommentNumChanging(value);
+				this.SendPropertyChanging();
+				this._CommentNum = value;
+				this.SendPropertyChanged("CommentNum");
+				this.OnCommentNumChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoverPic", DbType="NVarChar(255)")]
+	public string CoverPic
+	{
+		get
+		{
+			return this._CoverPic;
+		}
+		set
+		{
+			if ((this._CoverPic != value))
+			{
+				this.OnCoverPicChanging(value);
+				this.SendPropertyChanging();
+				this._CoverPic = value;
+				this.SendPropertyChanged("CoverPic");
+				this.OnCoverPicChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic1", DbType="NVarChar(255)")]
+	public string Pic1
+	{
+		get
+		{
+			return this._Pic1;
+		}
+		set
+		{
+			if ((this._Pic1 != value))
+			{
+				this.OnPic1Changing(value);
+				this.SendPropertyChanging();
+				this._Pic1 = value;
+				this.SendPropertyChanged("Pic1");
+				this.OnPic1Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic2", DbType="NVarChar(255)")]
+	public string Pic2
+	{
+		get
+		{
+			return this._Pic2;
+		}
+		set
+		{
+			if ((this._Pic2 != value))
+			{
+				this.OnPic2Changing(value);
+				this.SendPropertyChanging();
+				this._Pic2 = value;
+				this.SendPropertyChanged("Pic2");
+				this.OnPic2Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic3", DbType="NVarChar(255)")]
+	public string Pic3
+	{
+		get
+		{
+			return this._Pic3;
+		}
+		set
+		{
+			if ((this._Pic3 != value))
+			{
+				this.OnPic3Changing(value);
+				this.SendPropertyChanging();
+				this._Pic3 = value;
+				this.SendPropertyChanged("Pic3");
+				this.OnPic3Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic4", DbType="NVarChar(255)")]
+	public string Pic4
+	{
+		get
+		{
+			return this._Pic4;
+		}
+		set
+		{
+			if ((this._Pic4 != value))
+			{
+				this.OnPic4Changing(value);
+				this.SendPropertyChanging();
+				this._Pic4 = value;
+				this.SendPropertyChanged("Pic4");
+				this.OnPic4Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic5", DbType="NVarChar(255)")]
+	public string Pic5
+	{
+		get
+		{
+			return this._Pic5;
+		}
+		set
+		{
+			if ((this._Pic5 != value))
+			{
+				this.OnPic5Changing(value);
+				this.SendPropertyChanging();
+				this._Pic5 = value;
+				this.SendPropertyChanged("Pic5");
+				this.OnPic5Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic6", DbType="NVarChar(255)")]
+	public string Pic6
+	{
+		get
+		{
+			return this._Pic6;
+		}
+		set
+		{
+			if ((this._Pic6 != value))
+			{
+				this.OnPic6Changing(value);
+				this.SendPropertyChanging();
+				this._Pic6 = value;
+				this.SendPropertyChanged("Pic6");
+				this.OnPic6Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LikeNum", DbType="Int")]
+	public System.Nullable<int> LikeNum
+	{
+		get
+		{
+			return this._LikeNum;
+		}
+		set
+		{
+			if ((this._LikeNum != value))
+			{
+				this.OnLikeNumChanging(value);
+				this.SendPropertyChanging();
+				this._LikeNum = value;
+				this.SendPropertyChanged("LikeNum");
+				this.OnLikeNumChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ThongTinAmThuc_AmThuc_Comment_Rating", Storage="_AmThuc_Comment_Ratings", ThisKey="AmThuc_ID", OtherKey="AmThuc_ID")]
+	public EntitySet<AmThuc_Comment_Rating> AmThuc_Comment_Ratings
+	{
+		get
+		{
+			return this._AmThuc_Comment_Ratings;
+		}
+		set
+		{
+			this._AmThuc_Comment_Ratings.Assign(value);
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+	
+	private void attach_AmThuc_Comment_Ratings(AmThuc_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinAmThuc = this;
+	}
+	
+	private void detach_AmThuc_Comment_Ratings(AmThuc_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.ThongTinAmThuc = null;
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Event")]
+public partial class Event : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _Event_ID;
+	
+	private string _Title;
+	
+	private string _Content;
+	
+	private System.Nullable<int> _Rating;
+	
+	private string _InsertDay;
+	
+	private string _InsertMonth;
+	
+	private System.Nullable<int> _CommentNum;
+	
+	private string _CoverPic;
+	
+	private string _Pic1;
+	
+	private string _Pic2;
+	
+	private string _Pic3;
+	
+	private string _Pic4;
+	
+	private string _Pic5;
+	
+	private string _Pic6;
+	
+	private System.Nullable<int> _LikeNum;
+	
+	private EntitySet<Event_Comment_Rating> _Event_Comment_Ratings;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEvent_IDChanging(int value);
+    partial void OnEvent_IDChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnContentChanging(string value);
+    partial void OnContentChanged();
+    partial void OnRatingChanging(System.Nullable<int> value);
+    partial void OnRatingChanged();
+    partial void OnInsertDayChanging(string value);
+    partial void OnInsertDayChanged();
+    partial void OnInsertMonthChanging(string value);
+    partial void OnInsertMonthChanged();
+    partial void OnCommentNumChanging(System.Nullable<int> value);
+    partial void OnCommentNumChanged();
+    partial void OnCoverPicChanging(string value);
+    partial void OnCoverPicChanged();
+    partial void OnPic1Changing(string value);
+    partial void OnPic1Changed();
+    partial void OnPic2Changing(string value);
+    partial void OnPic2Changed();
+    partial void OnPic3Changing(string value);
+    partial void OnPic3Changed();
+    partial void OnPic4Changing(string value);
+    partial void OnPic4Changed();
+    partial void OnPic5Changing(string value);
+    partial void OnPic5Changed();
+    partial void OnPic6Changing(string value);
+    partial void OnPic6Changed();
+    partial void OnLikeNumChanging(System.Nullable<int> value);
+    partial void OnLikeNumChanged();
+    #endregion
+	
+	public Event()
+	{
+		this._Event_Comment_Ratings = new EntitySet<Event_Comment_Rating>(new Action<Event_Comment_Rating>(this.attach_Event_Comment_Ratings), new Action<Event_Comment_Rating>(this.detach_Event_Comment_Ratings));
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Event_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int Event_ID
+	{
+		get
+		{
+			return this._Event_ID;
+		}
+		set
+		{
+			if ((this._Event_ID != value))
+			{
+				this.OnEvent_IDChanging(value);
+				this.SendPropertyChanging();
+				this._Event_ID = value;
+				this.SendPropertyChanged("Event_ID");
+				this.OnEvent_IDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(100)")]
+	public string Title
+	{
+		get
+		{
+			return this._Title;
+		}
+		set
+		{
+			if ((this._Title != value))
+			{
+				this.OnTitleChanging(value);
+				this.SendPropertyChanging();
+				this._Title = value;
+				this.SendPropertyChanged("Title");
+				this.OnTitleChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+	public string Content
+	{
+		get
+		{
+			return this._Content;
+		}
+		set
+		{
+			if ((this._Content != value))
+			{
+				this.OnContentChanging(value);
+				this.SendPropertyChanging();
+				this._Content = value;
+				this.SendPropertyChanged("Content");
+				this.OnContentChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int")]
+	public System.Nullable<int> Rating
+	{
+		get
+		{
+			return this._Rating;
+		}
+		set
+		{
+			if ((this._Rating != value))
+			{
+				this.OnRatingChanging(value);
+				this.SendPropertyChanging();
+				this._Rating = value;
+				this.SendPropertyChanged("Rating");
+				this.OnRatingChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertDay", DbType="Char(2)")]
+	public string InsertDay
+	{
+		get
+		{
+			return this._InsertDay;
+		}
+		set
+		{
+			if ((this._InsertDay != value))
+			{
+				this.OnInsertDayChanging(value);
+				this.SendPropertyChanging();
+				this._InsertDay = value;
+				this.SendPropertyChanged("InsertDay");
+				this.OnInsertDayChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InsertMonth", DbType="Char(3)")]
+	public string InsertMonth
+	{
+		get
+		{
+			return this._InsertMonth;
+		}
+		set
+		{
+			if ((this._InsertMonth != value))
+			{
+				this.OnInsertMonthChanging(value);
+				this.SendPropertyChanging();
+				this._InsertMonth = value;
+				this.SendPropertyChanged("InsertMonth");
+				this.OnInsertMonthChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CommentNum", DbType="Int")]
+	public System.Nullable<int> CommentNum
+	{
+		get
+		{
+			return this._CommentNum;
+		}
+		set
+		{
+			if ((this._CommentNum != value))
+			{
+				this.OnCommentNumChanging(value);
+				this.SendPropertyChanging();
+				this._CommentNum = value;
+				this.SendPropertyChanged("CommentNum");
+				this.OnCommentNumChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CoverPic", DbType="NVarChar(255)")]
+	public string CoverPic
+	{
+		get
+		{
+			return this._CoverPic;
+		}
+		set
+		{
+			if ((this._CoverPic != value))
+			{
+				this.OnCoverPicChanging(value);
+				this.SendPropertyChanging();
+				this._CoverPic = value;
+				this.SendPropertyChanged("CoverPic");
+				this.OnCoverPicChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic1", DbType="NVarChar(255)")]
+	public string Pic1
+	{
+		get
+		{
+			return this._Pic1;
+		}
+		set
+		{
+			if ((this._Pic1 != value))
+			{
+				this.OnPic1Changing(value);
+				this.SendPropertyChanging();
+				this._Pic1 = value;
+				this.SendPropertyChanged("Pic1");
+				this.OnPic1Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic2", DbType="NVarChar(255)")]
+	public string Pic2
+	{
+		get
+		{
+			return this._Pic2;
+		}
+		set
+		{
+			if ((this._Pic2 != value))
+			{
+				this.OnPic2Changing(value);
+				this.SendPropertyChanging();
+				this._Pic2 = value;
+				this.SendPropertyChanged("Pic2");
+				this.OnPic2Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic3", DbType="NVarChar(255)")]
+	public string Pic3
+	{
+		get
+		{
+			return this._Pic3;
+		}
+		set
+		{
+			if ((this._Pic3 != value))
+			{
+				this.OnPic3Changing(value);
+				this.SendPropertyChanging();
+				this._Pic3 = value;
+				this.SendPropertyChanged("Pic3");
+				this.OnPic3Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic4", DbType="NVarChar(255)")]
+	public string Pic4
+	{
+		get
+		{
+			return this._Pic4;
+		}
+		set
+		{
+			if ((this._Pic4 != value))
+			{
+				this.OnPic4Changing(value);
+				this.SendPropertyChanging();
+				this._Pic4 = value;
+				this.SendPropertyChanged("Pic4");
+				this.OnPic4Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic5", DbType="NVarChar(255)")]
+	public string Pic5
+	{
+		get
+		{
+			return this._Pic5;
+		}
+		set
+		{
+			if ((this._Pic5 != value))
+			{
+				this.OnPic5Changing(value);
+				this.SendPropertyChanging();
+				this._Pic5 = value;
+				this.SendPropertyChanged("Pic5");
+				this.OnPic5Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pic6", DbType="NVarChar(255)")]
+	public string Pic6
+	{
+		get
+		{
+			return this._Pic6;
+		}
+		set
+		{
+			if ((this._Pic6 != value))
+			{
+				this.OnPic6Changing(value);
+				this.SendPropertyChanging();
+				this._Pic6 = value;
+				this.SendPropertyChanged("Pic6");
+				this.OnPic6Changed();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LikeNum", DbType="Int")]
+	public System.Nullable<int> LikeNum
+	{
+		get
+		{
+			return this._LikeNum;
+		}
+		set
+		{
+			if ((this._LikeNum != value))
+			{
+				this.OnLikeNumChanging(value);
+				this.SendPropertyChanging();
+				this._LikeNum = value;
+				this.SendPropertyChanged("LikeNum");
+				this.OnLikeNumChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Event_Event_Comment_Rating", Storage="_Event_Comment_Ratings", ThisKey="Event_ID", OtherKey="Event_ID")]
+	public EntitySet<Event_Comment_Rating> Event_Comment_Ratings
+	{
+		get
+		{
+			return this._Event_Comment_Ratings;
+		}
+		set
+		{
+			this._Event_Comment_Ratings.Assign(value);
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+	
+	private void attach_Event_Comment_Ratings(Event_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.Event = this;
+	}
+	
+	private void detach_Event_Comment_Ratings(Event_Comment_Rating entity)
+	{
+		this.SendPropertyChanging();
+		entity.Event = null;
 	}
 }
 #pragma warning restore 1591

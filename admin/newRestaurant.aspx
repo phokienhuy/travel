@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="newHotel.aspx.cs" Inherits="admin_newHotel" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="newRestaurant.aspx.cs" Inherits="admin_newRestaurant" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -27,11 +27,11 @@
             <div id="navigation">
                 <ul>
                     <li><a href="place.aspx"><span>Thông Tin Du Lịch</span></a></li>
-                    <li><a href="hotel.aspx" class="active"><span>Khách Sạn</span></a></li>
-                    <li><a href="restaurant.aspx"><span>Nhà Hàng</span></a></li>
-                    <li><a href="#"><span>Ẩm Thực</span></a></li>
-                    <li><a href="#"><span>Sự Kiện</span></a></li>
-                    <li><a href="#"><span>Tài Khoản</span></a></li>
+                    <li><a href="hotel.aspx"><span>Khách Sạn</span></a></li>
+                    <li><a href="restaurant.aspx" class="active"><span>Nhà Hàng</span></a></li>
+                    <li><a href="cuisine.aspx"><span>Ẩm Thực</span></a></li>
+                    <li><a href="event.aspx"><span>Sự Kiện</span></a></li>
+                    <li><a href="account.aspx"><span>Tài Khoản</span></a></li>
                 </ul>
             </div>
             <!-- End Main Nav -->
@@ -42,7 +42,7 @@
     <div id="container">
         <div class="shell">
             <div class="small-nav">
-                <a href="product.html">Dashboard</a> <span>&gt;</span> Khách sạn
+                <a href="product.html">Dashboard</a> <span>&gt;</span> Nhà hàng
             </div>
             <!-- End Small Nav -->
             <!-- Message OK -->
@@ -171,7 +171,7 @@
                             <asp:LinkButton ID="submit" runat="server" class="button" Font-Underline="false"
                                 OnClick="submit_Click">Thêm</asp:LinkButton>
                             <input type="button" class="button" value="Xoa Bieu Nhap" />
-                            <input type="button" class="button" value="Trở Về" onclick="window.location = 'place.aspx'" />
+                            <input type="button" class="button" value="Trở Về" onclick="window.location = 'restaurant.aspx'" />
                         </div>
                         <!-- End Form Buttons -->
                         </form>
