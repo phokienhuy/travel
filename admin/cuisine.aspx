@@ -134,8 +134,8 @@
     <!-- Footer -->
     <div id="footer">
         <div class="shell">
-            <span class="left">&copy; 2010 - VNWeb</span> <span class="right">Design by <a href="http://chocotemplates.com"
-                target="_blank" title="The Sweetest CSS Templates WorldWide">VNWeb.vn</a> </span>
+            <span class="left">&copy; 2014 - GroupB</span> <span class="right">Design by <a href="http://chocotemplates.com"
+                target="_blank" title="The Sweetest CSS Templates WorldWide">GroupB</a> </span>
         </div>
     </div>
     <!-- End Footer -->

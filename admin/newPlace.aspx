@@ -26,12 +26,12 @@
             <!-- Main Nav -->
             <div id="navigation">
                 <ul>
-                    <li><a href="#" class="active"><span>Thông Tin Du Lịch</span></a></li>
-                    <li><a href="#"><span>Khách Sạn</span></a></li>
-                    <li><a href="#"><span>Nhà Hàng</span></a></li>
-                    <li><a href="#"><span>Ẩm Thực</span></a></li>
-                    <li><a href="#"><span>Sự Kiện</span></a></li>
-                    <li><a href="#"><span>Tài Khoản</span></a></li>
+                    <li><a href="place.aspx" class="active"><span>Thông Tin Du Lịch</span></a></li>
+                    <li><a href="hotel.aspx"><span>Khách Sạn</span></a></li>
+                    <li><a href="restaurant.aspx"><span>Nhà Hàng</span></a></li>
+                    <li><a href="cuisine.aspx"><span>Ẩm Thực</span></a></li>
+                    <li><a href="event.aspx"><span>Sự Kiện</span></a></li>
+                    <li><a href="account.aspx"><span>Tài Khoản</span></a></li>
                 </ul>
             </div>
             <!-- End Main Nav -->
@@ -188,9 +188,9 @@
     <!-- End Container -->
     <!-- Footer -->
     <div id="footer">
-        <div class="shell">
-            <span class="left">&copy; 2010 - VNWeb</span> <span class="right">Design by <a href="http://chocotemplates.com"
-                target="_blank" title="The Sweetest CSS Templates WorldWide">VNWeb.vn</a> </span>
+                <div class="shell">
+            <span class="left">&copy; 2014 - GroupB</span> <span class="right">Design by <a href="http://chocotemplates.com"
+                target="_blank" title="The Sweetest CSS Templates WorldWide">GroupB</a> </span>
         </div>
     </div>
     <!-- End Footer -->
