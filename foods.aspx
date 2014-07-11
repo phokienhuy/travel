@@ -41,7 +41,7 @@
     <ajaxtoolkit:ToolkitScriptManager ID="ScripManager1" runat="server" />
 <h3>Các khách sạn mới</h3>
 		    </div>
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="Event_ID" 
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="AmThuc_ID" 
         DataSourceID="EventList">
         <ItemTemplate>
             <div class="blog">

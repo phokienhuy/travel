@@ -36,7 +36,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
     <ajaxtoolkit:ToolkitScriptManager ID="ScripManager1" runat="server" />
-    <asp:DataList ID="FoodDetail" runat="server" DataKeyField="Food_ID" 
+    <asp:DataList ID="FoodDetail" runat="server" DataKeyField="AmThuc_ID" 
                 DataSourceID="SQLFoodDetail">
                 <ItemTemplate>
                     <div class="grid_9">
