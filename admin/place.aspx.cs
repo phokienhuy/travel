@@ -27,6 +27,7 @@ public partial class admin_place : System.Web.UI.Page
         }
 
     }
+
     protected void addButton_Click(object sender, EventArgs e)
     {
         Server.Transfer("newPlace.aspx", true);

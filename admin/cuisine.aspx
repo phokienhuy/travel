@@ -17,7 +17,7 @@
                 <h1>
                     Travel Web</h1>
                 <div id="top-navigation">
-                    Xin chào <a href="#"><strong>Administrator</strong></a> <span>|</span> <a href="#">Trợ
+                    Xin chào <a href="#"><strong><asp:Literal ID="username" runat="server"></asp:Literal></strong></a> <span>|</span> <a href="#">Trợ
                         giúp</a> <span>|</span> <a href="#">Cài Đặt Tài Khoản</a> <span>|</span> <a href="#">
                             Thoát</a>
                 </div>
