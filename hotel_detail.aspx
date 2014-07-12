@@ -56,19 +56,19 @@
           <li>
             <div class="count">1</div>
             <div class="extra_wrapper">
-              <div class="text1"><a href="#">Pellentesque imperdiet. </a></div>Quisque sed quam justo. Nulla kilor congue sed turpis nec lacinia. Nulla facilisi. Ut sit amet gravida telluswil. Morbi id consequat erosivamus. 
+              <div class="text1"><a href="#">Tính trung thực</a></div>Chúng tôi trung thực với những người khác cũng như với chính chúng tôi. Trong tất cả các dịch vụ du lịch, chúng tôi luôn đáp ứng những tiêu chuẩn đạo đức cao nhất.  
             </div>
           </li>
           <li>
             <div class="count">2</div>
             <div class="extra_wrapper">
-              <div class="text1"><a href="#">Aellentesque omperdie. </a></div>Fuisque sed quam justo. Cngueteri sed turpis nec lacinia. Nulla facilisi. Ut sit amet gravida tellus. Morbi idy consequat eros. Vivamus imperdiet
+              <div class="text1"><a href="#">Tin cậy</a></div>Chúng tôi tin cậy, tôn trọng và hỗ trợ lẫn nhau và phấn đấu chinh phục niềm tin của đồng nghiệp và đối tác.
             </div>
           </li>
           <li>
             <div class="count">3</div>
             <div class="extra_wrapper">
-              <div class="text1"><a href="#">Grellentesque imperdik. </a></div>Yisque sed quam justo. Nullaongue sed turpis nec lacinia. Julla facilisi. Ut sit amet gravida tellus. Morbi idy consequat erosamus imperdiet. 
+              <div class="text1"><a href="#">Sáng tạo</a></div>Chúng tôi tìm kiếm các cơ hội mới với những giải pháp độc đáo. Chúng tôi dùng óc sáng tạo của mình để tìm kiếm những giải pháp bất ngờ và khả thi để giải quyết các vấn đề 
             </div>
           </li>
         </ul>
