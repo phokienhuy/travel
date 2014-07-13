@@ -51,38 +51,34 @@
             Điểm Đến Nổi Bật</h3>
     </div>
     <div class="boxes">
-        <div class="grid_4">
-            <figure>
-						    <div><img src="resource/images/page1_img1.jpg" alt=""></div>
-						    <figcaption>
-							    <h3>Venice</h3>
-							     Thường gọi "thành phố của các kênh đào" và La Serenissima, là thủ phủ của vùng Veneto và của tỉnh Venezia ở Ý. Trong tiếng Việt, thành phố này được gọi là Vơ-ni-dơ (phiên âm từ Venise trong tiếng Pháp).
-							    <a href="http://vi.wikipedia.org/wiki/Venice" class="btn">Xem</a>
-						    </figcaption>
-					    </figure>
-        </div>
-        <div class="grid_4">
-            <figure>
-						    <div><img src="resource/images/page1_img2.jpg" alt=""></div>
-						    <figcaption>
-							    <h3>New York</h3>
-							    Tên chính thức City of New York, là thành phố đông dân nhất tại Hoa Kỳ và trung tâm của Vùng đô thị New York, một trong những vùng đô thị đông dân nhất trên thế giới.
-							    <a href="http://vi.wikipedia.org/wiki/New_York" class="btn">Xem</a>
-
-						    </figcaption>
-					    </figure>
-        </div>
-        <div class="grid_4">
-            <figure>
-						    <div><img src="resource/images/page1_img3.jpg" alt=""></div>
-						    <figcaption>
-							    <h3>Paris</h3>
-							      Là thành phố thủ đô của nước Pháp, cũng là một trong ba thành phố phát triển kinh tế nhanh nhất thế giới cùng Luân Đôn và New York và cũng là một trung tâm hành chính của vùng Île-de-France. 
-							    <a href="http://vi.wikipedia.org/wiki/Paris" class="btn">Xem</a>
-						    </figcaption>
-					    </figure>
-        </div>
+        
+            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" 
+                RepeatColumns="3">
+                <ItemTemplate>
+                <div class="grid_4">
+                            <figure>
+						                    <div><img src='<%# Eval("CoverPic") %>' alt="" width="360px" height="337px"></div>
+						                    <figcaption>
+							                    <h3><%# Eval("Name") %></h3>
+                                                
+							                     <%# Eval("ShortDescription") %>
+							                    <a href="place_detail.aspx?tid=<%# Eval("Travel_ID") %>" class="btn">Xem</a>
+						                    </figcaption>
+					                    </figure>
+                        </div>
+                        
+                </ItemTemplate>
+            </asp:DataList>
+            
+            
         <div class="clear">
         </div>
     </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" 
+                
+        SelectCommand="SELECT TOP 3 [Travel_ID], [Name], [CoverPic], [ShortDescription] FROM [ThongTinDuLich] ORDER BY [Rating] DESC">
+            </asp:SqlDataSource>
 </asp:Content>
+
+

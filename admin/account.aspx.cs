@@ -8,6 +8,7 @@ using System.Web.Security;
 
 public partial class admin_account : System.Web.UI.Page
 {
+    public TravelDataContext db = new TravelDataContext();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["User"] != null && Session["User"] != "")
