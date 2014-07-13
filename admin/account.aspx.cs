@@ -10,7 +10,22 @@ public partial class admin_account : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        if (Session["User"] != null && Session["User"] != "")
+        {
+            Account user = db.Accounts.Single(n => n.UserName == Session["User"].ToString());
+            if (user.Type == 1)
+            {
+                username.Text = Session["User"].ToString();
+            }
+            else
+            {
+                Response.Redirect("~/main.aspx");
+            }
+        }
+        else
+        {
+            Response.Redirect("~/main.aspx");
+        }
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
