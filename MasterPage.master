@@ -260,7 +260,8 @@
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
-                                <asp:HyperLink ID="hplChangePW" runat="server" >Đổi mật khẩu</asp:HyperLink></td>
+                                <asp:HyperLink ID="hplChangePW" runat="server" >Đổi mật khẩu</asp:HyperLink>&nbsp
+                                <asp:HyperLink ID="adminPage" runat="server" Visible="False" >Trang quản trị</asp:HyperLink></td>
                             
                         </tr>
                     </table>

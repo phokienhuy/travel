@@ -14,7 +14,7 @@ public partial class admin_hotel : System.Web.UI.Page
         if (Session["User"] != null && Session["User"] != "")
         {
             Account user = db.Accounts.Single(n => n.UserName == Session["User"].ToString());
-            if (user.Type == true)
+            if (user.Type == 1)
             {
                 username.Text = Session["User"].ToString();
             }
@@ -31,5 +31,11 @@ public partial class admin_hotel : System.Web.UI.Page
     protected void addButton_Click(object sender, EventArgs e)
     {
         Server.Transfer("newHotel.aspx", true);
+    }
+
+    protected void logoutLink_Click(object sender, EventArgs e)
+    {
+        Session.Remove("User");
+        Response.Redirect("~/main.aspx");
     }
 }

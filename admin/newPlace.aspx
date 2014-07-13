@@ -17,9 +17,9 @@
                 <h1>
                     Travel Web</h1>
                 <div id="top-navigation">
-                    Xin chào <a href="#"><strong><asp:Literal ID="username" runat="server"></asp:Literal></strong></a> <span>|</span> <a href="#">Trợ
-                        giúp</a> <span>|</span> <a href="#">Cài Đặt Tài Khoản</a> <span>|</span> <a href="#">
-                            Thoát</a>
+                    Xin chào <a href="#"><strong>
+                        <asp:Literal ID="username" runat="server"></asp:Literal></strong></a> <span>|</span>
+                        <a href="logout.aspx">Thoát</a>
                 </div>
             </div>
             <!-- End Logo + Top Nav -->
@@ -41,10 +41,6 @@
     <!-- Container -->
     <div id="container">
         <div class="shell">
-            <div class="small-nav">
-                <a href="product.html">Dashboard</a> <span>&gt;</span> Quần Nam Ninomax
-            </div>
-            <!-- End Small Nav -->
             <!-- Message OK -->
             <div class="msg msg-ok hidden">
                 <p>
@@ -82,22 +78,22 @@
                             <p>
                                 <label>
                                     Tên</label>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                                    ControlToValidate="name" ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name"
+                                    ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:TextBox ID="name" runat="server" class="field size1"></asp:TextBox>
                             </p>
                             <p>
                                 <label>
                                     Địa Chỉ</label>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                                    ControlToValidate="address" ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="address"
+                                    ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:TextBox ID="address" runat="server" class="field size1"></asp:TextBox>
                             </p>
                             <p>
                                 <label>
                                     Số Điện Thoại</label>
-                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-                                    ControlToValidate="phone" ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="phone"
+                                    ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:TextBox ID="phone" runat="server" class="field size1"></asp:TextBox>
                             </p>
                             <p>
@@ -108,8 +104,8 @@
                             <p>
                                 <label>
                                     Miêu tả ngắn gọn:</label>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-                                    ControlToValidate="shortDes" ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="shortDes"
+                                    ErrorMessage="*Bắt buộc" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:TextBox ID="shortDes" runat="server" class="field size1"></asp:TextBox>
                             </p>
                             <p>
@@ -188,7 +184,7 @@
     <!-- End Container -->
     <!-- Footer -->
     <div id="footer">
-                <div class="shell">
+        <div class="shell">
             <span class="left">&copy; 2014 - GroupB</span> <span class="right">Design by <a href="http://chocotemplates.com"
                 target="_blank" title="The Sweetest CSS Templates WorldWide">GroupB</a> </span>
         </div>

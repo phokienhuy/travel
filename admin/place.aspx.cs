@@ -32,4 +32,10 @@ public partial class admin_place : System.Web.UI.Page
     {
         Server.Transfer("newPlace.aspx", true);
     }
+
+    protected void logoutLink_Click(object sender, EventArgs e)
+    {
+        Session.Remove("User");
+        Response.Redirect("~/main.aspx");
+    }
 }

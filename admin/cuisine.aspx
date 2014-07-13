@@ -16,10 +16,10 @@
             <div id="top">
                 <h1>
                     Travel Web</h1>
-                <div id="top-navigation">
-                    Xin chào <a href="#"><strong><asp:Literal ID="username" runat="server"></asp:Literal></strong></a> <span>|</span> <a href="#">Trợ
-                        giúp</a> <span>|</span> <a href="#">Cài Đặt Tài Khoản</a> <span>|</span> <a href="#">
-                            Thoát</a>
+                                <div id="top-navigation">
+                    Xin chào <a href="#"><strong>
+                        <asp:Literal ID="username" runat="server"></asp:Literal></strong></a> <span>|</span> 
+                        <a href="logout.aspx">Thoát</a>
                 </div>
             </div>
             <!-- End Logo + Top Nav -->
@@ -80,7 +80,7 @@
                                         SortExpression="AmThuc_ID" />
                                     <asp:BoundField DataField="Title" HeaderText="Tựa đề" SortExpression="Title" />
                                     <asp:CommandField HeaderText="Thao tác" ShowDeleteButton="True" 
-                                        ShowEditButton="True" />
+                                        ShowEditButton="True" DeleteText="Xóa" EditText="Sửa" />
                                 </Columns>
                             </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>"

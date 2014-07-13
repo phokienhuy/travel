@@ -15,7 +15,7 @@ public partial class admin_newCuisine : System.Web.UI.Page
         if (Session["User"] != null && Session["User"] != "")
         {
             Account user = db.Accounts.Single(n => n.UserName == Session["User"].ToString());
-            if (user.Type == true)
+            if (user.Type == 1)
             {
                 username.Text = Session["User"].ToString();
             }
@@ -30,6 +30,13 @@ public partial class admin_newCuisine : System.Web.UI.Page
         }
 
     }
+
+    protected void logoutLink_Click(object sender, EventArgs e)
+    {
+        Session.Remove("User");
+        Response.Redirect("~/main.aspx");
+    }
+
     protected void submit_Click(object sender, EventArgs e)
     {
         String coverPath = "";

@@ -34,6 +34,11 @@ public partial class MasterPage : User_MasterPage
         lblInfoPhone.Text = user.Phone.ToString();
         lblInfoAdd.Text = user.Address.ToString();
         hplChangePW.NavigateUrl = "forgetpass.aspx?ID=" + user.User_ID.ToString();
+
+        if (user.Type == 1) {
+            adminPage.Visible = true;
+            adminPage.NavigateUrl = "admin/place.aspx";
+        }
     }
 
     protected void BtnLogin_Click(object sender, EventArgs e)
