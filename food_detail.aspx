@@ -44,7 +44,7 @@
                           <h3><%# Eval("Title") %></h3>
                           <ajaxtoolkit:Rating ID="CurrentRatingControl" ReadOnly="true" CurrentRating='<%# Eval("Rating") %>' StarCssClass="ratingEmpty" WaitingStarCssClass="ratingSaved" EmptyStarCssClass="ratingEmpty" FilledStarCssClass="ratingFilled" runat="server">
                           </ajaxtoolkit:Rating><br /><br />
-                          <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft">
+                          <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft" width="360px" height="281">
                           <p class="text1"><a href="#"><%--<%# Eval("ShortDescription") %>--%></a></p>
                           <div class="clear"></div>
                           <%# Eval("Content") %>
@@ -84,23 +84,24 @@
       <div class="clear"></div>
        <div class="gallery">
       <div class="grid_4">
-        <a href="resource/images/big1.jpg" class="gal img_inner"><img src="resource/images/page3_img1.jpg" alt=""></a>
+        
+        <a href="<%# Eval("Pic1") %>" class="gal img_inner"><img src="<%# Eval("Pic1") %>" alt="" width="360px" height="194"></a>
       </div>
       <div class="grid_4">
-        <a href="resource/images/big2.jpg" class="gal img_inner"><img src="resource/images/page3_img2.jpg" alt=""></a>
+        <a href="<%# Eval("Pic2") %>" class="gal img_inner"><img src="<%# Eval("Pic2") %>" alt="" width="360px" height="194"></a>
       </div>
       <div class="grid_4">
-        <a href="resource/images/big3.jpg" class="gal img_inner"><img src="resource/images/page3_img3.jpg" alt=""></a>
+        <a href="<%# Eval("Pic3") %>" class="gal img_inner"><img src="<%# Eval("Pic3") %>" alt="" width="360px" height="194"></a>
       </div>
       <div class="clear"></div>
       <div class="grid_4">
-        <a href="resource/images/big4.jpg" class="gal img_inner"><img src="resource/images/page3_img4.jpg" alt=""></a>
+        <a href="<%# Eval("Pic4") %>" class="gal img_inner"><img src="<%# Eval("Pic4") %>" alt="" width="360px" height="194"></a>
       </div>
       <div class="grid_4">
-        <a href="resource/images/big5.jpg" class="gal img_inner"><img src="resource/images/page3_img5.jpg" alt=""></a>
+        <a href="<%# Eval("Pic5") %>" class="gal img_inner"><img src="<%# Eval("Pic5") %>" alt="" width="360px" height="194"></a>
       </div>
       <div class="grid_4">
-        <a href="resource/images/big6.jpg" class="gal img_inner"><img src="resource/images/page3_img6.jpg" alt=""></a>
+        <a href="<%# Eval("Pic6") %>" class="gal img_inner"><img src="<%# Eval("Pic6") %>" alt="" width="360px" height="194"></a>
       </div>
     </div>
       <div class="clear"></div>

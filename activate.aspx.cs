@@ -40,7 +40,7 @@ public partial class activate : User
 
 
             }
-            else if (usr.Active == true)
+            else if (usr.Active == 1)
             {
                 VerificationMessageLabel.Text = "Tài khoản đã được kích hoạt từ trước, chuyển về trang chủ";
                 Response.AddHeader("REFRESH", "3;URL=main.aspx");
@@ -49,7 +49,7 @@ public partial class activate : User
             }
             else
             {
-                usr.Active = true;
+                usr.Active = 1;
                 //db.accounts.InsertOnSubmit(usr);
                 db.SubmitChanges();
                 VerificationMessageLabel.Text = "Chào mừng bạn đến với The Travel. Enjoy!!";

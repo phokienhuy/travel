@@ -29,8 +29,8 @@ public partial class signup : User
             Name = txtName.Text,
             Phone = txtPhone.Text,
             Address = txtAddress.Text,
-            Active = false,
-            Type = false,
+            Active = 0,
+            Type = 0,
         };
         try
         {

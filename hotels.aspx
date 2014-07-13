@@ -61,7 +61,7 @@
                     <asp:Label ID="Likenum" runat="server" Text='<%# Eval("LikeNum") %> '></asp:Label> Like(s)</a></div>
                 </div>
                 <div class="clear"></div>
-                <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft">
+                <img src="<%# Eval("CoverPic") %>" alt="" class="img_inner fleft" width="360px" height="281">
                 <div class="extra_wrapper">
                     <p class="text1"></p>
                     <p><asp:Label ID="lblShortDes" runat="server" Text='<%# Eval("ShortDescription") %>' /></p>

@@ -2,240 +2,240 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 30.875" name="Travel">
   <DataContextMoniker Name="/TravelDataContext" />
   <nestedChildShapes>
-    <classShape Id="7e495772-2db3-4766-bfb3-5859405016c0" absoluteBounds="0.75, 12.5, 2, 2.5401025390624987">
+    <classShape Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" absoluteBounds="0.75, 12.5, 2, 2.5401025390624987">
       <DataClassMoniker Name="/TravelDataContext/Account" />
       <nestedChildShapes>
-        <elementListCompartment Id="ec464783-f669-4f57-87da-e1841b90f324" absoluteBounds="0.765, 12.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4f77b860-a503-41f1-a269-99e9769e8bd7" absoluteBounds="0.765, 12.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ec8edd97-ed51-4523-b7c7-f68d761e4681" absoluteBounds="3.5, 13, 2, 1.5785953776041666">
+    <classShape Id="d09617c2-cfc3-4e13-ae56-ab783dccc530" absoluteBounds="3.5, 13, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TravelDataContext/Travel_Like" />
       <nestedChildShapes>
-        <elementListCompartment Id="46755cc2-b627-45d4-b1e8-d624d7408933" absoluteBounds="3.515, 13.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="63fc072c-ebda-4cea-b7ef-b71df7406d2a" absoluteBounds="3.515, 13.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fc615be7-77de-4d97-bd9a-d875572083cb" absoluteBounds="6.5, 15.875, 2, 1.7708968098958327">
+    <classShape Id="266df4d5-e0e4-4f91-a7bc-6b006dcf6530" absoluteBounds="6.5, 15.875, 2, 1.7708968098958327">
       <DataClassMoniker Name="/TravelDataContext/AmThuc_Comment_Rating" />
       <nestedChildShapes>
-        <elementListCompartment Id="e76ee7b2-f8b2-49fa-b0dd-50ae85b9dd76" absoluteBounds="6.515, 16.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="56937640-d0be-4c96-b05d-ca8c1ceea0f5" absoluteBounds="6.515, 16.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="208b6d58-b6df-4b1c-b3c4-c842d62ba918" absoluteBounds="0.75, 5.875, 2, 3.6939111328124987">
+    <classShape Id="2676f721-8636-4ead-9a14-d443c7524653" absoluteBounds="0.75, 5.875, 2, 3.6939111328124987">
       <DataClassMoniker Name="/TravelDataContext/Event" />
       <nestedChildShapes>
-        <elementListCompartment Id="365e30a2-d80b-4158-80ad-915e66b40a80" absoluteBounds="0.765, 6.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="90e40465-7392-4867-a668-3c69dff93a2f" absoluteBounds="0.765, 6.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9345d5a8-338c-4501-abaa-0a3f02c55c2e" absoluteBounds="3.5, 6.875, 2, 1.7708968098958335">
+    <classShape Id="c5193f08-b86f-4000-b210-6516f4fc8732" absoluteBounds="3.5, 6.875, 2, 1.7708968098958335">
       <DataClassMoniker Name="/TravelDataContext/Event_Comment_Rating" />
       <nestedChildShapes>
-        <elementListCompartment Id="219580b9-4e52-41c6-a12b-7aede0de6f99" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="bb19c01a-b30e-4f26-aacc-8012a5cf2ab2" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="088c5d9f-4256-48f0-917a-b109584732d1" absoluteBounds="3.5, 10, 2, 1.5785953776041666">
+    <classShape Id="fe142974-4eee-4a1f-b40f-a7b925add986" absoluteBounds="3.5, 10, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TravelDataContext/Event_Like" />
       <nestedChildShapes>
-        <elementListCompartment Id="62f02fb0-3437-4426-b6dc-2b20ec123ce4" absoluteBounds="3.515, 10.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="585f132a-0928-48c6-93a1-d392cdf30627" absoluteBounds="3.515, 10.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d9b4f791-3cb7-4e8f-a6e2-4bb554ee03fb" absoluteBounds="3.5, 16, 2, 1.5785953776041666">
+    <classShape Id="20d3a294-4dc3-42a3-9986-3c58f0c1f8ac" absoluteBounds="3.5, 16, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TravelDataContext/Food_Like" />
       <nestedChildShapes>
-        <elementListCompartment Id="24bd6c3b-233e-4712-87de-bea70af2bcfe" absoluteBounds="3.515, 16.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="64fbae88-8c5a-4e52-9a72-498514ba1f0f" absoluteBounds="3.515, 16.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="95f70f2d-33b2-4c3a-83cb-e65435da351f" absoluteBounds="3.5, 18.875, 2, 1.7708968098958309">
+    <classShape Id="48cb83ad-c939-463a-98c9-7eb5727286d0" absoluteBounds="3.5, 18.875, 2, 1.7708968098958309">
       <DataClassMoniker Name="/TravelDataContext/Hotel_Comment_Rating" />
       <nestedChildShapes>
-        <elementListCompartment Id="ddc08c6b-72f2-41f4-a45d-5ea59e727dbd" absoluteBounds="3.515, 19.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="7b3423d8-877b-4d8d-a0c6-a2f4a5b6892f" absoluteBounds="3.515, 19.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="7055212f-8ead-4208-80ea-5b58b161b5a8" absoluteBounds="6.5, 13, 2, 1.5785953776041666">
+    <classShape Id="ecb4f7a8-ee25-4b26-8005-680d7a562e82" absoluteBounds="6.5, 13, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TravelDataContext/Hotel_Like" />
       <nestedChildShapes>
-        <elementListCompartment Id="207d06b0-f60a-4e79-bb3d-e2169a42dff2" absoluteBounds="6.515, 13.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2ced39bf-5c26-4b8b-8598-d6e038b42a46" absoluteBounds="6.515, 13.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="11974753-96ae-4b84-9752-41dfde00d173" absoluteBounds="6.5, 6.875, 2, 1.7708968098958335">
+    <classShape Id="2f627465-9065-4a6b-9f8f-0ff01b975655" absoluteBounds="6.5, 6.875, 2, 1.7708968098958335">
       <DataClassMoniker Name="/TravelDataContext/Rest_Comment_Rating" />
       <nestedChildShapes>
-        <elementListCompartment Id="1ef80564-c5c5-4ccf-8e13-dda171d739ba" absoluteBounds="6.515, 7.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="536d420d-4856-4485-a75e-162abbaaeb96" absoluteBounds="6.515, 7.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="29dcc657-de4f-40d8-95b9-67b6bc6f418d" absoluteBounds="6.5, 10, 2, 1.5785953776041666">
+    <classShape Id="dc709063-4edf-45f8-a36f-b899edd5f79b" absoluteBounds="6.5, 10, 2, 1.5785953776041666">
       <DataClassMoniker Name="/TravelDataContext/Restaurant_Like" />
       <nestedChildShapes>
-        <elementListCompartment Id="06616716-f823-4a82-82de-f274073ce9ef" absoluteBounds="6.515, 10.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5a4c1131-558e-40d1-8e6f-d0915b1f2cbd" absoluteBounds="6.515, 10.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="6f6cc900-868a-46e5-a5b6-35a552645e6a" absoluteBounds="3.75, 26.875, 2, 3.6939111328125023">
+    <classShape Id="340d9032-6e8e-401b-936e-30bd3e3b401f" absoluteBounds="3.75, 26.875, 2, 3.6939111328125023">
       <DataClassMoniker Name="/TravelDataContext/ThongTinAmThuc" />
       <nestedChildShapes>
-        <elementListCompartment Id="586652b3-54fc-4320-a47c-17a590eb8f70" absoluteBounds="3.765, 27.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="db3051c9-1289-4e4b-a946-a17d68ce7298" absoluteBounds="3.765, 27.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0c2b85ac-97ab-496f-9a54-8b56717f4510" absoluteBounds="0.75, 16.625, 2, 4.2708154296875023">
+    <classShape Id="516fc5fc-08b9-4985-a64c-0fed9e76ac93" absoluteBounds="0.75, 16.625, 2, 4.2708154296875023">
       <DataClassMoniker Name="/TravelDataContext/ThongTinDuLich" />
       <nestedChildShapes>
-        <elementListCompartment Id="58f8548d-6c94-4870-82f2-5bd1c2fc6d18" absoluteBounds="0.765, 17.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="0c8a88b7-5302-474e-8693-93fde87b8fbe" absoluteBounds="0.765, 17.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="5a85c651-2d4d-410d-b0ab-8879f08be3c1" absoluteBounds="3.75, 21.625, 2, 4.2708154296875023">
+    <classShape Id="b25c7f77-d129-451a-9108-019d81e4a903" absoluteBounds="3.75, 21.625, 2, 4.2708154296875023">
       <DataClassMoniker Name="/TravelDataContext/ThongTinKhachSan" />
       <nestedChildShapes>
-        <elementListCompartment Id="d772bac9-1574-4d35-8013-cf554418c9b0" absoluteBounds="3.765, 22.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d6708a63-e8da-46da-9a48-ba827922c7f3" absoluteBounds="3.765, 22.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3a721df8-efb5-421f-b5d2-67d14beb5edb" absoluteBounds="3.75, 1.625, 2, 4.2708154296874987">
+    <classShape Id="86bff377-aec3-4447-b990-7d2f16baa348" absoluteBounds="3.75, 1.625, 2, 4.2708154296874987">
       <DataClassMoniker Name="/TravelDataContext/ThongTinNhaHang" />
       <nestedChildShapes>
-        <elementListCompartment Id="7f6e81a9-04b6-4dab-a28f-5e9e9f18c752" absoluteBounds="3.765, 2.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5ff4a3a2-b211-424c-b3a5-87c38d7049db" absoluteBounds="3.765, 2.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="fbb13495-79bb-48f7-92ea-b49d350bb2ac" absoluteBounds="6.5, 18.875, 2, 1.7708968098958309">
+    <classShape Id="6afe6d2f-a7b2-4ddd-813f-d07c7317c569" absoluteBounds="6.5, 18.875, 2, 1.7708968098958309">
       <DataClassMoniker Name="/TravelDataContext/Travel_Comment_Rating" />
       <nestedChildShapes>
-        <elementListCompartment Id="8d717d25-ea0f-4d5a-92ed-aa6843d0d6bb" absoluteBounds="6.515, 19.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6df57871-f112-4de9-aa6d-f6450539235b" absoluteBounds="6.515, 19.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(2.75 : 13.7892976888021); (3.5 : 13.7892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Travel_Like" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="ec8edd97-ed51-4523-b7c7-f68d761e4681" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="d09617c2-cfc3-4e13-ae56-ab783dccc530" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 14.9847169236779); (3.18038561538462 : 15.4151025390625); (6.22916666666667 : 15.4151025390625 : JumpStart); (6.39583333333333 : 15.4151025390625 : JumpEnd); (7.5 : 15.4151025390625); (7.5 : 15.875)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_AmThuc_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="fc615be7-77de-4d97-bd9a-d875572083cb" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="266df4d5-e0e4-4f91-a7bc-6b006dcf6530" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 7.76044840494792); (3.5 : 7.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Event/Event_Event_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="208b6d58-b6df-4b1c-b3c4-c842d62ba918" />
-        <classShapeMoniker Id="9345d5a8-338c-4501-abaa-0a3f02c55c2e" />
+        <classShapeMoniker Id="2676f721-8636-4ead-9a14-d443c7524653" />
+        <classShapeMoniker Id="c5193f08-b86f-4000-b210-6516f4fc8732" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.70076923076923 : 12.5); (3.1875 : 12.0132692307692); (3.1875 : 8.23442460742188); (3.5 : 8.23442460742188)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Event_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="9345d5a8-338c-4501-abaa-0a3f02c55c2e" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="c5193f08-b86f-4000-b210-6516f4fc8732" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(1.75 : 9.5689111328125); (1.75 : 10.7892976888021); (3.10416666666667 : 10.7892976888021 : JumpStart); (3.27083333333333 : 10.7892976888021 : JumpEnd); (3.29166666666667 : 10.7892976888021 : JumpStart); (3.45833333333333 : 10.7892976888021 : JumpEnd); (3.5 : 10.7892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Event/Event_Event_Like" />
       <nodes>
-        <classShapeMoniker Id="208b6d58-b6df-4b1c-b3c4-c842d62ba918" />
-        <classShapeMoniker Id="088c5d9f-4256-48f0-917a-b109584732d1" />
+        <classShapeMoniker Id="2676f721-8636-4ead-9a14-d443c7524653" />
+        <classShapeMoniker Id="fe142974-4eee-4a1f-b40f-a7b925add986" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.25 : 12.5); (2.25 : 11.2151990332031); (3.10416666666667 : 11.2151990332031 : JumpStart); (3.27083333333333 : 11.2151990332031 : JumpEnd); (3.29166666666667 : 11.2151990332031 : JumpStart); (3.45833333333333 : 11.2151990332031 : JumpEnd); (3.5 : 11.2151990332031)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Event_Like" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="088c5d9f-4256-48f0-917a-b109584732d1" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="fe142974-4eee-4a1f-b40f-a7b925add986" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.72846153846154 : 15.0401025390625); (3.12857443490112 : 15.4402154355021 : JumpStart); (3.24642556509888 : 15.5580665656998 : JumpEnd); (3.28125 : 15.592891000601); (3.28125 : 16.7892976888021); (3.5 : 16.7892976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Food_Like" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="d9b4f791-3cb7-4e8f-a6e2-4bb554ee03fb" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="20d3a294-4dc3-42a3-9986-3c58f0c1f8ac" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.72076923076923 : 15.0401025390625); (3.12857443490112 : 15.4479077431944 : JumpStart); (3.24642556509888 : 15.5657588733921 : JumpEnd); (3.34375 : 15.6630833082933); (3.34375 : 19.7604484049479); (3.5 : 19.7604484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Hotel_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="95f70f2d-33b2-4c3a-83cb-e65435da351f" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="48cb83ad-c939-463a-98c9-7eb5727286d0" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 12.7820207307692); (7.5 : 12.7820207307692); (7.5 : 13)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Hotel_Like" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="7055212f-8ead-4208-80ea-5b58b161b5a8" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="ecb4f7a8-ee25-4b26-8005-680d7a562e82" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 12.5015374615385); (3.375 : 11.8765374615385); (3.375 : 9.02089680989583); (6.1263612283153 : 9.02089680989583); (6.50136122831531 : 8.64589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Rest_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="11974753-96ae-4b84-9752-41dfde00d173" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="2f627465-9065-4a6b-9f8f-0ff01b975655" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 12.5507682307692); (3.17576823076923 : 12.125); (7.5 : 12.125); (7.5 : 11.5785953776042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Restaurant_Like" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="29dcc657-de4f-40d8-95b9-67b6bc6f418d" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="dc709063-4edf-45f8-a36f-b899edd5f79b" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.75 : 26.875); (6.125 : 26.5); (6.125 : 16.7604484049479); (6.22916666666667 : 16.7604484049479 : JumpStart); (6.39583333333333 : 16.7604484049479 : JumpEnd); (6.5 : 16.7604484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/ThongTinAmThuc/ThongTinAmThuc_AmThuc_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="6f6cc900-868a-46e5-a5b6-35a552645e6a" />
-        <classShapeMoniker Id="fc615be7-77de-4d97-bd9a-d875572083cb" />
+        <classShapeMoniker Id="340d9032-6e8e-401b-936e-30bd3e3b401f" />
+        <classShapeMoniker Id="266df4d5-e0e4-4f91-a7bc-6b006dcf6530" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(3.75 : 26.875); (3.375 : 26.5); (3.25 : 26.5); (3.25 : 17.8298086817408); (3.28482443490112 : 17.7949842468397 : JumpStart); (3.40267556509888 : 17.6771331166419 : JumpEnd); (3.50121330413662 : 17.5785953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TravelDataContext/ThongTinAmThuc/ThongTinAmThuc_Food_Like" />
       <nodes>
-        <classShapeMoniker Id="6f6cc900-868a-46e5-a5b6-35a552645e6a" />
-        <classShapeMoniker Id="d9b4f791-3cb7-4e8f-a6e2-4bb554ee03fb" />
+        <classShapeMoniker Id="340d9032-6e8e-401b-936e-30bd3e3b401f" />
+        <classShapeMoniker Id="20d3a294-4dc3-42a3-9986-3c58f0c1f8ac" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 16.6865374615385); (3.06607443490112 : 16.3704630266373 : JumpStart); (3.18392556509888 : 16.2526118964396 : JumpEnd); (3.1875 : 16.2490374615385); (3.1875 : 14.2151985332031); (3.5 : 14.2151985332031)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/ThongTinDuLich/ThongTinDuLich_Travel_Like" />
       <nodes>
-        <classShapeMoniker Id="0c2b85ac-97ab-496f-9a54-8b56717f4510" />
-        <classShapeMoniker Id="ec8edd97-ed51-4523-b7c7-f68d761e4681" />
+        <classShapeMoniker Id="516fc5fc-08b9-4985-a64c-0fed9e76ac93" />
+        <classShapeMoniker Id="d09617c2-cfc3-4e13-ae56-ab783dccc530" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(4.625 : 21.625); (4.625 : 20.6458968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/ThongTinKhachSan/ThongTinKhachSan_Hotel_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="5a85c651-2d4d-410d-b0ab-8879f08be3c1" />
-        <classShapeMoniker Id="95f70f2d-33b2-4c3a-83cb-e65435da351f" />
+        <classShapeMoniker Id="b25c7f77-d129-451a-9108-019d81e4a903" />
+        <classShapeMoniker Id="48cb83ad-c939-463a-98c9-7eb5727286d0" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.75 : 21.6865374615385); (6.06607443490112 : 21.3704630266373 : JumpStart); (6.18392556509888 : 21.2526118964396 : JumpEnd); (6.3125 : 21.1240374615385); (6.3125 : 13.7892976888021); (6.5 : 13.7892976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/ThongTinKhachSan/ThongTinKhachSan_Hotel_Like" />
       <nodes>
-        <classShapeMoniker Id="5a85c651-2d4d-410d-b0ab-8879f08be3c1" />
-        <classShapeMoniker Id="7055212f-8ead-4208-80ea-5b58b161b5a8" />
+        <classShapeMoniker Id="b25c7f77-d129-451a-9108-019d81e4a903" />
+        <classShapeMoniker Id="ecb4f7a8-ee25-4b26-8005-680d7a562e82" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.75 : 3.76040771484375); (7.5 : 3.76040771484375); (7.5 : 6.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/ThongTinNhaHang/ThongTinNhaHang_Rest_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="3a721df8-efb5-421f-b5d2-67d14beb5edb" />
-        <classShapeMoniker Id="11974753-96ae-4b84-9752-41dfde00d173" />
+        <classShapeMoniker Id="86bff377-aec3-4447-b990-7d2f16baa348" />
+        <classShapeMoniker Id="2f627465-9065-4a6b-9f8f-0ff01b975655" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(5.75 : 5.8958154296875); (6.125 : 6.2708154296875); (6.125 : 10.7892976888021); (6.5 : 10.7892976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/TravelDataContext/ThongTinNhaHang/ThongTinNhaHang_Restaurant_Like" />
       <nodes>
-        <classShapeMoniker Id="3a721df8-efb5-421f-b5d2-67d14beb5edb" />
-        <classShapeMoniker Id="29dcc657-de4f-40d8-95b9-67b6bc6f418d" />
+        <classShapeMoniker Id="86bff377-aec3-4447-b990-7d2f16baa348" />
+        <classShapeMoniker Id="dc709063-4edf-45f8-a36f-b899edd5f79b" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 20.894275968149); (3.125 : 21.269275968149); (3.125 : 21.0208968098958); (3.16666666666667 : 21.0208968098958 : JumpStart); (3.33333333333333 : 21.0208968098958 : JumpEnd); (4.54166666666667 : 21.0208968098958 : JumpStart); (4.70833333333333 : 21.0208968098958 : JumpEnd); (6.1263612283153 : 21.0208968098958); (6.25357443490112 : 20.89368360331 : JumpStart); (6.37142556509888 : 20.7758324731123 : JumpEnd); (6.5013612283153 : 20.6458968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TravelDataContext/ThongTinDuLich/ThongTinDuLich_Travel_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="0c2b85ac-97ab-496f-9a54-8b56717f4510" />
-        <classShapeMoniker Id="fbb13495-79bb-48f7-92ea-b49d350bb2ac" />
+        <classShapeMoniker Id="516fc5fc-08b9-4985-a64c-0fed9e76ac93" />
+        <classShapeMoniker Id="6afe6d2f-a7b2-4ddd-813f-d07c7317c569" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 15.0231784621394); (3.125 : 15.3981784621394); (3.125 : 18.5); (3.16666666666667 : 18.5 : JumpStart); (3.42708333333333 : 18.5 : JumpEnd); (6.1263612283153 : 18.5); (6.25357443490112 : 18.6272132065858 : JumpStart); (6.37142556509888 : 18.7450643367836 : JumpEnd); (6.5013612283153 : 18.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/TravelDataContext/Account/Account_Travel_Comment_Rating" />
       <nodes>
-        <classShapeMoniker Id="7e495772-2db3-4766-bfb3-5859405016c0" />
-        <classShapeMoniker Id="fbb13495-79bb-48f7-92ea-b49d350bb2ac" />
+        <classShapeMoniker Id="7d16099d-02e8-4ddd-abbc-aaf29acb50f4" />
+        <classShapeMoniker Id="6afe6d2f-a7b2-4ddd-813f-d07c7317c569" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

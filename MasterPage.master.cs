@@ -64,7 +64,7 @@ public partial class MasterPage : User_MasterPage
             {
                 if (PW == user.Pass)
                 {
-                    if (user.Active == false)
+                    if (user.Active == 0)
                     {
                         LbMessages.Visible = true;
                         LbMessages.Text = "Tài khoản chưa được kích hoạt";
@@ -72,7 +72,7 @@ public partial class MasterPage : User_MasterPage
                     }
                     else
                     {
-                        if (user.Active == true)
+                        if (user.Active == 1)
                         {
                             
                             Session["User"] = user.UserName;

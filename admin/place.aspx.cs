@@ -14,7 +14,7 @@ public partial class admin_place : System.Web.UI.Page
         if (Session["User"] != null && Session["User"] != "")
         {
             Account user = db.Accounts.Single(n => n.UserName == Session["User"].ToString());
-            if (user.Type == true)
+            if (user.Type == 1)
             {
                 username.Text = Session["User"].ToString();
             }

@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 <script language="javascript" src="resource/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+        
 <script language="javascript" type="text/javascript">
     var $j = jQuery.noConflict();
     function checkUN(src, args) {
@@ -46,7 +48,7 @@
 									         <li><a href="main.aspx">Trang Chủ</a></li>
 									         <li><a href="places.aspx" >Địa Điểm</a></li>
 									         <li><a href="restaurant.aspx">Nhà Hàng</a></li>
-									         <li><a href="index-3.html">Khách sạn</a></li>
+									         <li><a href="hotel.aspx">Khách sạn</a></li>
 									         <li><a href="events.aspx">Sự kiện</a></li>
 									         <li><a href="foods.aspx">Ẩm thực</a></li>
 						        </ul>

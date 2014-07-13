@@ -258,9 +258,9 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _Address;
 	
-	private System.Nullable<bool> _Type;
+	private System.Nullable<int> _Type;
 	
-	private System.Nullable<bool> _Active;
+	private System.Nullable<int> _Active;
 	
 	private EntitySet<Travel_Like> _Travel_Likes;
 	
@@ -300,9 +300,9 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnPhoneChanged();
     partial void OnAddressChanging(string value);
     partial void OnAddressChanged();
-    partial void OnTypeChanging(System.Nullable<bool> value);
+    partial void OnTypeChanging(System.Nullable<int> value);
     partial void OnTypeChanged();
-    partial void OnActiveChanging(System.Nullable<bool> value);
+    partial void OnActiveChanging(System.Nullable<int> value);
     partial void OnActiveChanged();
     #endregion
 	
@@ -461,8 +461,8 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Bit")]
-	public System.Nullable<bool> Type
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int")]
+	public System.Nullable<int> Type
 	{
 		get
 		{
@@ -481,8 +481,8 @@ public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Bit")]
-	public System.Nullable<bool> Active
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Active", DbType="Int")]
+	public System.Nullable<int> Active
 	{
 		get
 		{

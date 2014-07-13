@@ -9,8 +9,8 @@
       <Column Name="Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Type" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Account_Travel_Like" Member="Travel_Likes" ThisKey="UserName" OtherKey="UserName" Type="Travel_Like" />
       <Association Name="Account_AmThuc_Comment_Rating" Member="AmThuc_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="AmThuc_Comment_Rating" />
       <Association Name="Account_Event_Comment_Rating" Member="Event_Comment_Ratings" ThisKey="UserName" OtherKey="UserName" Type="Event_Comment_Rating" />
