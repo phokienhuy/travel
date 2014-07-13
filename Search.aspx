@@ -33,202 +33,42 @@
     </strong></span>
     <br />
     <br />
-    <asp:ListView ID="ListView1" runat="server" DataKeyNames="Travel_ID" 
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="Travel_ID" 
         DataSourceID="SqlDataSource1">
-        <AlternatingItemTemplate>
-            <span style="">Name:
-            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
-            <br />
-            Address:
-            <asp:Label ID="AddressLabel" runat="server" Text='<%# Eval("Address") %>' />
-            <br />
-            Phone:
-            <asp:Label ID="PhoneLabel" runat="server" Text='<%# Eval("Phone") %>' />
-            <br />
-            ShortDescription:
-            <asp:Label ID="ShortDescriptionLabel" runat="server" 
-                Text='<%# Eval("ShortDescription") %>' />
-            <br />
-            Content:
-            <asp:Label ID="ContentLabel" runat="server" Text='<%# Eval("Content") %>' />
-            <br />
-            Rating:
-            <asp:Label ID="RatingLabel" runat="server" Text='<%# Eval("Rating") %>' />
-            <br />
-            InsertDay:
-            <asp:Label ID="InsertDayLabel" runat="server" Text='<%# Eval("InsertDay") %>' />
-            <br />
-            InsertMonth:
-            <asp:Label ID="InsertMonthLabel" runat="server" 
-                Text='<%# Eval("InsertMonth") %>' />
-            <br />
-            Travel_ID:
-            <asp:Label ID="Travel_IDLabel" runat="server" Text='<%# Eval("Travel_ID") %>' />
-            <br />
-            CoverPic:
-            <asp:Label ID="CoverPicLabel" runat="server" Text='<%# Eval("CoverPic") %>' />
-            <br />
-<br /></span>
-        </AlternatingItemTemplate>
-        <EditItemTemplate>
-            <span style="">Name:
-            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-            <br />
-            Address:
-            <asp:TextBox ID="AddressTextBox" runat="server" Text='<%# Bind("Address") %>' />
-            <br />
-            Phone:
-            <asp:TextBox ID="PhoneTextBox" runat="server" Text='<%# Bind("Phone") %>' />
-            <br />
-            ShortDescription:
-            <asp:TextBox ID="ShortDescriptionTextBox" runat="server" 
-                Text='<%# Bind("ShortDescription") %>' />
-            <br />
-            Content:
-            <asp:TextBox ID="ContentTextBox" runat="server" Text='<%# Bind("Content") %>' />
-            <br />
-            Rating:
-            <asp:TextBox ID="RatingTextBox" runat="server" Text='<%# Bind("Rating") %>' />
-            <br />
-            InsertDay:
-            <asp:TextBox ID="InsertDayTextBox" runat="server" 
-                Text='<%# Bind("InsertDay") %>' />
-            <br />
-            InsertMonth:
-            <asp:TextBox ID="InsertMonthTextBox" runat="server" 
-                Text='<%# Bind("InsertMonth") %>' />
-            <br />
-            Travel_ID:
-            <asp:Label ID="Travel_IDLabel1" runat="server" 
-                Text='<%# Eval("Travel_ID") %>' />
-            <br />
-            CoverPic:
-            <asp:TextBox ID="CoverPicTextBox" runat="server" 
-                Text='<%# Bind("CoverPic") %>' />
-            <br />
-            <asp:Button ID="UpdateButton" runat="server" CommandName="Update" 
-                Text="Update" />
-            <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" 
-                Text="Cancel" />
-            <br /><br /></span>
-        </EditItemTemplate>
-        <EmptyDataTemplate>
-            <span></span>
-        </EmptyDataTemplate>
-        <InsertItemTemplate>
-            <span style="">Name:
-            <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' />
-            <br />Address:
-            <asp:TextBox ID="AddressTextBox" runat="server" Text='<%# Bind("Address") %>' />
-            <br />Phone:
-            <asp:TextBox ID="PhoneTextBox" runat="server" Text='<%# Bind("Phone") %>' />
-            <br />ShortDescription:
-            <asp:TextBox ID="ShortDescriptionTextBox" runat="server" 
-                Text='<%# Bind("ShortDescription") %>' />
-            <br />Content:
-            <asp:TextBox ID="ContentTextBox" runat="server" Text='<%# Bind("Content") %>' />
-            <br />Rating:
-            <asp:TextBox ID="RatingTextBox" runat="server" Text='<%# Bind("Rating") %>' />
-            <br />InsertDay:
-            <asp:TextBox ID="InsertDayTextBox" runat="server" 
-                Text='<%# Bind("InsertDay") %>' />
-            <br />InsertMonth:
-            <asp:TextBox ID="InsertMonthTextBox" runat="server" 
-                Text='<%# Bind("InsertMonth") %>' />
-            <br />CoverPic:
-            <asp:TextBox ID="CoverPicTextBox" runat="server" 
-                Text='<%# Bind("CoverPic") %>' />
-            <br />
-            <asp:Button ID="InsertButton" runat="server" CommandName="Insert" 
-                Text="Insert" />
-            <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" 
-                Text="Clear" />
-            <br /><br /></span>
-        </InsertItemTemplate>
         <ItemTemplate>
-            <strong>Tên :</strong><span style="">
+            <strong>Tên :</strong>&nbsp;
             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
             <br />
             <br />
-            <strong>Địa Chỉ : </strong>
-            <asp:Label ID="Label2" runat="server" Text='<%# Eval("Address") %>'></asp:Label>
+            <strong>Địa Chỉ :</strong>
+            <asp:Label ID="Label2" runat="server" Text='<%# Eval("Address") %>' />
             <br />
             <br />
-            <strong>Điện Thoại :</strong>
+            <strong>Điện Thoại : </strong>
             <asp:Label ID="Label3" runat="server" Text='<%# Eval("Phone") %>'></asp:Label>
             <br />
             <br />
-            <strong>Mô Tả Sơ Lược : </strong>
-            <asp:Label ID="Label4" runat="server" Text='<%# Eval("ShortDescription") %>'></asp:Label>
-            <br />
-            <br />
-            <strong>Nội Dung :</strong>
-            <asp:Label ID="Label5" runat="server" Text='<%# Eval("Content") %>'></asp:Label>
+            <strong>Mô Tả Sợ Lược :</strong>
+            <asp:Label ID="Label4" runat="server" Text='<%# Eval("ShortDescription") %>' />
             <br />
             <br />
             <strong>Bình Chọn :</strong>
-            <asp:Label ID="Label6" runat="server" Text='<%# Eval("Rating") %>'></asp:Label>
-            /5<br />
-            <br />
-            <strong>Ngày Khởi Hành :</strong>
-            <asp:Label ID="Label7" runat="server" Text='<%# Eval("InsertDay") %>'></asp:Label>
-            /<asp:Label ID="Label8" runat="server" Text='<%# Eval("InsertMonth") %>'></asp:Label>
-            <br />
-            <strong>Hình Ảnh :</strong>
-            <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("CoverPic") %>' />
+            <asp:Label ID="Label5" runat="server" Text='<%# Eval("Rating") %>' />
             <br />
             <br />
-            <a href="place_detail.aspx?tid=<%# Eval("Travel_ID") %>" class="btn">Chi Tiết</a>
-            </span>
+            <strong>CoverPic :</strong>
+            <asp:Image ID="Image1" runat="server" Height="131px" 
+                ImageUrl='<%# Eval("CoverPic") %>' Width="305px" />
+            <br />
+<br />
+                    <a href="place_detail.aspx?tid=<%# Eval("Travel_ID") %>" class="btn">Chi Tiết</a>
         </ItemTemplate>
-        <LayoutTemplate>
-            <div ID="itemPlaceholderContainer" runat="server" style="">
-                <span runat="server" id="itemPlaceholder" />
-            </div>
-            <div style="">
-            </div>
-        </LayoutTemplate>
-        <SelectedItemTemplate>
-            <span style="">Name:
-            <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
-            <br />
-            Address:
-            <asp:Label ID="AddressLabel" runat="server" Text='<%# Eval("Address") %>' />
-            <br />
-            Phone:
-            <asp:Label ID="PhoneLabel" runat="server" Text='<%# Eval("Phone") %>' />
-            <br />
-            ShortDescription:
-            <asp:Label ID="ShortDescriptionLabel" runat="server" 
-                Text='<%# Eval("ShortDescription") %>' />
-            <br />
-            Content:
-            <asp:Label ID="ContentLabel" runat="server" Text='<%# Eval("Content") %>' />
-            <br />
-            Rating:
-            <asp:Label ID="RatingLabel" runat="server" Text='<%# Eval("Rating") %>' />
-            <br />
-            InsertDay:
-            <asp:Label ID="InsertDayLabel" runat="server" Text='<%# Eval("InsertDay") %>' />
-            <br />
-            
-            InsertMonth:
-            <asp:Label ID="InsertMonthLabel" runat="server" 
-                Text='<%# Eval("InsertMonth") %>' />
-            <br />
-            Travel_ID:
-            <asp:Label ID="Travel_IDLabel" runat="server" Text='<%# Eval("Travel_ID") %>' />
-            <br />
-            <br />
-            <br />
-            CoverPic:
-            <asp:Label ID="CoverPicLabel" runat="server" Text='<%# Eval("CoverPic") %>' />
-            <br />
-<br /></span>
-        </SelectedItemTemplate>
-    </asp:ListView>
+    </asp:DataList>
+    <br />
+    <br />
+
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" SelectCommand="SELECT ThongTinDuLich.Name, ThongTinDuLich.Address, ThongTinDuLich.Phone, ThongTinDuLich.ShortDescription, ThongTinDuLich.Content, ThongTinDuLich.Rating, ThongTinDuLich.InsertDay, ThongTinDuLich.InsertMonth, ThongTinDuLich.Travel_ID, ThongTinDuLich.CoverPic
+        ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" SelectCommand="SELECT ThongTinDuLich.Name, ThongTinDuLich.Address, ThongTinDuLich.Phone, ThongTinDuLich.ShortDescription,ThongTinDuLich.Rating, ThongTinDuLich.InsertDay, ThongTinDuLich.InsertMonth, ThongTinDuLich.Travel_ID, ThongTinDuLich.CoverPic
 FROM ThongTinDuLich
 WHERE (ThongTinDuLich.Name LIKE '%' + @a + '%') ">
         <SelectParameters>
@@ -237,5 +77,152 @@ WHERE (ThongTinDuLich.Name LIKE '%' + @a + '%') ">
         </SelectParameters>
     </asp:SqlDataSource>
     <br />
+    <asp:DataList ID="DataList2" runat="server" DataKeyField="Hotel_ID" 
+        DataSourceID="SqlDataSource2">
+        <ItemTemplate>
+            <strong>Tên Khách Sạn :</strong>&nbsp;
+            <asp:Label ID="Label8" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+            <br />
+            <br />
+            <strong>Địa Chỉ :</strong>
+            <asp:Label ID="Label9" runat="server" Text='<%# Eval("Address") %>' />
+            <br />
+            <br />
+            <strong>Điện Thoại :</strong>
+            <asp:Label ID="Label10" runat="server" Text='<%# Eval("Phone") %>' />
+            <br />
+            <br />
+            <strong>Mô Tả :</strong>
+            <asp:Label ID="Label11" runat="server" Text='<%# Eval("ShortDescription") %>' />
+            <br />
+            <br />
+            <strong>Bình Chọn :</strong>
+            <asp:Label ID="Label12" runat="server" Text='<%# Eval("Rating") %>' />
+            <br />
+            <br />
+            <strong>Hình Ảnh :</strong>
+            <asp:Image ID="Image2" runat="server" Height="126px" 
+                ImageUrl='<%# Eval("CoverPic") %>' Width="213px" />
+            <br />
+            <br />
+                    <a href="hotel_detail.aspx?hid=<%# Eval("Hotel_ID") %>" class="btn">Chi Tiết</a>
+
+        </ItemTemplate>
+    </asp:DataList>
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" SelectCommand="SELECT ThongTinKhachSan.Name, ThongTinKhachSan.Address, ThongTinKhachSan.Phone, ThongTinKhachSan.ShortDescription,ThongTinKhachSan.Rating, ThongTinKhachSan.Hotel_ID, ThongTinKhachSan.CoverPic
+FROM ThongTinKhachSan
+WHERE (ThongTinKhachSan.Name LIKE '%' + @a + '%') ">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="TextBox1" DefaultValue="-1" Name="a" 
+                PropertyName="Text" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <br />
+    <asp:DataList ID="DataList3" runat="server" DataKeyField="AmThuc_ID" 
+        DataSourceID="SqlDataSource3">
+        <ItemTemplate>
+            <strong>Tên :</strong>
+            <asp:Label ID="Label13" runat="server" Text='<%# Eval("Title") %>' />
+            <br />
+            <br />
+            <strong>Bình Chọn :</strong>
+            <asp:Label ID="Label14" runat="server" Text='<%# Eval("Rating") %>' />
+            <br />
+            <br />
+            <strong>Hình Ảnh :</strong>
+            <asp:Image ID="Image3" runat="server" Height="136px"
+            ImageUrl='<%# Eval("CoverPic") %>' Width="237px" />
+            <br />
+<br />
+                    <a href="food_detail.aspx?fid=<%# Eval("AmThuc_ID") %>" class="btn">Chi Tiết</a>
+
+        </ItemTemplate>
+    </asp:DataList>
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" SelectCommand="SELECT ThongTinAmThuc.Title,ThongTinAmThuc.Rating, ThongTinAmThuc.AmThuc_ID, ThongTinAmThuc.CoverPic
+FROM ThongTinAmThuc
+WHERE (ThongTinAmThuc.Title LIKE '%' + @a + '%') ">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="TextBox1" DefaultValue="-1" Name="a" 
+                PropertyName="Text" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <br />
+    <asp:DataList ID="DataList4" runat="server" DataKeyField="Rest_ID" 
+        DataSourceID="SqlDataSource4">
+        <ItemTemplate>
+            <strong>Tên Nhà Hàng :</strong>
+            <asp:Label ID="Label15" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+            <br />
+            <br />
+            <strong>Địa Chỉ :</strong>
+            <asp:Label ID="Label16" runat="server" Text='<%# Eval("Address") %>' />
+            <br />
+            <br />
+            <strong>Điện Thoại :</strong>
+            <asp:Label ID="Label17" runat="server" Text='<%# Eval("Phone") %>' />
+            <br />
+            <br />
+            <strong>Mô Tả Sơ Lược :</strong>
+            <asp:Label ID="Label18" runat="server" Text='<%# Eval("ShortDescription") %>' />
+            <br />
+            <strong>
+            <br />
+            Rating :</strong>
+            <asp:Label ID="Label19" runat="server" Text='<%# Eval("Rating") %>' />
+            <br />
+            <br />
+            <strong>Hình Ảnh :</strong>
+            <asp:Image ID="Image4" runat="server" Height="101px" 
+                ImageUrl='<%# Eval("CoverPic") %>' Width="162px" />
+            <br />
+            <br />
+                    <a href="restaurant_detail.aspx?rid=<%# Eval("Rest_ID") %>" class="btn">Xem</a>
+
+        </ItemTemplate>
+    </asp:DataList>
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" SelectCommand="SELECT ThongTinNhaHang.Name, ThongTinNhaHang.Address, ThongTinNhaHang.Phone, ThongTinNhaHang.ShortDescription,ThongTinNhaHang.Rating, ThongTinNhaHang.Rest_ID, ThongTinNhaHang.CoverPic
+FROM ThongTinNhaHang
+WHERE (ThongTinNhaHang.Name LIKE '%' + @a + '%') ">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="TextBox1" DefaultValue="-1" Name="a" 
+                PropertyName="Text" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <br />
+    <asp:DataList ID="DataList5" runat="server" DataKeyField="Event_ID" 
+        DataSourceID="SqlDataSource5">
+        <ItemTemplate>
+            <strong>Tên sự kiện : </strong>
+            <asp:Label ID="Label20" runat="server" Text='<%# Eval("Title") %>'></asp:Label>
+            <br />
+            <br />
+            <strong>Bình Chọn :</strong>
+            <asp:Label ID="Label21" runat="server" Text='<%# Eval("Rating") %>' />
+            <br />
+            <br />
+            <strong>Hình Ảnh :</strong>
+            <asp:Image ID="Image5" runat="server" Height="119px" 
+                ImageUrl='<%# Eval("CoverPic") %>' Width="213px" />
+            <br />
+            <br />
+            <a href="event_detail.aspx?eid=<%# Eval("Event_ID") %>" class="btn">Chi Tiết</a>
+        </ItemTemplate>
+    </asp:DataList>
+    <br />
+    <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:TravelConnectionString %>" SelectCommand="SELECT Event.Title , Event.Rating, Event.Event_ID, Event.CoverPic
+FROM Event
+WHERE (Event.Title LIKE '%' + @a + '%') ">
+        <SelectParameters>
+            <asp:ControlParameter ControlID="TextBox1" DefaultValue="-1" Name="a" 
+                PropertyName="Text" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <br />
 </asp:Content>
