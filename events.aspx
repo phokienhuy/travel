@@ -38,7 +38,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" Runat="Server">
     <div class="grid_12">
     <ajaxtoolkit:ToolkitScriptManager ID="ScripManager1" runat="server" />
-<h3>Các khách sạn mới</h3>
+<h3>Các sự kiện mới</h3>
 		    </div>
     <asp:DataList ID="DataList1" runat="server" DataKeyField="Event_ID" 
         DataSourceID="EventList">

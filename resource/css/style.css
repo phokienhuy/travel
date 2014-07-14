@@ -1065,3 +1065,13 @@ footer {
 #toTop:hover {
 	background-position: right 0;
 }
+
+.visibleDiv
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 99;
+    width: 80px;
+    height: 80px;
+}
