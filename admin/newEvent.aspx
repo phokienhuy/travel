@@ -19,7 +19,7 @@
                                 <div id="top-navigation">
                     Xin chào <a href="#"><strong>
                         <asp:Literal ID="username" runat="server"></asp:Literal></strong></a> <span>|</span> 
-                        <asp:LinkButton ID="logoutLink" runat="server" onclick="logoutLink_Click">Thoát</asp:LinkButton>
+                        <a href="logout.aspx">Thoát</a>
                 </div>
             </div>
             <!-- End Logo + Top Nav -->
