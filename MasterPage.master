@@ -61,7 +61,11 @@
 
 		<![endif]-->
 </head>
-<body class="page1
+<body>
+    <div class="visibleDiv">
+        <a href="Search.aspx">
+            <img src="resource/images/Search.png" width="80" height="80" /></a>
+    </div>
     <form id="form1" runat="server">
     <div>
         <header> 
@@ -82,9 +86,6 @@
                                     
 	        </div>
         </header>
-            <div class="visibleDiv">
-        <a href="Search.aspx"><img src="resource/images/Search.png" width="80" height="80" /></a>
-    </div>
         <div class="main">
             <asp:ContentPlaceHolder ID="Slider" runat="server">
             </asp:ContentPlaceHolder>
